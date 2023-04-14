@@ -22,4 +22,4 @@ git clone https://github.com/leonopteryx130/notes_docs.git
 gitbook install
 gitbook serve --port 4000
 ```
-Type ```localhost:4000``` in the browser address, and then, you can read my documents
+Type ```localhost:4000``` in the browser address bar, and then, you can read my documents
