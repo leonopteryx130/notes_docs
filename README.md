@@ -23,3 +23,19 @@ gitbook install
 gitbook serve --port 4000
 ```
 Type ```localhost:4000``` in the browser address bar, and then, you can read my documents
+
+# Contact Me
+<font color=lightblue>
+    489264018@qq.com ---- <strong>personal</strong>
+<font>
+
+<font color=lightblue>
+    wangyinqi@ucas.ac.cn ---- <strong>business</strong>
+<font>
+
+<div  align=right>
+    <font color=grey>
+        <strong>author: Yinqi Wang</strong>
+    <font>
+</div>
+
