@@ -3,5 +3,5 @@
 * [Introduction](README.md)
 * 计算机科学
     * 基础知识
-        * [Writing is nice](./notes/计算机科学/基础知识.md)
+        * [应用程序的进程和线程](./notes/计算机科学/基础知识/进程和线程.md)
     * 硬件
