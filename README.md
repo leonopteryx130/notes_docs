@@ -24,6 +24,10 @@ gitbook serve --port 4000
 ```
 Type ```localhost:4000``` in the browser address bar, and then, you can read my documents
 
+# statement
+Some notes and pictures are excerpted from other bloggers or books, and the other part is modified according to my own understanding. If there is any infringement, please contact me
+
+
 # Contact Me
 <font color=lightblue>
     489264018@qq.com ---- <strong>personal</strong>
