@@ -14,3 +14,6 @@
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
     * 通信协议
+* HTML
+    * HTML基础知识
+        * [预加载prefetch和preload](./notes/HTML/HTML基础知识/预加载prefetch和preload.md)
