@@ -17,3 +17,6 @@
 * HTML
     * HTML基础知识
         * [预加载prefetch和preload](./notes/HTML/HTML基础知识/预加载prefetch和preload.md)
+* JavaScript
+    * 基本概念及理念
+        * [node.js和javascript中的全局变量](./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
