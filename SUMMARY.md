@@ -17,6 +17,8 @@
 * HTML
     * HTML基础知识
         * [预加载prefetch和preload](./notes/HTML/HTML基础知识/预加载prefetch和preload.md)
+    * 浏览器
+        * [判断对象是否存活的方法](./notes/HTML/浏览器/判断对象是否存活的方法.md)
 * JavaScript
     * 基本概念及理念
         * [node.js和javascript中的全局变量](./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
