@@ -22,6 +22,7 @@
 * JavaScript
     * 基本概念及理念
         * [node.js和javascript中的全局变量](./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
+        * [js内部对象和宿主对象](./notes/JavaScript/基本概念及理念/js内部对象和宿主对象.md)
 * css
     * css基本概念
         * [什么是BFC](./notes/css/css基本概念/什么是BFC.md)

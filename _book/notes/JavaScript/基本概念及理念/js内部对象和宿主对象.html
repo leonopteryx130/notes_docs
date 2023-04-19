@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>转储dump · GitBook</title>
+        <title>js内部对象和宿主对象 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,7 +62,7 @@
 
     
     
-    <link rel="prev" href="进程控制块.html" />
+    <link rel="prev" href="node.js和javascript中的全局对象.html" />
     
 
     </head>
@@ -132,9 +132,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1.1" data-path="进程和线程.html">
+        <li class="chapter " data-level="1.2.1.1" data-path="../../计算机科学/基础知识/进程和线程.html">
             
-                <a href="进程和线程.html">
+                <a href="../../计算机科学/基础知识/进程和线程.html">
             
                     
                     应用程序的进程和线程
@@ -145,9 +145,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.2" data-path="进程控制块.html">
+        <li class="chapter " data-level="1.2.1.2" data-path="../../计算机科学/基础知识/进程控制块.html">
             
-                <a href="进程控制块.html">
+                <a href="../../计算机科学/基础知识/进程控制块.html">
             
                     
                     进程控制块
@@ -158,9 +158,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.1.3" data-path="转储.html">
+        <li class="chapter " data-level="1.2.1.3" data-path="../../计算机科学/基础知识/转储.html">
             
-                <a href="转储.html">
+                <a href="../../计算机科学/基础知识/转储.html">
             
                     
                     转储dump
@@ -203,9 +203,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.3.1" data-path="../数据结构及其算法/线性表.html">
+        <li class="chapter " data-level="1.2.3.1" data-path="../../计算机科学/数据结构及其算法/线性表.html">
             
-                <a href="../数据结构及其算法/线性表.html">
+                <a href="../../计算机科学/数据结构及其算法/线性表.html">
             
                     
                     线性表
@@ -216,9 +216,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.2" data-path="../数据结构及其算法/树的遍历——深度优先vs广度优先.html">
+        <li class="chapter " data-level="1.2.3.2" data-path="../../计算机科学/数据结构及其算法/树的遍历——深度优先vs广度优先.html">
             
-                <a href="../数据结构及其算法/树的遍历——深度优先vs广度优先.html">
+                <a href="../../计算机科学/数据结构及其算法/树的遍历——深度优先vs广度优先.html">
             
                     
                     树的遍历——深度优先vs广度优先
@@ -414,9 +414,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="../../JavaScript/基本概念及理念/node.js和javascript中的全局对象.html">
+        <li class="chapter " data-level="1.5.1.1" data-path="node.js和javascript中的全局对象.html">
             
-                <a href="../../JavaScript/基本概念及理念/node.js和javascript中的全局对象.html">
+                <a href="node.js和javascript中的全局对象.html">
             
                     
                     node.js和javascript中的全局变量
@@ -427,9 +427,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.2" data-path="../../JavaScript/基本概念及理念/js内部对象和宿主对象.html">
+        <li class="chapter active" data-level="1.5.1.2" data-path="js内部对象和宿主对象.html">
             
-                <a href="../../JavaScript/基本概念及理念/js内部对象和宿主对象.html">
+                <a href="js内部对象和宿主对象.html">
             
                     
                     js内部对象和宿主对象
@@ -531,7 +531,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >转储dump</a>
+        <a href="../../.." >js内部对象和宿主对象</a>
     </h1>
 </div>
 
@@ -546,20 +546,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8F6C;&#x50A8;dump">&#x8F6C;&#x50A8;dump</h1>
-<p>&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#xFF0C;&#x53C8;&#x53EB;dump&#x6587;&#x4EF6;&#x3002;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x662F;&#x8FDB;&#x7A0B;&#x67D0;&#x4E00;&#x65F6;&#x523B;&#x7684;&#x5FEB;&#x7167;&#x3002;</p>
-<p>&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5FAE;&#x8F6F;&#x5B98;&#x65B9;&#x7684;&#x4ECB;&#x7ECD;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;&#x8F6C;&#x50A8;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x53D1;&#x751F;&#x7684;&#x95EE;&#x9898;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x60A8;&#x65E0;&#x6CD5;&#x5728;&#x81EA;&#x5DF1;&#x673A;&#x5668;&#x4E0A;&#x91CD;&#x73B0;&#x5BA2;&#x6237;&#x9047;&#x5230;&#x7684;&#x5D29;&#x6E83;&#x6216;&#x6302;&#x8D77;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5BA2;&#x6237;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x4FDD;&#x5B58;&#x7684;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x3002;&#x6D4B;&#x8BD5;&#x4EBA;&#x5458;&#x4E5F;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x4EE5;&#x4FDD;&#x5B58;&#x5D29;&#x6E83;&#x6216;&#x6302;&#x8D77;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x4FBF;&#x7EE7;&#x7EED;&#x505A;&#x66F4;&#x591A;&#x7684;&#x6D4B;&#x8BD5;&#x3002;</p>
-<h2 id="&#x6293;&#x53D6;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;"><strong>&#x6293;&#x53D6;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</strong></h2>
+                                <h1 id="js&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x548C;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;">js&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x548C;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;</h1>
+<p>JS&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5BF9;&#x8C61;&#x5206;&#x4E3A;&#x201C;&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x201D;&#x3001;&#x201C;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x201D;&#x548C;&#x201C;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x201D;&#x4E09;&#x79CD;&#x3002;</p>
+<h3 id="&#x5185;&#x90E8;&#x5BF9;&#x8C61;"><strong>&#x5185;&#x90E8;&#x5BF9;&#x8C61;</strong></h3>
+<p>js&#x4E2D;&#x7684;&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x5305;&#x62EC;Array&#x3001;Boolean&#x3001;Date&#x3001;Function&#x3001;Global&#x3001;Math&#x3001;Number&#x3001;Object&#x3001;RegExp&#x3001;String
+&#x4EE5;&#x53CA;&#x5404;&#x79CD;&#x9519;&#x8BEF;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x62EC;Error&#x3001;EvalError&#x3001;RangeError&#x3001;ReferenceError&#x3001;SyntaxError&#x3001;TypeError&#x3002;
+&#x5176;&#x4E2D;Global&#x548C;Math&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x53C8;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x201D;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x5728;&#x811A;&#x672C;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;&#x4E0D;&#x5FC5;&#x5B9E;&#x4F8B;&#x5316;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;"><strong>&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;</strong></h3>
 <ul>
-<li><p>&#x6253;&#x5F00;&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;- &gt;&#x53F3;&#x952E;&#x5355;&#x51FB;&#x60F3;&#x8981;&#x6293;&#x53D6;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x8FDB;&#x7A0B;- &gt;&#x70B9;&#x51FB;&#x201C;&#x521B;&#x5EFA;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x201D;&#x3002;&#x8FD9;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x5BF9;&#x8BDD;&#x6846;&#x663E;&#x793A;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x548C;&#x521B;&#x5EFA;&#x7684;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
-<div align="center">
- <img src="&#x8F6C;&#x50A8;dump.png" width="60%">
-</div>
-</li>
-<li><p>windbg&#x5DE5;&#x5177;</p>
-</li>
-<li>&#x4FEE;&#x6539;&#x6CE8;&#x518C;&#x8868;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7A0B;&#x5E8F;&#x5D29;&#x6E83;&#x65F6;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;</li>
+<li>&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x6267;&#x884C;JS&#x811A;&#x672C;&#x7684;&#x73AF;&#x5883;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5BF9;&#x4E8E;&#x5D4C;&#x5165;&#x5230;&#x7F51;&#x9875;&#x4E2D;&#x7684;JS&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x53C8;&#x79F0;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;IE&#x3001;Firefox&#x7B49;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x53EF;&#x80FD;&#x4E0D;&#x540C;&#xFF0C;&#x5373;&#x4F7F;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x76F8;&#x540C;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E5F;&#x5927;&#x76F8;&#x5F84;&#x5EAD;&#xFF01;&#x8FD9;&#x4F1A;&#x5E26;&#x6765;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x95EE;&#x9898;&#xFF0C;&#x589E;&#x52A0;&#x5F00;&#x53D1;&#x96BE;&#x5EA6;&#x3002;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x5982;Window&#x548C;Document&#x7B49;&#x7B49;&#x3002;</li>
 </ul>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;"><strong>&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;</strong></h3>
+<p>&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;&#x5BF9;&#x8C61;&#x3002;JS&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;JS&#x5E94;&#x7528;&#x53CA;&#x529F;&#x80FD;&#x5F97;&#x5230;&#x6269;&#x5145;</p>
 
                                 
                                 </section>
@@ -587,7 +586,7 @@
 
             
                 
-                <a href="进程控制块.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 进程控制块">
+                <a href="node.js和javascript中的全局对象.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: node.js和javascript中的全局变量">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -599,7 +598,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"转储dump","level":"1.2.1.3","depth":3,"next":{"title":"硬件","level":"1.2.2","depth":2,"ref":"","articles":[]},"previous":{"title":"进程控制块","level":"1.2.1.2","depth":3,"path":"notes/计算机科学/基础知识/进程控制块.md","ref":"./notes/计算机科学/基础知识/进程控制块.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/计算机科学/基础知识/转储.md","mtime":"2023-04-18T01:16:48.727Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-19T02:25:47.414Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"js内部对象和宿主对象","level":"1.5.1.2","depth":3,"next":{"title":"css","level":"1.6","depth":1,"ref":"","articles":[{"title":"css基本概念","level":"1.6.1","depth":2,"ref":"","articles":[{"title":"什么是BFC","level":"1.6.1.1","depth":3,"path":"notes/css/css基本概念/什么是BFC.md","ref":"./notes/css/css基本概念/什么是BFC.md","articles":[]}]}]},"previous":{"title":"node.js和javascript中的全局变量","level":"1.5.1.1","depth":3,"path":"notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md","ref":"./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/JavaScript/基本概念及理念/js内部对象和宿主对象.md","mtime":"2023-04-19T02:25:44.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-19T02:25:47.414Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
