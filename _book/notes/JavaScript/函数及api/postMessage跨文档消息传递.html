@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>js内部对象和宿主对象 · GitBook</title>
+        <title>postMessage跨文档消息传递 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,6 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    
-    <link rel="prev" href="node.js和javascript中的全局对象.html" />
     
 
     </head>
@@ -478,9 +476,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1.1" data-path="node.js和javascript中的全局对象.html">
+        <li class="chapter " data-level="1.6.1.1" data-path="../基本概念及理念/node.js和javascript中的全局对象.html">
             
-                <a href="node.js和javascript中的全局对象.html">
+                <a href="../基本概念及理念/node.js和javascript中的全局对象.html">
             
                     
                     node.js和javascript中的全局变量
@@ -491,9 +489,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.1.2" data-path="js内部对象和宿主对象.html">
+        <li class="chapter " data-level="1.6.1.2" data-path="../基本概念及理念/js内部对象和宿主对象.html">
             
-                <a href="js内部对象和宿主对象.html">
+                <a href="../基本概念及理念/js内部对象和宿主对象.html">
             
                     
                     js内部对象和宿主对象
@@ -523,9 +521,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.2.1" data-path="../函数及api/postMessage跨文档消息传递.html">
+        <li class="chapter active" data-level="1.6.2.1" data-path="postMessage跨文档消息传递.html">
             
-                <a href="../函数及api/postMessage跨文档消息传递.html">
+                <a href="postMessage跨文档消息传递.html">
             
                     
                     postMessage跨文档消息传递
@@ -627,7 +625,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >js内部对象和宿主对象</a>
+        <a href="../../.." >postMessage跨文档消息传递</a>
     </h1>
 </div>
 
@@ -642,20 +640,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="js&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x548C;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;">js&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x548C;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;</h1>
-<p>JS&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5BF9;&#x8C61;&#x5206;&#x4E3A;&#x201C;&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x201D;&#x3001;&#x201C;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x201D;&#x548C;&#x201C;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x201D;&#x4E09;&#x79CD;&#x3002;</p>
-<h3 id="&#x5185;&#x90E8;&#x5BF9;&#x8C61;"><strong>&#x5185;&#x90E8;&#x5BF9;&#x8C61;</strong></h3>
-<p>js&#x4E2D;&#x7684;&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x5305;&#x62EC;Array&#x3001;Boolean&#x3001;Date&#x3001;Function&#x3001;Global&#x3001;Math&#x3001;Number&#x3001;Object&#x3001;RegExp&#x3001;String
-&#x4EE5;&#x53CA;&#x5404;&#x79CD;&#x9519;&#x8BEF;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x62EC;Error&#x3001;EvalError&#x3001;RangeError&#x3001;ReferenceError&#x3001;SyntaxError&#x3001;TypeError&#x3002;
-&#x5176;&#x4E2D;Global&#x548C;Math&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x53C8;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x201D;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x5728;&#x811A;&#x672C;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;&#x4E0D;&#x5FC5;&#x5B9E;&#x4F8B;&#x5316;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
-<h3 id="&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;"><strong>&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;</strong></h3>
-<ul>
-<li>&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x6267;&#x884C;JS&#x811A;&#x672C;&#x7684;&#x73AF;&#x5883;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5BF9;&#x4E8E;&#x5D4C;&#x5165;&#x5230;&#x7F51;&#x9875;&#x4E2D;&#x7684;JS&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x53C8;&#x79F0;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;IE&#x3001;Firefox&#x7B49;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x5BBF;&#x4E3B;&#x5BF9;&#x8C61;&#x53EF;&#x80FD;&#x4E0D;&#x540C;&#xFF0C;&#x5373;&#x4F7F;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x76F8;&#x540C;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E5F;&#x5927;&#x76F8;&#x5F84;&#x5EAD;&#xFF01;&#x8FD9;&#x4F1A;&#x5E26;&#x6765;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x95EE;&#x9898;&#xFF0C;&#x589E;&#x52A0;&#x5F00;&#x53D1;&#x96BE;&#x5EA6;&#x3002;</li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x5982;Window&#x548C;Document&#x7B49;&#x7B49;&#x3002;</li>
-</ul>
-<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;"><strong>&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;</strong></h3>
-<p>&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;&#x5BF9;&#x8C61;&#x3002;JS&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;JS&#x5E94;&#x7528;&#x53CA;&#x529F;&#x80FD;&#x5F97;&#x5230;&#x6269;&#x5145;</p>
-
+                                <h1 id="postmessage&#x8DE8;&#x6587;&#x6863;&#x6D88;&#x606F;&#x4F20;&#x9012;">postMessage&#x8DE8;&#x6587;&#x6863;&#x6D88;&#x606F;&#x4F20;&#x9012;</h1>
+<p><code>window.postMessage()</code> &#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x6765;&#x81EA;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x7684;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x6587;&#x672C;&#x6D88;&#x606F;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x91CC;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x7BA1;&#x662F;&#x5426;&#x8DE8;&#x57DF;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x79CD;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x6280;&#x672F;&#x6765;&#x5B9E;&#x73B0;&#x5B89;&#x5168;&#x7684;&#x901A;&#x4FE1;&#x3002;&#x8FD9;&#x9879;&#x6280;&#x672F;&#x79F0;&#x4E3A;&#x201C;<strong>&#x8DE8;&#x6587;&#x6863;&#x6D88;&#x606F;&#x4F20;&#x9012;</strong>&#x201D;&#xFF0C;&#x53C8;&#x79F0;&#x4E3A;&#x201C;<strong>&#x7A97;&#x53E3;&#x95F4;&#x6D88;&#x606F;&#x4F20;&#x9012;</strong>&#x201D;&#x6216;&#x8005;&#x201C;<strong>&#x8DE8;&#x57DF;&#x6D88;&#x606F;&#x4F20;&#x9012;</strong>&#x201D;&#x3002;</p>
+<h2 id="&#x7528;&#x6CD5;&#xFF1A;"><strong>&#x7528;&#x6CD5;&#xFF1A;</strong></h2>
+<h4 id="&#x53D1;&#x9001;&#x6D88;&#x606F;"><strong>&#x53D1;&#x9001;&#x6D88;&#x606F;</strong></h4>
+<pre><code>otherWindow.postMessage(message, targetOrigin, [transfer]);
+</code></pre><p><strong>otherWindow</strong>&#xFF1A;&#x5176;&#x4ED6;&#x7A97;&#x53E3;&#x7684;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x3002;&#x6BD4;&#x5982; iframe &#x7684; contentWindow &#x5C5E;&#x6027;&#x3001;&#x6267;&#x884C; window.open &#x8FD4;&#x56DE;&#x7684;&#x7A97;&#x53E3;&#x5BF9;&#x8C61;&#x3001;&#x6216;&#x8005;&#x662F;&#x547D;&#x540D;&#x8FC7;&#x6216;&#x6570;&#x503C;&#x7D22;&#x5F15;&#x7684; window.frames&#x3002;</p>
+<p><strong>message</strong> &#xFF1A;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x3002;&#x5B83;&#x5C06;&#x4F1A;&#x88AB;&#x7ED3;&#x6784;&#x5316;&#x514B;&#x9686;&#x7B97;&#x6CD5;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x9700;&#x81EA;&#x5DF1;&#x5E8F;&#x5217;&#x5316;&#xFF0C;html5&#x89C4;&#x8303;&#x4E2D;&#x63D0;&#x5230;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F;JavaScript&#x7684;&#x4EFB;&#x610F;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x6216;&#x53EF;&#x590D;&#x5236;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x800C;&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x505A;&#x5230;&#x4E86;&#x8FD9;&#x70B9;&#x513F;&#xFF0C;&#x90E8;&#x5206;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x80FD;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5728;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x4F7F;&#x7528;JSON.stringify()&#x65B9;&#x6CD5;&#x5BF9;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x5E8F;&#x5217;&#x5316;&#x3002;</p>
+<h4 id="&#x63A5;&#x6536;&#x6D88;&#x606F;"><strong>&#x63A5;&#x6536;&#x6D88;&#x606F;</strong></h4>
+<p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x6E90;&#x5339;&#x914D;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x5F53;&#x8C03;&#x7528; postMessage() &#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x7684;Window&#x5BF9;&#x8C61;&#x4E0A;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x4E2A; message &#x4E8B;&#x4EF6;&#x3002; &#x83B7;&#x53D6;postMessage&#x4F20;&#x6765;&#x7684;&#x6D88;&#x606F;&#xFF1A;&#x4E3A;&#x9875;&#x9762;&#x6DFB;&#x52A0;onmessage&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code>window.addEventListener(&apos;message&apos;,function(e) {
+   var origin = event.origin;
+   // &#x901A;&#x5E38;&#xFF0C;onmessage()&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x5E94;&#x5F53;&#x9996;&#x5148;&#x68C0;&#x6D4B;&#x5176;&#x4E2D;&#x7684;origin&#x5C5E;&#x6027;&#xFF0C;&#x5FFD;&#x7565;&#x6765;&#x81EA;&#x672A;&#x77E5;&#x6E90;&#x7684;&#x6D88;&#x606F;
+   if (origin !== &quot;http://example.org:8080&quot;) return;
+   // ...
+}, false)
+</code></pre>
                                 
                                 </section>
                             
@@ -682,10 +682,6 @@
 
             
                 
-                <a href="node.js和javascript中的全局对象.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: node.js和javascript中的全局变量">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
                 
             
         
@@ -694,7 +690,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"js内部对象和宿主对象","level":"1.6.1.2","depth":3,"next":{"title":"函数及api","level":"1.6.2","depth":2,"ref":"","articles":[{"title":"postMessage跨文档消息传递","level":"1.6.2.1","depth":3,"path":"notes/JavaScript/函数及api/postMessage跨文档消息传递.md","ref":"./notes/JavaScript/函数及api/postMessage跨文档消息传递.md","articles":[]}]},"previous":{"title":"node.js和javascript中的全局变量","level":"1.6.1.1","depth":3,"path":"notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md","ref":"./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/JavaScript/基本概念及理念/js内部对象和宿主对象.md","mtime":"2023-04-19T02:25:44.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-26T03:06:59.293Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"postMessage跨文档消息传递","level":"1.6.2.1","depth":3,"next":{"title":"css","level":"1.7","depth":1,"ref":"","articles":[{"title":"css基本概念","level":"1.7.1","depth":2,"ref":"","articles":[{"title":"什么是BFC","level":"1.7.1.1","depth":3,"path":"notes/css/css基本概念/什么是BFC.md","ref":"./notes/css/css基本概念/什么是BFC.md","articles":[]}]}]},"previous":{"title":"函数及api","level":"1.6.2","depth":2,"ref":"","articles":[{"title":"postMessage跨文档消息传递","level":"1.6.2.1","depth":3,"path":"notes/JavaScript/函数及api/postMessage跨文档消息传递.md","ref":"./notes/JavaScript/函数及api/postMessage跨文档消息传递.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/JavaScript/函数及api/postMessage跨文档消息传递.md","mtime":"2023-04-26T03:05:02.289Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-26T03:06:59.293Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
