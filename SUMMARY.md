@@ -27,6 +27,7 @@
     * 基本概念及理念
         * [node.js和javascript中的全局变量](./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
         * [js内部对象和宿主对象](./notes/JavaScript/基本概念及理念/js内部对象和宿主对象.md)
+        * [事件循环，宏任务和微任务](./notes/JavaScript/基本概念及理念/事件循环，宏任务和微任务.md)
     * 函数及api
         * [postMessage跨文档消息传递](./notes/JavaScript/函数及api/postMessage跨文档消息传递.md)
 * css
