@@ -2,7 +2,7 @@
 
 react是facebook开发维护的，没有使用typescript，但是在源码里使用了flow，官方定义它为静态类型检查器，不是一种编程语言。由于js是一种动态类型语言，因此在输入输出上很容易变得很混乱，也因此出现了typescript这种东西，但是typescript毕竟是一个语言，使用起来相对繁琐，这个时候flow的作用就体现出来了，通过很简单的安装和配置之后，只需要将@flow写入注释，就可以直接使用flow，不想使用的时候，删去注释即可。
 
-<div align="center">
+<div align="left">
     <img src=./flow和typescript.png width=30% />
 </div>
 
