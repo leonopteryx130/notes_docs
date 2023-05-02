@@ -26,6 +26,8 @@ Type ```localhost:4000``` in the browser address bar, and then, you can read my 
 
 You can also visit the online-book: [http://49.235.67.41](http://49.235.67.41)
 
+Gitbook repository: [https://github.com/leonopteryx130/notes_docs](https://github.com/leonopteryx130/notes_docs)
+
 # statement
 Some notes and pictures are excerpted from other bloggers or books, and the other part is modified according to my own understanding. If there is any infringement, please contact me
 
