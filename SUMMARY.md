@@ -45,6 +45,7 @@
         * [js内部对象和宿主对象](./notes/JavaScript/基本概念及理念/js内部对象和宿主对象.md)
         * [事件循环，宏任务和微任务](./notes/JavaScript/基本概念及理念/事件循环，宏任务和微任务.md)
         * [基本数据类型和引用数据类型](./notes/JavaScript/基本概念及理念/基本数据类型和引用数据类型.md)
+        * [深拷贝和浅拷贝](./notes/JavaScript/基本概念及理念/深拷贝和浅拷贝.md)
     * 函数及api
         * [postMessage跨文档消息传递](./notes/JavaScript/函数及api/postMessage跨文档消息传递.md)
         * [call,apply和bind](./notes/JavaScript/函数及api/call,apply和bind.md)
