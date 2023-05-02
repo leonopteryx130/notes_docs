@@ -59,5 +59,7 @@
     * css基本概念
         * [什么是BFC](./notes/css/css基本概念/什么是BFC.md)
 * 项目开发
+    * 基本知识
+        * [app整包更新和热更新](./notes/项目开发/基本知识/app整包更新和热更新.md)
     * git
     * webpack
