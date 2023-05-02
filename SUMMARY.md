@@ -46,6 +46,7 @@
         * [事件循环，宏任务和微任务](./notes/JavaScript/基本概念及理念/事件循环，宏任务和微任务.md)
     * 函数及api
         * [postMessage跨文档消息传递](./notes/JavaScript/函数及api/postMessage跨文档消息传递.md)
+        * [call,apply和bind](./notes/JavaScript/函数及api/call,apply和bind.md)
     * typescript
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
 * css
