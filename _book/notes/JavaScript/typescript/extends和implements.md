@@ -2,6 +2,10 @@
 
 在ts中，extends和es6 class继承的extends是一样的，ts里的接口interface也可以用extends关键字实现继承，继承者和被继承者可以是interface也可以是class，举几个例子：
 ```
+interface IPerson {
+    age: number;
+    name: string;
+}
 interface IPeoPle extends IPerson { // 接口继承接口
     sex: string;
 }
