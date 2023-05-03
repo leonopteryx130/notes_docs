@@ -55,6 +55,7 @@
         * [import()异步加载](./notes/JavaScript/函数及api/import异步加载.md)
     * typescript
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
+        * [extends和implements](./notes/JavaScript/typescript/extends和implements.md)
 * css
     * css基本概念
         * [什么是BFC](./notes/css/css基本概念/什么是BFC.md)
