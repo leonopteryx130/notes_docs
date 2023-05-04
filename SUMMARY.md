@@ -23,6 +23,7 @@
     * react源码解读
         * [flow和typescript比较](./notes/React/react源码解读/flow和typescript比较.md)
         * [React的两种启动方式](./notes/React/react源码解读/React的两种启动方式.md)
+        * [createRoot节点类型和节点挂载检查](./notes/React/react源码解读/createRoot节点类型和节点挂载检查.md)
 * 计算机网络
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
