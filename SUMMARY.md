@@ -44,6 +44,7 @@
         * [怪异模式和标准模式](./notes/HTML/浏览器/怪异模式和标准模式.md)
         * [强缓存和协商缓存](./notes/HTML/浏览器/强缓存和协商缓存.md)
         * [浏览器渲染](./notes/HTML/浏览器/浏览器渲染.md)
+        * [浏览器多线程机制](./notes/HTML/浏览器/浏览器多线程机制.md)
 * JavaScript
     * 基本概念及理念
         * [node.js和javascript中的全局变量](./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
