@@ -58,6 +58,7 @@
         * [call,apply和bind](./notes/JavaScript/函数及api/call,apply和bind.md)
         * [import()异步加载](./notes/JavaScript/函数及api/import异步加载.md)
         * [setTimeouot的知识](./notes/JavaScript/函数及api/setTimeout的知识.md)
+        * [async和await](./notes/JavaScript/函数及api/async和await.md)
     * typescript
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
         * [extends和implements](./notes/JavaScript/typescript/extends和implements.md)
