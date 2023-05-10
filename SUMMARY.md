@@ -63,6 +63,7 @@
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
         * [extends和implements](./notes/JavaScript/typescript/extends和implements.md)
         * [问号和惊叹号操作符](./notes/JavaScript/typescript/问号和惊叹号操作符.md)
+        * [联合类型和交叉类型](./notes/JavaScript/typescript/联合类型和交叉类型.md)
 * css
     * css基本概念
         * [什么是BFC](./notes/css/css基本概念/什么是BFC.md)

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>async和await · GitBook</title>
+        <title>联合类型和交叉类型 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,7 +62,7 @@
 
     
     
-    <link rel="prev" href="setTimeout的知识.html" />
+    <link rel="prev" href="问号和惊叹号操作符.html" />
     
 
     </head>
@@ -885,9 +885,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.2.1" data-path="postMessage跨文档消息传递.html">
+        <li class="chapter " data-level="1.6.2.1" data-path="../函数及api/postMessage跨文档消息传递.html">
             
-                <a href="postMessage跨文档消息传递.html">
+                <a href="../函数及api/postMessage跨文档消息传递.html">
             
                     
                     postMessage跨文档消息传递
@@ -898,9 +898,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2.2" data-path="call,apply和bind.html">
+        <li class="chapter " data-level="1.6.2.2" data-path="../函数及api/call,apply和bind.html">
             
-                <a href="call,apply和bind.html">
+                <a href="../函数及api/call,apply和bind.html">
             
                     
                     call,apply和bind
@@ -911,9 +911,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2.3" data-path="import异步加载.html">
+        <li class="chapter " data-level="1.6.2.3" data-path="../函数及api/import异步加载.html">
             
-                <a href="import异步加载.html">
+                <a href="../函数及api/import异步加载.html">
             
                     
                     import()异步加载
@@ -924,9 +924,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2.4" data-path="setTimeout的知识.html">
+        <li class="chapter " data-level="1.6.2.4" data-path="../函数及api/setTimeout的知识.html">
             
-                <a href="setTimeout的知识.html">
+                <a href="../函数及api/setTimeout的知识.html">
             
                     
                     setTimeouot的知识
@@ -937,9 +937,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.2.5" data-path="async和await.html">
+        <li class="chapter " data-level="1.6.2.5" data-path="../函数及api/async和await.html">
             
-                <a href="async和await.html">
+                <a href="../函数及api/async和await.html">
             
                     
                     async和await
@@ -969,9 +969,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.3.1" data-path="../typescript/as关键字，类型断言.html">
+        <li class="chapter " data-level="1.6.3.1" data-path="as关键字，类型断言.html">
             
-                <a href="../typescript/as关键字，类型断言.html">
+                <a href="as关键字，类型断言.html">
             
                     
                     as关键字，类型断言
@@ -982,9 +982,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3.2" data-path="../typescript/extends和implements.html">
+        <li class="chapter " data-level="1.6.3.2" data-path="extends和implements.html">
             
-                <a href="../typescript/extends和implements.html">
+                <a href="extends和implements.html">
             
                     
                     extends和implements
@@ -995,9 +995,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3.3" data-path="../typescript/问号和惊叹号操作符.html">
+        <li class="chapter " data-level="1.6.3.3" data-path="问号和惊叹号操作符.html">
             
-                <a href="../typescript/问号和惊叹号操作符.html">
+                <a href="问号和惊叹号操作符.html">
             
                     
                     问号和惊叹号操作符
@@ -1008,9 +1008,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3.4" data-path="../typescript/联合类型和交叉类型.html">
+        <li class="chapter active" data-level="1.6.3.4" data-path="联合类型和交叉类型.html">
             
-                <a href="../typescript/联合类型和交叉类型.html">
+                <a href="联合类型和交叉类型.html">
             
                     
                     联合类型和交叉类型
@@ -1189,7 +1189,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >async和await</a>
+        <a href="../../.." >联合类型和交叉类型</a>
     </h1>
 </div>
 
@@ -1204,77 +1204,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="async&#x548C;await">async&#x548C;await</h1>
-<h3 id="async&#xFF1A;"><strong>async</strong>&#xFF1A;</h3>
-<p>async&#x548C;await&#x5176;&#x5B9E;&#x662F;promise&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;async&#x80FD;&#x5B9E;&#x73B0;&#x7684;&#x6548;&#x679C;&#x90FD;&#x80FD;&#x7528;promise+then&#x94FE;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;async&#x5176;&#x5B9E;&#x662F;&#x4E3A;&#x4E86;&#x4F18;&#x5316;then&#x94FE;&#x800C;&#x5F00;&#x53D1;&#x51FA;&#x6765;&#x7684;&#x3002;async&#x8BED;&#x6CD5;&#x7CD6;&#x4F1A;&#x9ED8;&#x8BA4;&#x628A;&#x540E;&#x8FB9;&#x7684;&#x51FD;&#x6570;&#x5305;&#x88C5;&#x5728;promise&#x5BF9;&#x8C61;&#x91CC;&#x8FD4;&#x56DE;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x5305;&#x88C5;&#x5728;promise&#x7684;&#x5B9A;&#x4E49;&#x91CC;&#xFF0C;return&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x5305;&#x88C5;&#x5728;resolve&#x91CC;&#x8FB9;&#xFF0C;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code>async function f() {
-    return 1;
-}
-f().then((res) =&gt; {
-    console.log(res)
-})
-</code></pre><p>&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
-<pre><code>function f() {
-    return new Promise((resolve, reject) =&gt; {
-        resolve(1)
-    })
-}
-f().then((res) =&gt; {
-    console.log(res)
-})
-</code></pre><h3 id="await&#xFF1A;"><strong>await</strong>&#xFF1A;</h3>
-<p>await&#x5173;&#x952E;&#x5B57;&#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728;async&#x51FD;&#x6570;&#x91CC;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x662F;await&#x5173;&#x952E;&#x5B57;&#x540E;&#x8FB9;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x503C;&#xFF0C;&#x5982;&#x679C;await&#x540E;&#x8FB9;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E0D;&#x662F;promise&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;await&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;&#x8868;&#x8FBE;&#x5F0F;&#x8FD0;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;await&#x540E;&#x8FB9;&#x662F;&#x4E00;&#x4E2A;promise&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;promise&#x5BF9;&#x8C61;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x503C;&#x5C31;&#x4F1A;&#x4F5C;&#x4E3A;await&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x3002;</p>
-<p>&#x65E0;&#x8BBA;await&#x5173;&#x952E;&#x5B57;&#x540E;&#x8FB9;&#x662F;&#x4E0D;&#x662F;promise&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x540E;&#x8FB9;&#x7684;&#x4EE3;&#x7801;&#xFF08;&#x5728;async&#x51FD;&#x6570;&#x91CC;&#xFF09;&#x90FD;&#x4F1A;&#x6DFB;&#x52A0;&#x5728;&#x5FAE;&#x4EFB;&#x52A1;&#x91CC;&#x8FB9;&#x3002;</p>
-<p>async&#x548C;await&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x7B80;&#x5316;then&#x94FE;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x7B80;&#x6D01;&#xFF0C;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x4E1A;&#x52A1;&#xFF0C;&#x5206;&#x591A;&#x4E2A;&#x6B65;&#x9AA4;&#x5B8C;&#x6210;&#xFF0C;&#x6BCF;&#x4E2A;&#x6B65;&#x9AA4;&#x90FD;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x4F9D;&#x8D56;&#x4E8E;&#x4E0A;&#x4E00;&#x4E2A;&#x6B65;&#x9AA4;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x7528; setTimeout &#x6765;&#x6A21;&#x62DF;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF1A;</p>
-<pre><code>function takeLongTime(n){
-  return new Promise((resolve) =&gt; {
-    setTimeout(() =&gt; resolve(n + 200),n);
-  })
-}
-function step1(n){
-  console.log(`step1 with ${n}`);
-  return takeLongTime(n);
-}
-function step2(n){
-  console.log(`step2 with ${n}`);
-  return takeLongTime(n);
-}
-function step3(n){
-  console.log(`step3 with ${n}`);
-  return takeLongTime(n);
-}
-</code></pre><p>&#x7528;Promise&#x94FE;&#x6765;&#x5B9E;&#x73B0;</p>
-<pre><code>function doIt(){
-  let time1 = 300;
-  step1(time1)
-    .then((time2) =&gt; step2(time2))
-    .then((time3) =&gt; step3(time3))
-    .then((result) =&gt; {
-      console.log(`result is ${result}`);
-    })
-}
-
-doIt();
-//&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;:
-//step1 with 300
-//step2 with 500
-//step3 with 700
-//result is 900
-</code></pre><p>&#x4F7F;&#x7528;async&#x548C;await&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code>async function doIt() {
-  let time1 = 300;
-  let time2 = await step1(time1);//&#x5C06;Promise&#x5BF9;&#x8C61;resolve(n+200)&#x7684;&#x503C;&#x8D4B;&#x7ED9;time2
-  let time3 = await step1(time2);
-  let result = await step1(time3);
-  console.log(`result is ${result}`);
-}
-doIt();
-//&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;:
-//step1 with 300
-//step2 with 500
-//step3 with 700
-//result is 900
-</code></pre><p>async&#x548C;await&#x6210;&#x529F;&#x89E3;&#x51B3;&#x4E86;promise&#x2026;then&#x94FE;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x9EBB;&#x70E6;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x4F46;&#x662F;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5C31;&#x662F;promise&#x53EF;&#x80FD;&#x6709;reject&#xFF0C;&#x4F46;&#x662F;await&#x8FD4;&#x56DE;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE;resolve&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x662F;reject&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x597D;&#x628A;await&#x653E;&#x5728;try&#x2026;catch&#x4EE3;&#x7801;&#x5757;&#x91CC;&#x6267;&#x884C;</p>
+                                <h1 id="&#x8054;&#x5408;&#x7C7B;&#x578B;&#x548C;&#x4EA4;&#x53C9;&#x7C7B;&#x578B;">&#x8054;&#x5408;&#x7C7B;&#x578B;&#x548C;&#x4EA4;&#x53C9;&#x7C7B;&#x578B;</h1>
+<p>&#x7406;&#x89E3;&#x8FD9;&#x4E24;&#x4E2A;&#x6982;&#x5FF5;&#x53EF;&#x4EE5;&#x7C7B;&#x6BD4;&#x6570;&#x5B66;&#x91CC;&#x7684;&#x4EA4;&#x96C6;&#x548C;&#x5E76;&#x96C6;&#x3002;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x7531;&#x4E24;&#x4E2A;&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x6210;&#x5458;&#x7C7B;&#x578B;&#x6784;&#x6210;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x5E76;&#x96C6;&#xFF0C;&#x6210;&#x5458;&#x7C7B;&#x578B;&#x901A;&#x8FC7;&#x7AD6;&#x7EBF;&#x7B26;&#x53F7; &quot;|&quot; &#x5206;&#x9694;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x5B57;&#x9762;&#x91CF;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>type MyNumber = number | bigint
+</code></pre><p>&#x4EA4;&#x53C9;&#x7C7B;&#x578B;&#x7C7B;&#x4F3C;&#x4E8E;&#x4EA4;&#x96C6;&#xFF0C;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>type A = string | number
+type B = string | boolean
+type C = A &amp; B
+</code></pre><p>C&#x7684;&#x7C7B;&#x578B;&#x4E3A;string&#x7C7B;&#x578B;</p>
 
                                 
                                 </section>
@@ -1302,7 +1239,7 @@ doIt();
 
             
                 
-                <a href="setTimeout的知识.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: setTimeouot的知识">
+                <a href="问号和惊叹号操作符.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 问号和惊叹号操作符">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1314,7 +1251,7 @@ doIt();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"async和await","level":"1.6.2.5","depth":3,"next":{"title":"typescript","level":"1.6.3","depth":2,"ref":"","articles":[{"title":"as关键字，类型断言","level":"1.6.3.1","depth":3,"path":"notes/JavaScript/typescript/as关键字，类型断言.md","ref":"./notes/JavaScript/typescript/as关键字，类型断言.md","articles":[]},{"title":"extends和implements","level":"1.6.3.2","depth":3,"path":"notes/JavaScript/typescript/extends和implements.md","ref":"./notes/JavaScript/typescript/extends和implements.md","articles":[]},{"title":"问号和惊叹号操作符","level":"1.6.3.3","depth":3,"path":"notes/JavaScript/typescript/问号和惊叹号操作符.md","ref":"./notes/JavaScript/typescript/问号和惊叹号操作符.md","articles":[]},{"title":"联合类型和交叉类型","level":"1.6.3.4","depth":3,"path":"notes/JavaScript/typescript/联合类型和交叉类型.md","ref":"./notes/JavaScript/typescript/联合类型和交叉类型.md","articles":[]}]},"previous":{"title":"setTimeouot的知识","level":"1.6.2.4","depth":3,"path":"notes/JavaScript/函数及api/setTimeout的知识.md","ref":"./notes/JavaScript/函数及api/setTimeout的知识.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/JavaScript/函数及api/async和await.md","mtime":"2023-05-10T14:52:48.552Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-10T15:00:23.420Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"联合类型和交叉类型","level":"1.6.3.4","depth":3,"next":{"title":"css","level":"1.7","depth":1,"ref":"","articles":[{"title":"css基本概念","level":"1.7.1","depth":2,"ref":"","articles":[{"title":"什么是BFC","level":"1.7.1.1","depth":3,"path":"notes/css/css基本概念/什么是BFC.md","ref":"./notes/css/css基本概念/什么是BFC.md","articles":[]}]}]},"previous":{"title":"问号和惊叹号操作符","level":"1.6.3.3","depth":3,"path":"notes/JavaScript/typescript/问号和惊叹号操作符.md","ref":"./notes/JavaScript/typescript/问号和惊叹号操作符.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/JavaScript/typescript/联合类型和交叉类型.md","mtime":"2023-05-10T14:59:28.015Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-10T15:00:23.420Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
