@@ -20,6 +20,7 @@
     * api和hooks
         * [useEffect](./notes/React/api和hooks/useEffect.md)
         * [useCallback](./notes/React/api和hooks/useCallback.md)
+        * [useMemo](./notes/React/api和hooks/useMemo.md)
         * [React.memo](./notes/React/api和hooks/React.memo.md)
     * react源码解读
         * [flow和typescript比较](./notes/React/react源码解读/flow和typescript比较.md)
