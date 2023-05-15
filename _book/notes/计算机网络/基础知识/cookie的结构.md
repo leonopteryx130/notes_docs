@@ -2,7 +2,7 @@
 
 随便打开一个网站的开发者调试栏，找到network，点击cookie可以看到一个表格一样的东西：
 
- <div align="center">
+<div align="center">
     <img src=./cookie的结构.png width=80% />
 </div>
 
