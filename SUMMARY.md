@@ -74,6 +74,7 @@
     * 基本知识
         * [app整包更新和热更新](./notes/项目开发/基本知识/app整包更新和热更新.md)
         * [前端项目常用的环境](./notes/项目开发/基本知识/前端项目常用的环境.md)
+        * [什么是LCP](./notes/项目开发/基本知识/什么是LCP.md)
     * git
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
     * webpack
