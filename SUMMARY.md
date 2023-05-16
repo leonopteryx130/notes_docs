@@ -61,6 +61,7 @@
         * [setTimeouot的知识](./notes/JavaScript/函数及api/setTimeout的知识.md)
         * [async和await](./notes/JavaScript/函数及api/async和await.md)
         * [IntersectionObserver](./notes/JavaScript/函数及api/IntersectionObserver.md)
+        * [continue和break](./notes/JavaScript/函数及api/continue和break.md)
     * typescript
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
         * [extends和implements](./notes/JavaScript/typescript/extends和implements.md)
