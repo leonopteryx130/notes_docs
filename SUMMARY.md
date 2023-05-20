@@ -49,6 +49,7 @@
         * [强缓存和协商缓存](./notes/HTML/浏览器/强缓存和协商缓存.md)
         * [浏览器渲染](./notes/HTML/浏览器/浏览器渲染.md)
         * [浏览器多线程机制](./notes/HTML/浏览器/浏览器多线程机制.md)
+        * [浏览器渲染过程的事件触发](./notes/HTML/浏览器/浏览器渲染过程的事件触发.md)
 * JavaScript
     * 基本概念及理念
         * [node.js和javascript中的全局变量](./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
@@ -65,6 +66,7 @@
         * [async和await](./notes/JavaScript/函数及api/async和await.md)
         * [IntersectionObserver](./notes/JavaScript/函数及api/IntersectionObserver.md)
         * [continue和break](./notes/JavaScript/函数及api/continue和break.md)
+        * [path模块](./notes/JavaScript/函数及api/path模块.md)
     * typescript
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
         * [extends和implements](./notes/JavaScript/typescript/extends和implements.md)
@@ -79,6 +81,7 @@
         * [app整包更新和热更新](./notes/项目开发/基本知识/app整包更新和热更新.md)
         * [前端项目常用的环境](./notes/项目开发/基本知识/前端项目常用的环境.md)
         * [什么是LCP](./notes/项目开发/基本知识/什么是LCP.md)
+        * [前端页面性能指标](./notes/项目开发/基本知识/前端页面性能指标.md)
     * git
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
     * webpack
