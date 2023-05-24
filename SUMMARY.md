@@ -67,6 +67,7 @@
         * [IntersectionObserver](./notes/JavaScript/函数及api/IntersectionObserver.md)
         * [continue和break](./notes/JavaScript/函数及api/continue和break.md)
         * [path模块](./notes/JavaScript/函数及api/path模块.md)
+        * [Performance](./notes/JavaScript/函数及api/Performance.md)
     * typescript
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
         * [extends和implements](./notes/JavaScript/typescript/extends和implements.md)
