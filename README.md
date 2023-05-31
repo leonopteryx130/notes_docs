@@ -24,7 +24,7 @@ gitbook serve --port 4000
 ```
 Type ```localhost:4000``` in the browser address bar, and then, you can read my documents
 
-You can also visit the online-book: [http://49.235.67.41](http://49.235.67.41)
+You can also visit the online-book: [http://49.235.67.41:7000](http://49.235.67.41:7000)
 
 Gitbook repository: [https://github.com/leonopteryx130/notes_docs](https://github.com/leonopteryx130/notes_docs)
 
