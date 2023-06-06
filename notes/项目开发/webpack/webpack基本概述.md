@@ -1,0 +1,43 @@
+# webpack基础概述
+
+### **安装**：
+
+如果希望在命令行或者package.json中使用webpack，那么必须安装webpack-cli工具包，webpack-cli是webpack的一个命令行工具。
+```
+npm i webpack webpack-cli -D
+```
+
+### **配置文件**:
+
+webpack以及webpack相关命令（比如webpack-dev-server）运行的时候，会自动在根目录下读取webpack.config.js文件作为配置文件，配置文件的结构为：
+
+```
+module.exports = {
+    
+}
+```
+
+### **入口文件和出口文件**:
+
+webpack打包的默认入口文件是./src/index.js，出口文件的路径是./dist/main.js在项目根目录下新建src文件，并创建index.js文件，写入下边代码：
+
+```
+const a = 333
+console.log(333)
+console.log(a)
+```
+
+项目根目录运行npx webpack，会看到根目录生成一个dist文件夹，包含一个main.js文件。
+
+<div align="left">
+    <img src=./webpack基本概述.png width=50% />
+</div>
+
+可以看到webpack把变量进行赋值，然后消去了多余的换行，这里压缩是因为webpack默认是生产模式。
+
+webpack打包的入口文件和出口文件的路径可以进行一些配置，webpack.config.js配置文件中的entry和output属性对应就是入口文件和出口文件的配置...
+
+### **开发模式和生产模式**：
+
+- 开发模式：仅编译JS中的ES Module语法
+- 生产模式：不仅能编译JS中的ES Module语法，还能压缩JS代码。压缩代码可以让代码体积更小，运行速度更快。
