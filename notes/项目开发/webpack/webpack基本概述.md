@@ -40,7 +40,7 @@ console.log(a)
 项目根目录运行npx webpack，会看到根目录生成一个dist文件夹，包含一个main.js文件。
 
 <div align="left">
-    <img src=./webpack基本概述.png width=50% />
+    <img src=./webpack基本概述1.png width=50% />
 </div>
 
 可以看到webpack把变量进行赋值，然后消去了多余的换行，这里压缩是因为webpack默认是生产模式。
@@ -51,3 +51,26 @@ webpack打包的入口文件和出口文件的路径可以进行一些配置，w
 
 - 开发模式：仅编译JS中的ES Module语法
 - 生产模式：不仅能编译JS中的ES Module语法，还能压缩JS代码。压缩代码可以让代码体积更小，运行速度更快。
+
+可以通过--mode参数来配置开发模式或者生产模式，命令行：
+
+```
+"scripts": {
+  "build": "webpack --mode production",
+  "dev": "webpack --mode development"
+}
+```
+这个参数同样可以写入webpack.config.js文件里的mode属性，比如：
+
+```
+module.exports = {
+    entry: "./app.js",
+    mode: "development"
+}
+```
+
+如果希望参数配置写入配置文件，并且可以通过命令行区分开发模式和生产模式，那么可以通过使用 不同的配置文件，在命令中修改配置文件路径的方法（参考本文档中配置文件一节）。常用的目录结构为:
+
+<div align="left">
+    <img src=./webpack基本概述2.png width=30% />
+</div>
