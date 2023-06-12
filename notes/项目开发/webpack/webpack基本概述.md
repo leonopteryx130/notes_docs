@@ -17,6 +17,16 @@ module.exports = {
 }
 ```
 
+webpack命令也可以指定配置文件，通过--config或者-c参数指定配置文件，举例：
+
+```
+"scripts": {
+  "build": "webpack --config ./build/webpack.dev.js",
+  "dev": "webpack --config ./build/webpack.prod.js",
+}
+```
+一般来说，打包和开发环境的webpack配置差异比较大需要特性化定制的时候需要这么写
+
 ### **入口文件和出口文件**:
 
 webpack打包的默认入口文件是./src/index.js，出口文件的路径是./dist/main.js在项目根目录下新建src文件，并创建index.js文件，写入下边代码：
