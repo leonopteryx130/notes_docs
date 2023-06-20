@@ -32,6 +32,8 @@
 * Vue
     * 基本概念
         * [数据更新](./notes/vue/基本概念/数据更新.md)
+    * api
+        * [computed](./notes/vue/api/computed.md)
 * 计算机网络
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
