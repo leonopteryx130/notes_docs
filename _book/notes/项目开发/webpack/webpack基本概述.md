@@ -74,3 +74,12 @@ module.exports = {
 <div align="left">
     <img src=./webpack基本概述2.png width=30% />
 </div>
+
+### **loader和plugin**：
+
+Webpack 就像一条生产线，要经过一系列处理流程后才能将源文件转换成输出结果（loader）。这条生产线上的每个处理流程的职责都是单一的，多个流程之间有存在依赖关系，只有完成当前处理后才能交给下一个流程去处理。而插件（plugin）就像是一个插入到生产线中的一个功能，在特定的时机对生产线上的资源做处理。
+
+- **Loader**：用于对模块源码的转换，loader描述了webpack如何处理非javascript模块，并且在build中引入这些依赖。loader可以将文件从不同的语言（如TypeScript）转换为JavaScript。
+
+- **Plugin**：目的在于解决loader无法实现的其他事，从打包优化和压缩，到重新定义环境变量，功能强大到可以用来处理各种各样的任务。
+简而言之，loader可以理解成webpack的横向广度，有了loader，webpack才可以打包处理各种的扩展语言。而plugin可以理解为webpack的纵向深度，在生命周期内注入不同的插件来扩展更多的能力。
