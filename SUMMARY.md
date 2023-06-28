@@ -30,6 +30,7 @@
         * [React的两种启动方式](./notes/React/react源码解读/React的两种启动方式.md)
         * [createRoot节点类型和节点挂载检查](./notes/React/react源码解读/createRoot节点类型和节点挂载检查.md)
         * [为什么有两个createRoot方法？](./notes/React/react源码解读/为什么有两个createRoot方法？.md)
+        * [react挂载元素根组件标记](./notes/React/react源码解读/react挂载元素根组件标记.md)
 * Vue
     * 基本概念
         * [数据更新](./notes/vue/基本概念/数据更新.md)
