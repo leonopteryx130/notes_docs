@@ -38,6 +38,8 @@
     * api
         * [computed](./notes/vue/api/computed.md)
         * [watch](./notes/vue/api/watch.md)
+    * vue源码解读
+        * [utils](./notes/vue/vue源码解读/utils.md)
 * 计算机网络
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
