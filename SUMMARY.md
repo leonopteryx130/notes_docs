@@ -101,5 +101,6 @@
         * [CRA是如何运行webpack的](./notes/项目开发/webpack/CRA是如何运行webpack的.md)
         * [webpack-dev-server](./notes/项目开发/webpack/webpack-dev-server.md)
         * [webpack基本概述](./notes/项目开发/webpack/webpack基本概述.md)
+        * [webpack-chain](./notes/项目开发/webpack/webpack-chain.md)
     * package.json
         * [基本参数](./notes/项目开发/package.json/基本参数.md)

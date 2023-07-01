@@ -1,4 +1,4 @@
-- ##### **def**
+- #### **def**
 
 **文件路径**：/src/core/util/lang.ts
 
