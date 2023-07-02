@@ -75,6 +75,8 @@ module.exports = {
     <img src=./webpack基本概述2.png width=30% />
 </div>
 
+**tips**：webpack会自动根据mode参数的值设定process.env.NODE_ENV，也就是说这个环境变量不用单独赋值，可以直接在js代码中使用，它的值和mode参数的值一样。
+
 ### **loader和plugin**：
 
 Webpack 就像一条生产线，要经过一系列处理流程后才能将源文件转换成输出结果（loader）。这条生产线上的每个处理流程的职责都是单一的，多个流程之间有存在依赖关系，只有完成当前处理后才能交给下一个流程去处理。而插件（plugin）就像是一个插入到生产线中的一个功能，在特定的时机对生产线上的资源做处理。

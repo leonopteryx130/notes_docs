@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>import()异步加载 · GitBook</title>
+        <title>Function · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="setTimeout的知识.html" />
     
-    
-    <link rel="prev" href="call,apply和bind.html" />
+    <link rel="prev" href="Performance.html" />
     
 
     </head>
@@ -1151,7 +1149,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2.3" data-path="import异步加载.html">
+        <li class="chapter " data-level="1.7.2.3" data-path="import异步加载.html">
             
                 <a href="import异步加载.html">
             
@@ -1242,7 +1240,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.10" data-path="Function.html">
+        <li class="chapter active" data-level="1.7.2.10" data-path="Function.html">
             
                 <a href="Function.html">
             
@@ -1668,7 +1666,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >import()异步加载</a>
+        <a href="../../.." >Function</a>
     </h1>
 </div>
 
@@ -1683,40 +1681,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="import&#x5F02;&#x6B65;&#x52A0;&#x8F7D;">import()&#x5F02;&#x6B65;&#x52A0;&#x8F7D;</h1>
-<p>ES6&#x4E2D;import&#x5173;&#x952E;&#x5B57;&#x603B;&#x662F;&#x4F1A;&#x88AB;javascript&#x9759;&#x6001;&#x89E3;&#x6790;&#xFF0C;&#x4F18;&#x5148;&#x4E8E;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x6267;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x6309;&#x9700;&#x52A0;&#x8F7D;&#x548C;&#x61D2;&#x52A0;&#x8F7D;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#xFF0C;&#x5373;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x8FD0;&#x884C;&#x65F6;&#x52A0;&#x8F7D;&#xFF09;&#xFF0C;&#x5728;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x8FD9;&#x79CD;&#x64CD;&#x4F5C;&#x4F1A;&#x589E;&#x5927;&#x6027;&#x80FD;&#x6D88;&#x8017;&#x3002;</p>
-<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#xFF0C;ES6&#x5F15;&#x5165;&#x4E86;import()&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7C7B;&#x4F3C;&#x4E8E;node&#x4E2D;require&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4E0E;&#x4E4B;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;require&#x662F;&#x540C;&#x6B65;&#x52A0;&#x8F7D;&#xFF0C;import&#x662F;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x3002;</p>
-<p>import()&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#xFF0C; &#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x8C03;&#x7528;then&#x65B9;&#x6CD5;&#xFF0C;then&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x51FD;&#x6570;&#x53C8;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x8C61;&#x6709;&#x4E2A;default&#x5C5E;&#x6027;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x5C31;&#x662F;import&#x53C2;&#x6570;&#x5BF9;&#x5E94;js&#x6587;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#x503C;&#xFF08;&#x5373;export default&#xFF09;&#xFF0C;&#x5982;&#x679C;js&#x6587;&#x4EF6;&#x6709;&#x591A;&#x4E2A;&#x5BFC;&#x51FA;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x8C61;&#x4E5F;&#x5C31;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;
-&#x9996;&#x5148;&#x51C6;&#x5907;&#x4E00;&#x4E2A;js&#x6587;&#x4EF6;&#xFF0C;&#x66B4;&#x9732;&#x4E24;&#x4E2A;&#x53EF;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code>//method.js
-export default function add(a, b) {
-    return a+b
-}
-export function minus(a, b) {
-    return a-b
-}
-</code></pre><p>&#x5728;main.js&#x91CC;&#x8FB9;&#x4F7F;&#x7528;import()&#x5BFC;&#x5165;method.js&#x6587;&#x4EF6;&#xFF1A;</p>
-<pre><code>//main.js 
-import(&quot;./src/method.js&quot;).then((a) =&gt; {
+                                <h1 id="function">Function</h1>
+<ul>
+<li>Function.displayname:
+&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6216;&#x8005;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x663E;&#x793A;&#x540D;&#x79F0;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x524D;&#x8BBE;&#x7F6E;&#x663E;&#x793A;&#x540D;&#x79F0;&#xFF0C;&#x90A3;&#x4E48;&#x663E;&#x793A;&#x540D;&#x79F0;&#x5219;&#x6C38;&#x8FDC;&#x4E3A;undefined&#xFF0C;demo:</li>
+</ul>
+<pre><code>const myFunc = function(a) {
     console.log(a)
-})
-</code></pre><p>&#x8F93;&#x51FA;&#xFF1A;</p>
-<p><div align="left">
-    <img src="import&#x5F02;&#x6B65;&#x52A0;&#x8F7D;.png" width="30%">
-</div>
-a&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x901A;&#x8FC7;a&#x7684;&#x5C5E;&#x6027;&#x6765;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF1A;</p>
-<pre><code>import(&quot;./src/method.js&quot;).then((a) =&gt; {
-    console.log(a.minus(9, 8))
-    console.log(a.default(9, 8))
-})
-
-//&#x5206;&#x522B;&#x8F93;&#x51FA;1 &#x548C; 17
-</code></pre><p>&#x7531;&#x4E8E;default&#x662F;js&#x91CC;&#x8FB9;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5230;export default&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x83B7;&#x53D6;&#x5230;&#x3002;</p>
-<pre><code>import(&quot;./src/method.js&quot;).then(({minus}) =&gt; {
-    console.log(minus(9, 8))
-})
-
-//&#x8F93;&#x51FA;1
+}
+console.log(myFunc.displayName) //undifined
+</code></pre><pre><code>const myFunc = function(a) {
+    console.log(a)
+}
+myFunc.displayName = &apos;yourFunc&apos;
+console.log(myFunc.displayName) //yourFunc
+</code></pre><pre><code>const myFunc = function(a) {
+    console.log(a)
+}
+myFunc.displayName = &apos;yourFunc&apos;
+console.log(myFunc) //[Function: myFunc] { displayName: &apos;yourFunc&apos; }
+</code></pre><ul>
+<li>Function.name:
+&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x88AB;displayName&#x5F71;&#x54CD;&#xFF0C;demo:</li>
+</ul>
+<pre><code>const myFunc = function(a) {
+    console.log(a)
+}
+myFunc.displayName = &apos;yourFunc&apos;
+console.log(myFunc.name) //myFunc
 </code></pre>
                                 
                                 </section>
@@ -1744,14 +1736,10 @@ a&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5
 
             
                 
-                <a href="call,apply和bind.html" class="navigation navigation-prev " aria-label="Previous page: call,apply和bind">
+                <a href="Performance.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Performance">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="setTimeout的知识.html" class="navigation navigation-next " aria-label="Next page: setTimeouot的知识">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1760,7 +1748,7 @@ a&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"import()异步加载","level":"1.7.2.3","depth":3,"next":{"title":"setTimeouot的知识","level":"1.7.2.4","depth":3,"path":"notes/JavaScript/函数及api/setTimeout的知识.md","ref":"./notes/JavaScript/函数及api/setTimeout的知识.md","articles":[]},"previous":{"title":"call,apply和bind","level":"1.7.2.2","depth":3,"path":"notes/JavaScript/函数及api/call,apply和bind.md","ref":"./notes/JavaScript/函数及api/call,apply和bind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/JavaScript/函数及api/import异步加载.md","mtime":"2023-05-02T16:47:40.861Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-02T17:05:25.617Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.7.2.10","depth":3,"next":{"title":"typescript","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"as关键字，类型断言","level":"1.7.3.1","depth":3,"path":"notes/JavaScript/typescript/as关键字，类型断言.md","ref":"./notes/JavaScript/typescript/as关键字，类型断言.md","articles":[]},{"title":"extends和implements","level":"1.7.3.2","depth":3,"path":"notes/JavaScript/typescript/extends和implements.md","ref":"./notes/JavaScript/typescript/extends和implements.md","articles":[]},{"title":"问号和惊叹号操作符","level":"1.7.3.3","depth":3,"path":"notes/JavaScript/typescript/问号和惊叹号操作符.md","ref":"./notes/JavaScript/typescript/问号和惊叹号操作符.md","articles":[]},{"title":"联合类型和交叉类型","level":"1.7.3.4","depth":3,"path":"notes/JavaScript/typescript/联合类型和交叉类型.md","ref":"./notes/JavaScript/typescript/联合类型和交叉类型.md","articles":[]},{"title":"索引签名","level":"1.7.3.5","depth":3,"path":"notes/JavaScript/typescript/索引签名.md","ref":"./notes/JavaScript/typescript/索引签名.md","articles":[]}]},"previous":{"title":"Performance","level":"1.7.2.9","depth":3,"path":"notes/JavaScript/函数及api/Performance.md","ref":"./notes/JavaScript/函数及api/Performance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/JavaScript/函数及api/Function.md","mtime":"2023-07-02T17:04:24.499Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-02T17:05:25.617Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
