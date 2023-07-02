@@ -1,6 +1,7 @@
 # Function
 
-- Function.displayname:
+- **Function.displayname**:
+
 这个方法用于获取或者设置一个方法的显示名称，但是如果没有提前设置显示名称，那么显示名称则永远为undefined，demo:
 
 ```
@@ -26,7 +27,8 @@ myFunc.displayName = 'yourFunc'
 console.log(myFunc) //[Function: myFunc] { displayName: 'yourFunc' }
 ```
 
-- Function.name:
+- **Function.name**:
+
 这个方法用于获取函数名，这个方法不会被displayName影响，demo:
 
 ```
