@@ -39,6 +39,7 @@
     * api
         * [computed](./notes/vue/api/computed.md)
         * [watch](./notes/vue/api/watch.md)
+        * [template标签](./notes/vue/api/template标签.md)
     * vue源码解读
         * [utils](./notes/vue/vue源码解读/utils.md)
 * 计算机网络
