@@ -98,6 +98,7 @@
         * [什么是LCP](./notes/项目开发/基本知识/什么是LCP.md)
         * [前端页面性能指标](./notes/项目开发/基本知识/前端页面性能指标.md)
         * [设计模式——访问者模式](./notes/项目开发/基本知识/设计模式——访问者模式.md)
+        * [沙箱](./notes/项目开发/基本知识/沙箱.md)
     * git
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
     * webpack

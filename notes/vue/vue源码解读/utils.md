@@ -4,7 +4,8 @@
 
 **源代码**：
 
-```export function def(obj: Object, key: string, val: any, enumerable?: boolean) {
+```
+export function def(obj: Object, key: string, val: any, enumerable?: boolean) {
     Object.defineProperty(obj, key, {
     value: val,
     enumerable: !!enumerable,
@@ -13,6 +14,7 @@
     })
 }
 ```
+
 **源码解读**：这个代码相当于对Object.defineProperty进行了一个封装
 
 **参数**：三个必传参数obj，key和val。一个可选参数enumerable。
