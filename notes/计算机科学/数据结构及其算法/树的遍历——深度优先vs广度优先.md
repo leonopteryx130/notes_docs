@@ -12,7 +12,7 @@
 </div>
 
 **DFS：深度优先遍历** ，首先访问根节点，然后对根节点的 children 挨个（递归）进行深度优先遍历。如下图（序号表示遍历顺序）：
- <div align="center">
+<div align="center">
     <img src=./树的遍历dfs_bfs2.png width=20% />
 </div>
 
@@ -23,6 +23,6 @@
 3. 重复（循环）第二、三步，直到队列为空。
 
 遍历过程如下图：
- <div align="center">
+<div align="center">
     <img src=./树的遍历dfs_bfs3.png width=20% />
 </div>
