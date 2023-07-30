@@ -111,3 +111,5 @@
         * [webpack-chain](./notes/项目开发/webpack/webpack-chain.md)
     * package.json
         * [基本参数](./notes/项目开发/package.json/基本参数.md)
+    * babel
+        * [基本参数](./notes/项目开发/babel/入门基本知识.md)
