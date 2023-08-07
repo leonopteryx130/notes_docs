@@ -57,3 +57,29 @@ const config = {
     ],
 }
 ```
+
+### webpack-merge
+作用背景：
+
+项目开发通常分为生产环境和开发环境，两个环境会包含一些共用的基础配置，但是两个环境的侧重点往往会不一样。在开发环境中，我们需要：强大的 source map 和一个有着 live reloading(实时重新加载) 或 hot module replacement(热模块替换) 能力的 localhost server。而生产环境目标则转移至其他方面，关注点在于压缩 bundle、更轻量的 source map、资源优化等，通过这些优化方式改善加载时间。
+
+实际开发中通常会把webpack配置文件分成开发环境和生产环境，但是开发中如果需要修改一些共有配置，可能就要修改两处代码，对项目开发而言并不是很友好，因此可以将共有配置单独写一个文件，搭配webpack-merge实现共有配置和特性化配置的融合。
+
+配置文件目录通常为如下结构：
+
+<div align="left">
+    <img src=./webpack常用插件.png width=30% />
+</div>
+在dev或者prod配置文件中可以用webpack-merge合并common里边的配置，举个例子：
+
+```
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
+module.exports = merge(common, {
+    mode: 'development',
+    devtool: 'inline-source-map',
+    devServer: {
+        static: './dist',
+    },
+});
+```
