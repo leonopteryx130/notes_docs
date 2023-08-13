@@ -58,6 +58,7 @@
 * HTML
     * HTML基础知识
         * [预加载prefetch和preload](./notes/HTML/HTML基础知识/预加载prefetch和preload.md)
+        * [模板引擎](./notes/HTML/HTML基础知识/模板引擎.md)
     * 浏览器
         * [判断对象是否存活的方法](./notes/HTML/浏览器/判断对象是否存活的方法.md)
         * [怪异模式和标准模式](./notes/HTML/浏览器/怪异模式和标准模式.md)
@@ -65,6 +66,8 @@
         * [浏览器渲染](./notes/HTML/浏览器/浏览器渲染.md)
         * [浏览器多线程机制](./notes/HTML/浏览器/浏览器多线程机制.md)
         * [浏览器渲染过程的事件触发](./notes/HTML/浏览器/浏览器渲染过程的事件触发.md)
+    * api
+        * [documentFragment对象](./notes/HTML/api/documentFragment对象.md)
 * JavaScript
     * 基本概念及理念
         * [node.js和javascript中的全局变量](./notes/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
