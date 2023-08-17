@@ -99,11 +99,12 @@
         * [问号和惊叹号操作符](./notes/JavaScript/typescript/问号和惊叹号操作符.md)
         * [联合类型和交叉类型](./notes/JavaScript/typescript/联合类型和交叉类型.md)
         * [索引签名](./notes/JavaScript/typescript/索引签名.md)
+        * [类型保护](./notes/JavaScript/typescript/类型保护.md)
 * css
     * css基本概念
         * [什么是BFC](./notes/css/css基本概念/什么是BFC.md)
-    * css基本概念
-        * [api](./notes/css/api/linear-gradient.md)
+    * api
+        * [linear-gradient](./notes/css/api/linear-gradient.md)
 * 项目开发
     * 基本知识
         * [app整包更新和热更新](./notes/项目开发/基本知识/app整包更新和热更新.md)
