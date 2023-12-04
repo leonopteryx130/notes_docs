@@ -2171,6 +2171,23 @@
     }
     return final;
 }
+</code></pre><h3 id="js&#x9898;&#x76EE;">js&#x9898;&#x76EE;</h3>
+<p>&#x5728;Array&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x6302;&#x8F7D;&#x4E00;&#x4E2A;<code>bubbleSort</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#x3002;</p>
+<pre><code>Array.prototype.bubbleSort = function () {
+  let self = this;
+  let len = self.length;
+  let temp;
+  for (let i = 0; i &lt; len - 1; i++) {
+    for (let j = 0; j &lt; len - 1 - i; j++) {
+      if (self[j] &gt; self[j + 1]) {
+        temp = self[j];
+        self[j] = self[j + 1];
+        self[j + 1] = temp;
+      }
+    }
+  }
+  return self;
+}
 </code></pre>
                                 
                                 </section>
@@ -2210,7 +2227,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"冒泡排序","level":"1.2.3.5","depth":3,"next":{"title":"计算机图形学","level":"1.2.4","depth":2,"ref":"","articles":[{"title":"顶点，图元，片元，像素","level":"1.2.4.1","depth":3,"path":"notes/计算机科学/计算机图形学/顶点，图元，片元，像素.md","ref":"./notes/计算机科学/计算机图形学/顶点，图元，片元，像素.md","articles":[]},{"title":"图像错切","level":"1.2.4.2","depth":3,"path":"notes/计算机科学/计算机图形学/图像错切.md","ref":"./notes/计算机科学/计算机图形学/图像错切.md","articles":[]},{"title":"色彩空间","level":"1.2.4.3","depth":3,"path":"notes/计算机科学/计算机图形学/色彩空间.md","ref":"./notes/计算机科学/计算机图形学/色彩空间.md","articles":[]}]},"previous":{"title":"时间复杂度算法","level":"1.2.3.4","depth":3,"path":"notes/计算机科学/数据结构及其算法/时间复杂度算法.md","ref":"./notes/计算机科学/数据结构及其算法/时间复杂度算法.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/计算机科学/数据结构及其算法/冒泡排序.md","mtime":"2023-12-04T15:37:06.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-04T15:38:30.310Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"冒泡排序","level":"1.2.3.5","depth":3,"next":{"title":"计算机图形学","level":"1.2.4","depth":2,"ref":"","articles":[{"title":"顶点，图元，片元，像素","level":"1.2.4.1","depth":3,"path":"notes/计算机科学/计算机图形学/顶点，图元，片元，像素.md","ref":"./notes/计算机科学/计算机图形学/顶点，图元，片元，像素.md","articles":[]},{"title":"图像错切","level":"1.2.4.2","depth":3,"path":"notes/计算机科学/计算机图形学/图像错切.md","ref":"./notes/计算机科学/计算机图形学/图像错切.md","articles":[]},{"title":"色彩空间","level":"1.2.4.3","depth":3,"path":"notes/计算机科学/计算机图形学/色彩空间.md","ref":"./notes/计算机科学/计算机图形学/色彩空间.md","articles":[]}]},"previous":{"title":"时间复杂度算法","level":"1.2.3.4","depth":3,"path":"notes/计算机科学/数据结构及其算法/时间复杂度算法.md","ref":"./notes/计算机科学/数据结构及其算法/时间复杂度算法.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/计算机科学/数据结构及其算法/冒泡排序.md","mtime":"2023-12-04T16:25:18.167Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-04T16:25:32.287Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
