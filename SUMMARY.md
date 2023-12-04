@@ -127,6 +127,8 @@
         * [基本参数](./notes/项目开发/package.json/基本参数.md)
     * babel
         * [入门基本知识](./notes/项目开发/babel/入门基本知识.md)
+    * 解决方案
+        * [jenkins+github实现自动部署](./notes/项目开发/解决方案/jenkins+github实现自动部署.md)
     * 其他
         * [电话外呼业务](./notes/项目开发/其他/电话外呼业务.md)
 * 数学
