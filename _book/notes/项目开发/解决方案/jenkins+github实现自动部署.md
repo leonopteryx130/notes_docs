@@ -99,7 +99,7 @@ Name自定义，API URL固定填这个就行，Credentials就是github上生成�
 首先点击New item新建一个项目，并进入项目中点击configure
 
 <div align="left">
-    <img src=./jenkins自动部署14.png width=40% />
+    <img src=./jenkins自动部署14.png width=30% />
 </div>
 
 配置Github project url为代码仓库url地址
