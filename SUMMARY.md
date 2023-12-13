@@ -124,6 +124,8 @@
         * [webpack基本概述](./notes/项目开发/webpack/webpack基本概述.md)
         * [webpack常用插件](./notes/项目开发/webpack/webpack常用插件.md)
         * [webpack-chain](./notes/项目开发/webpack/webpack-chain.md)
+        * [loader和plugin的区别](./notes/项目开发/webpack/loader和plugin的区别.md)
+        * [loaders](./notes/项目开发/webpack/loaders.md)
     * package.json
         * [基本参数](./notes/项目开发/package.json/基本参数.md)
     * babel
