@@ -51,15 +51,6 @@ export function makeMap(
     bike: true
 }
 ```
-expectsLowerCase为true时，会将这个map结构转化为小写key的map结构，即：
-```
-{
-    car: true,
-    bus: true,
-    bike: true,
-    car: true
-}
-```
 该方法返回值是一个方法，这个方法支持输入一个字符串，判断字符串是否在上边map结构的key里。
 
 该方法的第二个参数```expectsLower```是一个布尔值，如果设置为true，那么返回值方法传入的字符串会被转化为全小写再判断
