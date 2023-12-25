@@ -50,6 +50,7 @@
         * [slot](./notes/vue/api/slot.md)
     * vue源码解读
         * [utils](./notes/vue/vue源码解读/utils.md)
+        * [perf.ts——vue组件性能标记](./notes/vue/vue源码解读/perf.ts——vue组件性能标记.md)
 * 计算机网络
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
