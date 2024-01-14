@@ -28,6 +28,7 @@
     * 基础知识
         * [Fiber树](./notes/React/基础知识/Fiber树.md)
         * [react自动批处理](./notes/React/基础知识/react自动批处理.md)
+        * [高阶组件HOC](./notes/React/基础知识/高阶组件HOC.md)
     * api和hooks
         * [useEffect](./notes/React/api和hooks/useEffect.md)
         * [useCallback](./notes/React/api和hooks/useCallback.md)
