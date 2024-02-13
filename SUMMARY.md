@@ -126,6 +126,7 @@
         * [设计模式——单例模式](./notes/项目开发/基本知识/设计模式——单例模式.md)
         * [沙箱](./notes/项目开发/基本知识/沙箱.md)
         * [前端项目的环境](./notes/项目开发/基本知识/前端项目的环境.md)
+        * [react里的css module](./notes/项目开发/基本知识/react里的css module.md)
     * git
         * [git常用基本命令](./notes/项目开发/git/git常用基本命令.md)
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
