@@ -91,6 +91,7 @@
         * [对象的属性描述符](./notes/JavaScript/基本概念及理念/对象的属性描述符.md)
         * [模块化和模块化的发展](./notes/JavaScript/基本概念及理念/模块化和模块化的发展.md)
         * [function中的this指向](./notes/JavaScript/基本概念及理念/function中的this指向.md)
+        * [装饰器](./notes/JavaScript/基本概念及理念/装饰器.md)
     * 函数及api
         * [postMessage跨文档消息传递](./notes/JavaScript/函数及api/postMessage跨文档消息传递.md)
         * [call,apply和bind](./notes/JavaScript/函数及api/call,apply和bind.md)
