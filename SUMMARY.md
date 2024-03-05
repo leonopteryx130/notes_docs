@@ -20,18 +20,24 @@
         * [顶点，图元，片元，像素](./notes/计算机科学/计算机图形学/顶点，图元，片元，像素.md)
         * [图像错切](./notes/计算机科学/计算机图形学/图像错切.md)
         * [色彩空间](./notes/计算机科学/计算机图形学/色彩空间.md)
+        * [hsv色彩空间](./notes/计算机科学/计算机图形学/hsv色彩空间.md)
+        * [pixel和point及分辨率](./notes/计算机科学/计算机图形学/pixel和point及分辨率.md)
     * 编程语言
         * [声明式编程和命令式编程](./notes/计算机科学/编程语言/声明式编程和命令式编程.md)
         * [一些基本概念](./notes/计算机科学/编程语言/一些基本概念.md)
+        * [序列化和反序列化](./notes/计算机科学/编程语言/序列化和反序列化.md)
+        * [面向对象和面向过程](./notes/计算机科学/编程语言/面向对象和面向过程.md)
 * React
     * 基础知识
         * [Fiber树](./notes/React/基础知识/Fiber树.md)
         * [react自动批处理](./notes/React/基础知识/react自动批处理.md)
+        * [高阶组件HOC](./notes/React/基础知识/高阶组件HOC.md)
     * api和hooks
         * [useEffect](./notes/React/api和hooks/useEffect.md)
         * [useCallback](./notes/React/api和hooks/useCallback.md)
         * [useMemo](./notes/React/api和hooks/useMemo.md)
         * [React.memo](./notes/React/api和hooks/React.memo.md)
+        * [React组件propTypes属性](./notes/React/api和hooks/React组件propTypes属性.md)
     * react源码解读
         * [flow和typescript比较](./notes/React/react源码解读/flow和typescript比较.md)
         * [React的两种启动方式](./notes/React/react源码解读/React的两种启动方式.md)
@@ -49,6 +55,7 @@
         * [slot](./notes/vue/api/slot.md)
     * vue源码解读
         * [utils](./notes/vue/vue源码解读/utils.md)
+        * [perf.ts——vue组件性能标记](./notes/vue/vue源码解读/perf.ts——vue组件性能标记.md)
 * 计算机网络
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
@@ -83,6 +90,8 @@
         * [js的几种继承方式](./notes/JavaScript/基本概念及理念/js的几种继承方式.md)
         * [对象的属性描述符](./notes/JavaScript/基本概念及理念/对象的属性描述符.md)
         * [模块化和模块化的发展](./notes/JavaScript/基本概念及理念/模块化和模块化的发展.md)
+        * [function中的this指向](./notes/JavaScript/基本概念及理念/function中的this指向.md)
+        * [装饰器](./notes/JavaScript/基本概念及理念/装饰器.md)
     * 函数及api
         * [postMessage跨文档消息传递](./notes/JavaScript/函数及api/postMessage跨文档消息传递.md)
         * [call,apply和bind](./notes/JavaScript/函数及api/call,apply和bind.md)
@@ -94,6 +103,7 @@
         * [path模块](./notes/JavaScript/函数及api/path模块.md)
         * [Performance](./notes/JavaScript/函数及api/Performance.md)
         * [Function](./notes/JavaScript/函数及api/Function.md)
+        * [JSON.stringfy](./notes/JavaScript/函数及api/JSON.stringfy.md)
     * typescript
         * [as关键字，类型断言](./notes/JavaScript/typescript/as关键字，类型断言.md)
         * [extends和implements](./notes/JavaScript/typescript/extends和implements.md)
@@ -113,8 +123,12 @@
         * [前端页面性能指标](./notes/项目开发/基本知识/前端页面性能指标.md)
         * [设计模式——访问者模式](./notes/项目开发/基本知识/设计模式——访问者模式.md)
         * [设计模式——观察者模式](./notes/项目开发/基本知识/设计模式——观察者模式.md)
+        * [设计模式——mixin模式](./notes/项目开发/基本知识/设计模式——mixin模式.md)
+        * [设计模式——单例模式](./notes/项目开发/基本知识/设计模式——单例模式.md)
         * [沙箱](./notes/项目开发/基本知识/沙箱.md)
         * [前端项目的环境](./notes/项目开发/基本知识/前端项目的环境.md)
+        * [react里的css module](./notes/项目开发/基本知识/react里的css module.md)
+        * [AOP——面向切面编程](./notes/项目开发/基本知识/AOP——面向切面编程.md)
     * git
         * [git常用基本命令](./notes/项目开发/git/git常用基本命令.md)
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
@@ -126,15 +140,20 @@
         * [webpack基本概述](./notes/项目开发/webpack/webpack基本概述.md)
         * [webpack常用插件](./notes/项目开发/webpack/webpack常用插件.md)
         * [webpack-chain](./notes/项目开发/webpack/webpack-chain.md)
+        * [loader和plugin的区别](./notes/项目开发/webpack/loader和plugin的区别.md)
+        * [loaders](./notes/项目开发/webpack/loaders.md)
     * package.json
         * [基本参数](./notes/项目开发/package.json/基本参数.md)
     * babel
         * [入门基本知识](./notes/项目开发/babel/入门基本知识.md)
     * 解决方案
         * [jenkins+github实现自动部署](./notes/项目开发/解决方案/jenkins+github实现自动部署.md)
+        * [前端引入字体文件](./notes/项目开发/解决方案/前端引入字体文件.md)
+        * [字体文件裁剪工程化](./notes/项目开发/解决方案/字体文件裁剪工程化.md)
     * 其他
         * [电话外呼业务](./notes/项目开发/其他/电话外呼业务.md)
 * 数学
     * 理论数学
         * [一些基本概念](./notes/数学/理论数学/一些基本概念.md)
+        * [向量空间的基](./notes/数学/理论数学/向量空间的基.md)
     * 应用数学
