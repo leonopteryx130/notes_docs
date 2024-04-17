@@ -133,6 +133,8 @@
     * git
         * [git常用基本命令](./notes/项目开发/git/git常用基本命令.md)
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
+    * nginx
+        * [nginx基本用法](./notes/项目开发/nginx/nginx基本用法.md)
     * webpack
         * [CRA是如何运行webpack的](./notes/项目开发/webpack/CRA是如何运行webpack的.md)
         * [webpack-dev-server](./notes/项目开发/webpack/webpack-dev-server.md)
