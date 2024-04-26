@@ -112,6 +112,8 @@
         * [联合类型和交叉类型](./notes/JavaScript/typescript/联合类型和交叉类型.md)
         * [索引签名](./notes/JavaScript/typescript/索引签名.md)
         * [类型保护](./notes/JavaScript/typescript/类型保护.md)
+    * canvas
+        * [canvas获取渲染上下文](./notes/JavaScript/canvas/canvas获取渲染上下文.md)
 * css
     * css基本概念
         * [什么是BFC](./notes/css/css基本概念/什么是BFC.md)
