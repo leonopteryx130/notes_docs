@@ -30,6 +30,7 @@
         * [面向对象和面向过程](./notes/计算机科学/编程语言/面向对象和面向过程.md)
     * 操作系统
        * [不同的shell](./notes/计算机科学/操作系统/不同的shell.md)
+       * [macos中的四种配置文件](./notes/计算机科学/操作系统/macos中的四种配置文件.md)
 * React
     * 基础知识
         * [Fiber树](./notes/React/基础知识/Fiber树.md)
