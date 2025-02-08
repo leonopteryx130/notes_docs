@@ -120,6 +120,8 @@
         * [类型保护](./notes/JavaScript/typescript/类型保护.md)
     * canvas
         * [canvas获取渲染上下文](./notes/JavaScript/canvas/canvas获取渲染上下文.md)
+    * code demo
+        * [用defineProperty方法实现数据劫持](./notes/JavaScript/code_demo/用defineProperty方法实现数据劫持.md)
 * css
     * css基本概念
         * [什么是BFC](./notes/css/css基本概念/什么是BFC.md)
