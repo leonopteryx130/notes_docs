@@ -54,6 +54,7 @@
     * 基本概念
         * [数据更新](./notes/vue/基本概念/数据更新.md)
         * [一些基本概念](./notes/vue/基本概念/一些基本概念.md)
+        * [vue数据劫持](./notes/vue/基本概念/vue数据劫持.md)
     * api
         * [computed](./notes/vue/api/computed.md)
         * [watch](./notes/vue/api/watch.md)
