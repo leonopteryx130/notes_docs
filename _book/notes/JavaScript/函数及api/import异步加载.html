@@ -2598,36 +2598,40 @@
 <p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#xFF0C;ES6&#x5F15;&#x5165;&#x4E86;import()&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7C7B;&#x4F3C;&#x4E8E;node&#x4E2D;require&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4E0E;&#x4E4B;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;require&#x662F;&#x540C;&#x6B65;&#x52A0;&#x8F7D;&#xFF0C;import&#x662F;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x3002;</p>
 <p>import()&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#xFF0C; &#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x8C03;&#x7528;then&#x65B9;&#x6CD5;&#xFF0C;then&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x51FD;&#x6570;&#x53C8;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x8C61;&#x6709;&#x4E2A;default&#x5C5E;&#x6027;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x5C31;&#x662F;import&#x53C2;&#x6570;&#x5BF9;&#x5E94;js&#x6587;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#x503C;&#xFF08;&#x5373;export default&#xFF09;&#xFF0C;&#x5982;&#x679C;js&#x6587;&#x4EF6;&#x6709;&#x591A;&#x4E2A;&#x5BFC;&#x51FA;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x8C61;&#x4E5F;&#x5C31;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;
 &#x9996;&#x5148;&#x51C6;&#x5907;&#x4E00;&#x4E2A;js&#x6587;&#x4EF6;&#xFF0C;&#x66B4;&#x9732;&#x4E24;&#x4E2A;&#x53EF;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code>//method.js
-export default function add(a, b) {
-    return a+b
+<pre><code class="lang-javascript"><span class="hljs-comment">//method.js</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a+b
 }
-export function minus(a, b) {
-    return a-b
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">minus</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a-b
 }
-</code></pre><p>&#x5728;main.js&#x91CC;&#x8FB9;&#x4F7F;&#x7528;import()&#x5BFC;&#x5165;method.js&#x6587;&#x4EF6;&#xFF1A;</p>
-<pre><code>//main.js 
-import(&quot;./src/method.js&quot;).then((a) =&gt; {
-    console.log(a)
+</code></pre>
+<p>&#x5728;main.js&#x91CC;&#x8FB9;&#x4F7F;&#x7528;import()&#x5BFC;&#x5165;method.js&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//main.js </span>
+<span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./src/method.js&quot;</span>).then((a) =&gt; {
+    <span class="hljs-built_in">console</span>.log(a)
 })
-</code></pre><p>&#x8F93;&#x51FA;&#xFF1A;</p>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;</p>
 <p><div align="left">
     <img src="import&#x5F02;&#x6B65;&#x52A0;&#x8F7D;.png" width="30%">
 </div>
 a&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x901A;&#x8FC7;a&#x7684;&#x5C5E;&#x6027;&#x6765;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF1A;</p>
-<pre><code>import(&quot;./src/method.js&quot;).then((a) =&gt; {
-    console.log(a.minus(9, 8))
-    console.log(a.default(9, 8))
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./src/method.js&quot;</span>).then((a) =&gt; {
+    <span class="hljs-built_in">console</span>.log(a.minus(<span class="hljs-number">9</span>, <span class="hljs-number">8</span>))
+    <span class="hljs-built_in">console</span>.log(a.default(<span class="hljs-number">9</span>, <span class="hljs-number">8</span>))
 })
 
-//&#x5206;&#x522B;&#x8F93;&#x51FA;1 &#x548C; 17
-</code></pre><p>&#x7531;&#x4E8E;default&#x662F;js&#x91CC;&#x8FB9;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5230;export default&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x83B7;&#x53D6;&#x5230;&#x3002;</p>
-<pre><code>import(&quot;./src/method.js&quot;).then(({minus}) =&gt; {
-    console.log(minus(9, 8))
-})
-
-//&#x8F93;&#x51FA;1
+<span class="hljs-comment">//&#x5206;&#x522B;&#x8F93;&#x51FA;1 &#x548C; 17</span>
 </code></pre>
+<p>&#x7531;&#x4E8E;default&#x662F;js&#x91CC;&#x8FB9;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5230;export default&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x83B7;&#x53D6;&#x5230;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./src/method.js&quot;</span>).then(({minus}) =&gt; {
+    <span class="hljs-built_in">console</span>.log(minus(<span class="hljs-number">9</span>, <span class="hljs-number">8</span>))
+})
+
+<span class="hljs-comment">//&#x8F93;&#x51FA;1</span>
+</code></pre>
+
                                 
                                 </section>
                             
@@ -2670,7 +2674,7 @@ a&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"import()异步加载","level":"1.7.2.3","depth":3,"next":{"title":"setTimeouot的知识","level":"1.7.2.4","depth":3,"path":"notes/JavaScript/函数及api/setTimeout的知识.md","ref":"./notes/JavaScript/函数及api/setTimeout的知识.md","articles":[]},"previous":{"title":"call,apply和bind","level":"1.7.2.2","depth":3,"path":"notes/JavaScript/函数及api/call,apply和bind.md","ref":"./notes/JavaScript/函数及api/call,apply和bind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/JavaScript/函数及api/import异步加载.md","mtime":"2025-02-06T09:10:10.346Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-08T17:34:08.743Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"import()异步加载","level":"1.7.2.3","depth":3,"next":{"title":"setTimeouot的知识","level":"1.7.2.4","depth":3,"path":"notes/JavaScript/函数及api/setTimeout的知识.md","ref":"./notes/JavaScript/函数及api/setTimeout的知识.md","articles":[]},"previous":{"title":"call,apply和bind","level":"1.7.2.2","depth":3,"path":"notes/JavaScript/函数及api/call,apply和bind.md","ref":"./notes/JavaScript/函数及api/call,apply和bind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/JavaScript/函数及api/import异步加载.md","mtime":"2025-02-08T17:42:00.084Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-08T17:42:04.077Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

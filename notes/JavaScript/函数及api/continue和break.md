@@ -15,7 +15,7 @@ continue语句的作用是跳过本次循环体中余下尚未执行的语句，
 注意：continue语句并没有使整个循环终止。
 
 ### **举个例子**：
-```
+```javascript
 let fruit=["apple", "banana", "orange", "pear"]
 for (let i = 0; i < fruit.length; i++) {
     switch (fruit[i]) {

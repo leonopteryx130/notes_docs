@@ -5,7 +5,7 @@ ECMAScript 规范给所有函数都定义了 call 与 apply 两个方法，它�
 obj1(or function).call(obj2,argument1,argument2)
 ```
 call的作用就是把obj1的方法放到obj2上执行，后边的argument被作为传入参数。这样obj1可以继承obj2的一些属性直接执行，demo coding:
-```
+```javascript
 function add (x) { 
     console.log (x + this.num);
 } 
@@ -18,7 +18,7 @@ add.call (new minus(), 5);
 可以看到，demo里边打的call函数将add方法放在了minus的实例对象里边执行，这样add函数可以共享minus中this.num属性，因此即使不在add方法里声明this.num，也可以正确获取到对应的值。
 
 **apply 方法**传入两个参数：一个是作为函数上下文的对象，另外一个是作为函数参数所组成的数组，code:
-```
+```javascript
 var obj = {
     name : 'linxin'
 }
@@ -33,7 +33,7 @@ func.apply(obj, ['A', 'B']);    // A linxin B
 
 ### **利用call或者apply实现继承**
 demo coding:
-```
+```javascript
 function f(){    
     this.a ="a";    
     this.b = function(){    
@@ -50,7 +50,7 @@ c.b();    //弹出b
 这段代码将函数f放在了函数e里边执行，因此实例化函数e，也可以得到函数f的属性和方法。
 
 bind方法和call方法很相似，区别在于，call方法直接会执行对应的函数，而bind方法会返回一个function，相当于把函数绑定到某个对象上产生一个新的方法，支持直接调用，这个新的方法是被改变了上下文的方法。用法：
-```
+```javascript
 var obj = {
     name: 'linxin'
 }
@@ -61,7 +61,7 @@ var func1 = func.bind(obj);
 func1();
 ```
 bind方法参数的使用：
-```
+```javascript
 function func(a, b, c) {
     console.log(a, b, c);
 }

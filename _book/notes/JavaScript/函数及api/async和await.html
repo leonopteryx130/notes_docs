@@ -2596,74 +2596,79 @@
                                 <h1 id="async&#x548C;await">async&#x548C;await</h1>
 <h3 id="async&#xFF1A;"><strong>async</strong>&#xFF1A;</h3>
 <p>async&#x548C;await&#x5176;&#x5B9E;&#x662F;promise&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;async&#x80FD;&#x5B9E;&#x73B0;&#x7684;&#x6548;&#x679C;&#x90FD;&#x80FD;&#x7528;promise+then&#x94FE;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;async&#x5176;&#x5B9E;&#x662F;&#x4E3A;&#x4E86;&#x4F18;&#x5316;then&#x94FE;&#x800C;&#x5F00;&#x53D1;&#x51FA;&#x6765;&#x7684;&#x3002;async&#x8BED;&#x6CD5;&#x7CD6;&#x4F1A;&#x9ED8;&#x8BA4;&#x628A;&#x540E;&#x8FB9;&#x7684;&#x51FD;&#x6570;&#x5305;&#x88C5;&#x5728;promise&#x5BF9;&#x8C61;&#x91CC;&#x8FD4;&#x56DE;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x5305;&#x88C5;&#x5728;promise&#x7684;&#x5B9A;&#x4E49;&#x91CC;&#xFF0C;return&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x5305;&#x88C5;&#x5728;resolve&#x91CC;&#x8FB9;&#xFF0C;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code>async function f() {
-    return 1;
+<pre><code class="lang-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
 }
 f().then((res) =&gt; {
-    console.log(res)
+    <span class="hljs-built_in">console</span>.log(res)
 })
-</code></pre><p>&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
-<pre><code>function f() {
-    return new Promise((resolve, reject) =&gt; {
-        resolve(1)
+</code></pre>
+<p>&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+        resolve(<span class="hljs-number">1</span>)
     })
 }
 f().then((res) =&gt; {
-    console.log(res)
+    <span class="hljs-built_in">console</span>.log(res)
 })
-</code></pre><h3 id="await&#xFF1A;"><strong>await</strong>&#xFF1A;</h3>
+</code></pre>
+<h3 id="await&#xFF1A;"><strong>await</strong>&#xFF1A;</h3>
 <p>await&#x5173;&#x952E;&#x5B57;&#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728;async&#x51FD;&#x6570;&#x91CC;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x662F;await&#x5173;&#x952E;&#x5B57;&#x540E;&#x8FB9;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x503C;&#xFF0C;&#x5982;&#x679C;await&#x540E;&#x8FB9;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E0D;&#x662F;promise&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;await&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;&#x8868;&#x8FBE;&#x5F0F;&#x8FD0;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;await&#x540E;&#x8FB9;&#x662F;&#x4E00;&#x4E2A;promise&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;promise&#x5BF9;&#x8C61;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x503C;&#x5C31;&#x4F1A;&#x4F5C;&#x4E3A;await&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x3002;</p>
 <p>&#x65E0;&#x8BBA;await&#x5173;&#x952E;&#x5B57;&#x540E;&#x8FB9;&#x662F;&#x4E0D;&#x662F;promise&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x540E;&#x8FB9;&#x7684;&#x4EE3;&#x7801;&#xFF08;&#x5728;async&#x51FD;&#x6570;&#x91CC;&#xFF09;&#x90FD;&#x4F1A;&#x6DFB;&#x52A0;&#x5728;&#x5FAE;&#x4EFB;&#x52A1;&#x91CC;&#x8FB9;&#x3002;</p>
 <p>async&#x548C;await&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x7B80;&#x5316;then&#x94FE;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x7B80;&#x6D01;&#xFF0C;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x4E1A;&#x52A1;&#xFF0C;&#x5206;&#x591A;&#x4E2A;&#x6B65;&#x9AA4;&#x5B8C;&#x6210;&#xFF0C;&#x6BCF;&#x4E2A;&#x6B65;&#x9AA4;&#x90FD;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x4F9D;&#x8D56;&#x4E8E;&#x4E0A;&#x4E00;&#x4E2A;&#x6B65;&#x9AA4;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x7528; setTimeout &#x6765;&#x6A21;&#x62DF;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF1A;</p>
-<pre><code>function takeLongTime(n){
-  return new Promise((resolve) =&gt; {
-    setTimeout(() =&gt; resolve(n + 200),n);
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">takeLongTime</span>(<span class="hljs-params">n</span>)</span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
+    setTimeout(() =&gt; resolve(n + <span class="hljs-number">200</span>),n);
   })
 }
-function step1(n){
-  console.log(`step1 with ${n}`);
-  return takeLongTime(n);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">step1</span>(<span class="hljs-params">n</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`step1 with <span class="hljs-subst">${n}</span>`</span>);
+  <span class="hljs-keyword">return</span> takeLongTime(n);
 }
-function step2(n){
-  console.log(`step2 with ${n}`);
-  return takeLongTime(n);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">step2</span>(<span class="hljs-params">n</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`step2 with <span class="hljs-subst">${n}</span>`</span>);
+  <span class="hljs-keyword">return</span> takeLongTime(n);
 }
-function step3(n){
-  console.log(`step3 with ${n}`);
-  return takeLongTime(n);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">step3</span>(<span class="hljs-params">n</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`step3 with <span class="hljs-subst">${n}</span>`</span>);
+  <span class="hljs-keyword">return</span> takeLongTime(n);
 }
-</code></pre><p>&#x7528;Promise&#x94FE;&#x6765;&#x5B9E;&#x73B0;</p>
-<pre><code>function doIt(){
-  let time1 = 300;
+</code></pre>
+<p>&#x7528;Promise&#x94FE;&#x6765;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doIt</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> time1 = <span class="hljs-number">300</span>;
   step1(time1)
     .then((time2) =&gt; step2(time2))
     .then((time3) =&gt; step3(time3))
     .then((result) =&gt; {
-      console.log(`result is ${result}`);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result is <span class="hljs-subst">${result}</span>`</span>);
     })
 }
 
 doIt();
-//&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;:
-//step1 with 300
-//step2 with 500
-//step3 with 700
-//result is 900
-</code></pre><p>&#x4F7F;&#x7528;async&#x548C;await&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code>async function doIt() {
-  let time1 = 300;
-  let time2 = await step1(time1);//&#x5C06;Promise&#x5BF9;&#x8C61;resolve(n+200)&#x7684;&#x503C;&#x8D4B;&#x7ED9;time2
-  let time3 = await step1(time2);
-  let result = await step1(time3);
-  console.log(`result is ${result}`);
+<span class="hljs-comment">//&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;:</span>
+<span class="hljs-comment">//step1 with 300</span>
+<span class="hljs-comment">//step2 with 500</span>
+<span class="hljs-comment">//step3 with 700</span>
+<span class="hljs-comment">//result is 900</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;async&#x548C;await&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doIt</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> time1 = <span class="hljs-number">300</span>;
+  <span class="hljs-keyword">let</span> time2 = <span class="hljs-keyword">await</span> step1(time1);<span class="hljs-comment">//&#x5C06;Promise&#x5BF9;&#x8C61;resolve(n+200)&#x7684;&#x503C;&#x8D4B;&#x7ED9;time2</span>
+  <span class="hljs-keyword">let</span> time3 = <span class="hljs-keyword">await</span> step1(time2);
+  <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> step1(time3);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`result is <span class="hljs-subst">${result}</span>`</span>);
 }
 doIt();
-//&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;:
-//step1 with 300
-//step2 with 500
-//step3 with 700
-//result is 900
-</code></pre><p>async&#x548C;await&#x6210;&#x529F;&#x89E3;&#x51B3;&#x4E86;promise&#x2026;then&#x94FE;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x9EBB;&#x70E6;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x4F46;&#x662F;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5C31;&#x662F;promise&#x53EF;&#x80FD;&#x6709;reject&#xFF0C;&#x4F46;&#x662F;await&#x8FD4;&#x56DE;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE;resolve&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x662F;reject&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x597D;&#x628A;await&#x653E;&#x5728;try&#x2026;catch&#x4EE3;&#x7801;&#x5757;&#x91CC;&#x6267;&#x884C;</p>
+<span class="hljs-comment">//&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;:</span>
+<span class="hljs-comment">//step1 with 300</span>
+<span class="hljs-comment">//step2 with 500</span>
+<span class="hljs-comment">//step3 with 700</span>
+<span class="hljs-comment">//result is 900</span>
+</code></pre>
+<p>async&#x548C;await&#x6210;&#x529F;&#x89E3;&#x51B3;&#x4E86;promise&#x2026;then&#x94FE;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x9EBB;&#x70E6;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x4F46;&#x662F;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5C31;&#x662F;promise&#x53EF;&#x80FD;&#x6709;reject&#xFF0C;&#x4F46;&#x662F;await&#x8FD4;&#x56DE;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE;resolve&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x662F;reject&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x597D;&#x628A;await&#x653E;&#x5728;try&#x2026;catch&#x4EE3;&#x7801;&#x5757;&#x91CC;&#x6267;&#x884C;</p>
 
                                 
                                 </section>
@@ -2707,7 +2712,7 @@ doIt();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"async和await","level":"1.7.2.5","depth":3,"next":{"title":"IntersectionObserver","level":"1.7.2.6","depth":3,"path":"notes/JavaScript/函数及api/IntersectionObserver.md","ref":"./notes/JavaScript/函数及api/IntersectionObserver.md","articles":[]},"previous":{"title":"setTimeouot的知识","level":"1.7.2.4","depth":3,"path":"notes/JavaScript/函数及api/setTimeout的知识.md","ref":"./notes/JavaScript/函数及api/setTimeout的知识.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/JavaScript/函数及api/async和await.md","mtime":"2025-02-06T09:10:10.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-08T17:34:08.743Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"async和await","level":"1.7.2.5","depth":3,"next":{"title":"IntersectionObserver","level":"1.7.2.6","depth":3,"path":"notes/JavaScript/函数及api/IntersectionObserver.md","ref":"./notes/JavaScript/函数及api/IntersectionObserver.md","articles":[]},"previous":{"title":"setTimeouot的知识","level":"1.7.2.4","depth":3,"path":"notes/JavaScript/函数及api/setTimeout的知识.md","ref":"./notes/JavaScript/函数及api/setTimeout的知识.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/JavaScript/函数及api/async和await.md","mtime":"2025-02-08T17:39:21.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-08T17:42:04.077Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
