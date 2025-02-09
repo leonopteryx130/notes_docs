@@ -61,6 +61,8 @@
         * [template标签](./notes/vue/api/template标签.md)
         * [slot](./notes/vue/api/slot.md)
     * vue源码解读
+        * vue3
+            * [ReactiveFlags标记](./notes/vue/vue源码解读/vue3/ReactiveFlags标记.md)
         * [utils](./notes/vue/vue源码解读/utils.md)
         * [perf.ts——vue组件性能标记](./notes/vue/vue源码解读/perf.ts——vue组件性能标记.md)
 * 计算机网络
