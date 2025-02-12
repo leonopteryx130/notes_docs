@@ -152,8 +152,11 @@
         * [webpack-chain](./notes/项目开发/webpack/webpack-chain.md)
         * [loader和plugin的区别](./notes/项目开发/webpack/loader和plugin的区别.md)
         * [loaders](./notes/项目开发/webpack/loaders.md)
-    * package.json
-        * [基本参数](./notes/项目开发/package.json/基本参数.md)
+    * 前端工程化
+        * package.json
+            * [基本参数](./notes/项目开发/前端工程化/package.json/基本参数.md)
+        * [幽灵依赖](./notes/项目开发/前端工程化/幽灵依赖.md)
+        * [npm发展](./notes/项目开发/前端工程化/npm发展.md)
     * babel
         * [入门基本知识](./notes/项目开发/babel/入门基本知识.md)
     * 解决方案
