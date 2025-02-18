@@ -17,7 +17,7 @@ requestIdleCallback(callback[, options])
 
 ### 作用
 
-`requestIdleCallback` 是一个用于在浏览器空闲时期执行任务的 API，即task queue为空的时候执行的，这相当于是安排了一个低优先级的任务。它可以帮助开发者更好地利用[浏览器的空闲时间](../../计算机科学/浏览器/浏览器的空闲时间.md)，从而提高网页的性能和用户体验。
+`requestIdleCallback` 是一个用于在浏览器空闲时期执行任务的 API，即task queue为空的时候执行的，这相当于是安排了一个低优先级的任务。它可以帮助开发者更好地利用[浏览器的空闲时间](../../HTML/浏览器/浏览器的空闲时间.md)，从而提高网页的性能和用户体验。
 
 一个简单的demo，在react框架下，结合```requestAnimationFrame``` api 打印出每一帧的剩余时间，同时提供一个按钮改变dom结构，观察浏览器空闲时间的变化。
 
