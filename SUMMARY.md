@@ -159,6 +159,7 @@
             * [基本参数](./notes/项目开发/前端工程化/package.json/基本参数.md)
         * [幽灵依赖](./notes/项目开发/前端工程化/幽灵依赖.md)
         * [npm发展](./notes/项目开发/前端工程化/npm发展.md)
+        * [pnpm原理](./notes/项目开发/前端工程化/pnpm原理.md)
     * babel
         * [入门基本知识](./notes/项目开发/babel/入门基本知识.md)
     * 解决方案
