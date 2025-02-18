@@ -20,8 +20,12 @@
 
 ### git remote
 
+注：远程主机名通常情况下默认为origin
+
 - ```git remote```查看远程主机名
 - ```git remote -v```查看远程主机名及其具体的url
+- ```git remote add 远程主机名 远程仓库url```  添加远程主机名
+- ```git remote rm 远程主机名```  删除远程主机名
 
 ### git push
 
