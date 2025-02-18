@@ -33,6 +33,7 @@
         * Macos 
             * [macos中的四种配置文件](./notes/计算机科学/操作系统/Macos/macos中的四种配置文件.md) 
         * [不同的shell](./notes/计算机科学/操作系统/不同的shell.md)
+        * [软连接和硬链接](./notes/计算机科学/操作系统/软连接和硬链接.md)
 * React
     * 基础知识
         * [Fiber树](./notes/React/基础知识/Fiber树.md)
