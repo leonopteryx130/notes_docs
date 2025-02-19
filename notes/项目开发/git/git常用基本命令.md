@@ -1,5 +1,9 @@
 # git常用命令
 
+### git clone
+
+- ```git clone```命令用于克隆远程仓库到本地，这个命令支持在本地使用其他的文件夹名称，例如```git clone https://github.com/xxx/xxx.git myrepo```，这样就会把远程仓库克隆到本地的myrepo文件夹中
+
 ### git branch 
 
 - ```git branch``` 命令可以查看本地仓库的分支
