@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>CRA是如何运行webpack的 · GitBook</title>
+        <title>jenkins修改shell脚本的执行用户 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,8 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="webpack-dev-server.html" />
     
+    <link rel="prev" href="电话外呼业务.html" />
     
 
     </head>
@@ -2246,9 +2246,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.9.4.1" data-path="CRA是如何运行webpack的.html">
+        <li class="chapter " data-level="1.9.4.1" data-path="../webpack/CRA是如何运行webpack的.html">
             
-                <a href="CRA是如何运行webpack的.html">
+                <a href="../webpack/CRA是如何运行webpack的.html">
             
                     
                     CRA是如何运行webpack的
@@ -2259,9 +2259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4.2" data-path="webpack-dev-server.html">
+        <li class="chapter " data-level="1.9.4.2" data-path="../webpack/webpack-dev-server.html">
             
-                <a href="webpack-dev-server.html">
+                <a href="../webpack/webpack-dev-server.html">
             
                     
                     webpack-dev-server
@@ -2272,9 +2272,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4.3" data-path="webpack基本概述.html">
+        <li class="chapter " data-level="1.9.4.3" data-path="../webpack/webpack基本概述.html">
             
-                <a href="webpack基本概述.html">
+                <a href="../webpack/webpack基本概述.html">
             
                     
                     webpack基本概述
@@ -2285,9 +2285,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4.4" data-path="webpack常用插件.html">
+        <li class="chapter " data-level="1.9.4.4" data-path="../webpack/webpack常用插件.html">
             
-                <a href="webpack常用插件.html">
+                <a href="../webpack/webpack常用插件.html">
             
                     
                     webpack常用插件
@@ -2298,9 +2298,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4.5" data-path="webpack-chain.html">
+        <li class="chapter " data-level="1.9.4.5" data-path="../webpack/webpack-chain.html">
             
-                <a href="webpack-chain.html">
+                <a href="../webpack/webpack-chain.html">
             
                     
                     webpack-chain
@@ -2311,9 +2311,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4.6" data-path="loader和plugin的区别.html">
+        <li class="chapter " data-level="1.9.4.6" data-path="../webpack/loader和plugin的区别.html">
             
-                <a href="loader和plugin的区别.html">
+                <a href="../webpack/loader和plugin的区别.html">
             
                     
                     loader和plugin的区别
@@ -2324,9 +2324,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4.7" data-path="loaders.html">
+        <li class="chapter " data-level="1.9.4.7" data-path="../webpack/loaders.html">
             
-                <a href="loaders.html">
+                <a href="../webpack/loaders.html">
             
                     
                     loaders
@@ -2620,9 +2620,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.9.1" data-path="../其他/电话外呼业务.html">
+        <li class="chapter " data-level="1.9.9.1" data-path="电话外呼业务.html">
             
-                <a href="../其他/电话外呼业务.html">
+                <a href="电话外呼业务.html">
             
                     
                     电话外呼业务
@@ -2633,9 +2633,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.9.2" data-path="../其他/jenkins修改shell脚本的执行用户.html">
+        <li class="chapter active" data-level="1.9.9.2" data-path="jenkins修改shell脚本的执行用户.html">
             
-                <a href="../其他/jenkins修改shell脚本的执行用户.html">
+                <a href="jenkins修改shell脚本的执行用户.html">
             
                     
                     jenkins修改shell脚本的执行用户
@@ -2763,7 +2763,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >CRA是如何运行webpack的</a>
+        <a href="../../.." >jenkins修改shell脚本的执行用户</a>
     </h1>
 </div>
 
@@ -2778,23 +2778,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="cra&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C;webpack&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;">CRA&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C;webpack&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;</h1>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;CRA app&#x540E;&#x8FD0;&#x884C;yarn eject&#x53EF;&#x4EE5;&#x53CD;&#x7F16;&#x8BD1;&#x51FA;webpack&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;package.json&#x4E2D;&#x7684;script&#x4E5F;&#x4F1A;&#x53D8;&#xFF0C;&#x53CD;&#x7F16;&#x8BD1;&#x540E;&#x7684;package.json&#x4E2D;&#xFF1A;</p>
-<pre><code>  &quot;scripts&quot;: {
-    &quot;start&quot;: &quot;node scripts/start.js&quot;,
-    &quot;build&quot;: &quot;node scripts/build.js&quot;,
-    &quot;test&quot;: &quot;node scripts/test.js&quot;
-  },
-</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8FD0;&#x884C;&#xFF08;start&#xFF09;&#x548C;&#x6253;&#x5305;&#xFF08;build&#xFF09;&#x547D;&#x4EE4;&#x88AB;&#x5C01;&#x88C5;&#x5230;&#x4E0D;&#x540C;&#x7684;js&#x4EE3;&#x7801;&#x91CC;&#xFF0C;&#x5728;build.js&#x6587;&#x4EF6;&#x7684;&#x7B2C;22&#x884C;&#x548C;&#x7B2C;50&#x884C;&#xFF0C;&#x6709;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>//&#x7B2C;22&#x884C;
-const configFactory = require(&apos;../config/webpack.config&apos;);
-
-//&#x7B2C;50&#x884C;
-const config = configFactory(&apos;production&apos;);
-</code></pre><p>&#x8868;&#x793A;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x5F15;&#x5165;&#x4E86;webpack.config.js&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x8F93;&#x5165;&#x53C2;&#x6570;production&#xFF0C;&#x8FD9;&#x4E0E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;webpack.config.js&#xFF09;&#x4E2D;90-92&#x884C;&#x5E03;&#x5C14;&#x503C;&#x76F8;&#x5BF9;&#x5E94;&#xFF1A;</p>
-<div align="center">
-    <img src="CRA&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C;webpack.png" width="80%">
-</div>
+                                <h1 id="jenkins&#x4FEE;&#x6539;shell&#x811A;&#x672C;&#x7684;&#x6267;&#x884C;&#x7528;&#x6237;">jenkins&#x4FEE;&#x6539;shell&#x811A;&#x672C;&#x7684;&#x6267;&#x884C;&#x7528;&#x6237;</h1>
+<p>jenkins&#x7684;shell&#x91CC;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x662F;&#x4EE5;jenkins&#x7528;&#x6237;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4EE5;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x6267;&#x884C;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539;jenkins&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<h3 id="ubuntu&#x7CFB;&#x7EDF;&#x4E0B;&#x628A;jenkins&#x7684;shell&#x811A;&#x672C;&#x6267;&#x884C;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x4E3A;ubuntu">ubuntu&#x7CFB;&#x7EDF;&#x4E0B;&#x628A;jenkins&#x7684;shell&#x811A;&#x672C;&#x6267;&#x884C;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x4E3A;ubuntu</h3>
+<p>&#x4FEE;&#x6539;&#x6587;&#x4EF6;<code>vim /etc/default/jenkins</code></p>
+<p>&#x5C06;&#x539F;&#x6765;&#x7684;</p>
+<pre><code># Jenkins runs as root by default.
+JENKINS_USER=$NAME
+JENKINS_GROUP=$NAME
+</code></pre><p>&#x4FEE;&#x6539;&#x4E3A;</p>
+<pre><code># Jenkins runs as root by default.
+JENKINS_USER=ubuntu
+JENKINS_GROUP=ubuntu
+</code></pre><p>&#x7136;&#x540E;&#x91CD;&#x542F;jenkins</p>
+<pre><code>sudo service jenkins restart
+</code></pre>
                                 
                                 </section>
                             
@@ -2821,10 +2819,10 @@ const config = configFactory(&apos;production&apos;);
 
             
                 
-                
-                <a href="webpack-dev-server.html" class="navigation navigation-next navigation-unique" aria-label="Next page: webpack-dev-server">
-                    <i class="fa fa-angle-right"></i>
+                <a href="电话外呼业务.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 电话外呼业务">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -2833,7 +2831,7 @@ const config = configFactory(&apos;production&apos;);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CRA是如何运行webpack的","level":"1.9.4.1","depth":3,"next":{"title":"webpack-dev-server","level":"1.9.4.2","depth":3,"path":"notes/项目开发/webpack/webpack-dev-server.md","ref":"./notes/项目开发/webpack/webpack-dev-server.md","articles":[]},"previous":{"title":"webpack","level":"1.9.4","depth":2,"ref":"","articles":[{"title":"CRA是如何运行webpack的","level":"1.9.4.1","depth":3,"path":"notes/项目开发/webpack/CRA是如何运行webpack的.md","ref":"./notes/项目开发/webpack/CRA是如何运行webpack的.md","articles":[]},{"title":"webpack-dev-server","level":"1.9.4.2","depth":3,"path":"notes/项目开发/webpack/webpack-dev-server.md","ref":"./notes/项目开发/webpack/webpack-dev-server.md","articles":[]},{"title":"webpack基本概述","level":"1.9.4.3","depth":3,"path":"notes/项目开发/webpack/webpack基本概述.md","ref":"./notes/项目开发/webpack/webpack基本概述.md","articles":[]},{"title":"webpack常用插件","level":"1.9.4.4","depth":3,"path":"notes/项目开发/webpack/webpack常用插件.md","ref":"./notes/项目开发/webpack/webpack常用插件.md","articles":[]},{"title":"webpack-chain","level":"1.9.4.5","depth":3,"path":"notes/项目开发/webpack/webpack-chain.md","ref":"./notes/项目开发/webpack/webpack-chain.md","articles":[]},{"title":"loader和plugin的区别","level":"1.9.4.6","depth":3,"path":"notes/项目开发/webpack/loader和plugin的区别.md","ref":"./notes/项目开发/webpack/loader和plugin的区别.md","articles":[]},{"title":"loaders","level":"1.9.4.7","depth":3,"path":"notes/项目开发/webpack/loaders.md","ref":"./notes/项目开发/webpack/loaders.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/项目开发/webpack/CRA是如何运行webpack的.md","mtime":"2025-02-06T09:10:10.362Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-20T17:26:16.381Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"jenkins修改shell脚本的执行用户","level":"1.9.9.2","depth":3,"next":{"title":"数学","level":"1.10","depth":1,"ref":"","articles":[{"title":"理论数学","level":"1.10.1","depth":2,"ref":"","articles":[{"title":"一些基本概念","level":"1.10.1.1","depth":3,"path":"notes/数学/理论数学/一些基本概念.md","ref":"./notes/数学/理论数学/一些基本概念.md","articles":[]},{"title":"向量空间的基","level":"1.10.1.2","depth":3,"path":"notes/数学/理论数学/向量空间的基.md","ref":"./notes/数学/理论数学/向量空间的基.md","articles":[]}]},{"title":"应用数学","level":"1.10.2","depth":2,"ref":"","articles":[]}]},"previous":{"title":"电话外呼业务","level":"1.9.9.1","depth":3,"path":"notes/项目开发/其他/电话外呼业务.md","ref":"./notes/项目开发/其他/电话外呼业务.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/项目开发/其他/jenkins修改shell脚本的执行用户.md","mtime":"2025-02-20T17:25:46.729Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-20T17:26:16.381Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
