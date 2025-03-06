@@ -146,6 +146,7 @@
     * git
         * [git常用基本命令](./notes/项目开发/git/git常用基本命令.md)
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
+        * [github切换ssh连接](./notes/项目开发/git/github切换ssh连接.md)
     * nginx
         * [nginx基本用法](./notes/项目开发/nginx/nginx基本用法.md)
     * webpack
