@@ -39,3 +39,4 @@ history路由实现原理：
 
 1. 路由地址表现形式不同：hash路由地址有#，history路由地址没有#。举个例子：hishtory路由地址为：```http://localhost:8080/home```。hash路由地址为：```http://localhost:8080/#/home```。
 2. 刷新页面时，hash路由地址不会发送请求，history路由地址会发送请求。因此，history路由地址需要服务器配合（比如nginx），否则刷新页面会404。
+3. 当访问 ```http://yourdomain.com/qrCode/pureText``` 时，服务器会查找 /qrCode/pureText 这个路径下的文件。如果没有找到，服务器就会返回 404。但如果使用 HashRouter，浏览器在处理 ```http://yourdomain.com/#/qrCode/pureText``` 时，# 后面的部分不会被发送到服务器，所有的路由处理都在客户端完成，因此不会出现 404 错误。
