@@ -91,6 +91,7 @@
         * [浏览器多线程机制](./notes/HTML/浏览器/浏览器多线程机制.md)
         * [浏览器渲染过程的事件触发](./notes/HTML/浏览器/浏览器渲染过程的事件触发.md)
         * [浏览器的空闲时间](./notes/HTML/浏览器/浏览器的空闲时间.md)
+        * [hash路由和history路由](./notes/HTML/浏览器/hash路由和history路由.md)
     * api
         * [documentFragment对象](./notes/HTML/api/documentFragment对象.md)
 * JavaScript
