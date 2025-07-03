@@ -40,6 +40,7 @@
         * [react自动批处理](./notes/React/基础知识/react自动批处理.md)
         * [高阶组件HOC](./notes/React/基础知识/高阶组件HOC.md)
     * api和hooks
+        * [什么是hooks](./notes/React/api和hooks/什么是hooks.md)
         * [useEffect](./notes/React/api和hooks/useEffect.md)
         * [useCallback](./notes/React/api和hooks/useCallback.md)
         * [useMemo](./notes/React/api和hooks/useMemo.md)
