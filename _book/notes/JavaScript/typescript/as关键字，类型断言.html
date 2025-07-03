@@ -2867,16 +2867,62 @@
 <p>&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x7531;&#x4E24;&#x79CD;&#x8BED;&#x6CD5;&#x5F62;&#x5F0F;&#xFF1A;</p>
 <ul>
 <li><p>&#x5C16;&#x62EC;&#x53F7;&#x8BED;&#x6CD5;&#xFF1A;</p>
-<pre><code>let someValue:any = &apos;this is a string&apos;&#xFF1B;
-let strLength:number = (&lt;string&gt;someValue).length&#xFF1B;
-</code></pre></li>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">let</span> someValue:<span class="hljs-built_in">any</span> = <span class="hljs-string">&apos;this is a string&apos;</span>&#xFF1B;
+<span class="hljs-keyword">let</span> strLength:<span class="hljs-built_in">number</span> = (&lt;<span class="hljs-built_in">string</span>&gt;someValue).length&#xFF1B;
+</code></pre>
+</li>
 <li><p>as&#x8BED;&#x6CD5;</p>
-<pre><code>let someValue:any = &apos;this is a string&apos;&#xFF1B;
-let strLength:number = (someValue as string).length&#xFF1B;
-</code></pre></li>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">let</span> someValue:<span class="hljs-built_in">any</span> = <span class="hljs-string">&apos;this is a string&apos;</span>&#xFF1B;
+<span class="hljs-keyword">let</span> strLength:<span class="hljs-built_in">number</span> = (someValue as <span class="hljs-built_in">string</span>).length&#xFF1B;
+</code></pre>
+</li>
 </ul>
 <p>&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;&#x81F3;&#x4E8E;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x662F;&#x51ED;&#x4E2A;&#x4EBA;&#x7231;&#x597D;&#xFF1B;&#x7136;&#x800C;&#xFF0C;&#x5F53;&#x4F60;&#x5728;<code>TypeScript</code>&#x91CC;&#x4F7F;&#x7528;<code>JSX</code>&#x65F6;&#xFF0C;&#x53EA;&#x6709; <code>as</code> &#x8BED;&#x6CD5;&#x65AD;&#x8A00;&#x662F;&#x88AB;&#x5141;&#x8BB8;&#x7684;&#x3002;</p>
 <p><strong>Tips</strong>&#xFF1A;&#x5F53;&#x8BBE;&#x7F6E;&#x7C7B;&#x578B;&#x4E3A;any&#x65F6;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x65AD;&#x8A00;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x65AD;&#x8A00;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#x4E4B;&#x4E00;">&#x4F7F;&#x7528;&#x65AD;&#x8A00;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#x4E4B;&#x4E00;</h3>
+<ul>
+<li>&#x6E90;&#x7C7B;&#x578B;&#x548C;&#x76EE;&#x6807;&#x7C7B;&#x578B;&#x662F;&#x517C;&#x5BB9;&#x7684;&#xFF0C;&#x6709;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#x7684;</li>
+</ul>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-string">&quot;123&quot;</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">string</span> = a as <span class="hljs-built_in">string</span> <span class="hljs-comment">// ok</span>
+</code></pre>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-built_in">string</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-string">&quot;123&quot;</span> = a as <span class="hljs-string">&quot;123&quot;</span> <span class="hljs-comment">// ok</span>
+</code></pre>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-string">&quot;123&quot;</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-string">&quot;456&quot;</span> = a as <span class="hljs-string">&quot;456&quot;</span> <span class="hljs-comment">// error</span>
+</code></pre>
+<p>&#x56E0;&#x4E3A;<code>&quot;123&quot;</code>&#x548C;<code>&quot;456&quot;</code>&#x6CA1;&#x6709;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#xFF0C;&#x6240;&#x4EE5;&#x65AD;&#x8A00;&#x5931;&#x8D25;&#x3002;</p>
+<ul>
+<li>unknown &#x662F; <strong>&#x5B89;&#x5168;&#x7684;&#x9876;&#x5C42;&#x7C7B;&#x578B;</strong>&#xFF08;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x7236;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;<strong>&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x8D4B;&#x503C;</strong>&#xFF0C;&#x4F46; &#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x5176;&#x503C;&#xFF08;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x6216;&#x7C7B;&#x578B;&#x6536;&#x7A84;&#x540E;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#xFF09;&#x3002;</li>
+</ul>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: unknown = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">string</span> = a as <span class="hljs-built_in">string</span> <span class="hljs-comment">// ok</span>
+</code></pre>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-built_in">string</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: unknown = a as unknown <span class="hljs-comment">// ok</span>
+</code></pre>
+<ul>
+<li>&#x5982;&#x679C;&#x76EE;&#x6807;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x6E90;&#x7C7B;&#x578B;&#x662F;any&#xFF0C;any&#x65E2;&#x662F;&#x9876;&#x5C42;&#x7C7B;&#x578B;&#xFF0C;&#x53C8;&#x662F;&#x5E95;&#x5C42;&#x7C7B;&#x578B;&#xFF08;&#x7834;&#x574F;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x65AD;&#x8A00;&#x6210;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x3002;</li>
+</ul>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-built_in">any</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">string</span> = a as <span class="hljs-built_in">string</span> <span class="hljs-comment">// ok</span>
+</code></pre>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-built_in">string</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">any</span> = a as <span class="hljs-built_in">any</span> <span class="hljs-comment">// ok</span>
+</code></pre>
+<ul>
+<li>any &#x4F1A; <strong>&#x5B8C;&#x5168;&#x7981;&#x7528;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</strong>&#xFF0C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x8FD0;&#x884C;&#x65F6;&#x9519;&#x8BEF;&#x3002;&#x5E94;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528; as any&#xFF0C;&#x4F18;&#x5148;&#x7528; as unknown&#x3002;</li>
+</ul>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-built_in">any</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">number</span> = a as <span class="hljs-built_in">number</span> <span class="hljs-comment">// &#x7F16;&#x8BD1;&#x901A;&#x8FC7;&#xFF0C;&#x4F46;&#x8FD0;&#x884C;&#x65F6;&#x53EF;&#x80FD;&#x51FA;&#x9519;&#xFF01;</span>
+</code></pre>
+<h3 id="&#x53CC;&#x91CD;&#x65AD;&#x8A00;">&#x53CC;&#x91CD;&#x65AD;&#x8A00;</h3>
+<p>&#x521A;&#x624D;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;any&#x6216;&#x8005;unknown&#x90FD;&#x53EF;&#x4EE5;&#x65AD;&#x8A00;&#x6210;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4E00;&#x4E9B;&#x4E0D;&#x80FD;&#x65AD;&#x8A00;&#x6210;&#x76EE;&#x6807;&#x7C7B;&#x578B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53CC;&#x91CD;&#x65AD;&#x8A00;&#xFF0C;&#x5148;&#x65AD;&#x8A00;&#x6210;any&#x6216;&#x8005;unknown&#xFF0C;&#x518D;&#x65AD;&#x8A00;&#x6210;&#x76EE;&#x6807;&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code class="lang-typeScript"><span class="hljs-keyword">const</span> a: <span class="hljs-built_in">string</span> = <span class="hljs-string">&quot;123&quot;</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">number</span> = a as unknown as <span class="hljs-built_in">number</span> <span class="hljs-comment">// ok</span>
+</code></pre>
+<p>tips: &#x8FD9;&#x79CD;&#x53CC;&#x91CD;&#x65AD;&#x8A00; &#x5B8C;&#x5168;&#x7ED5;&#x8FC7;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#xFF0C;&#x5982;&#x679C; a &#x4E0D;&#x662F;&#x6709;&#x6548;&#x7684; number&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD0;&#x884C;&#x65F6;&#x9519;&#x8BEF;&#xFF08;&#x5982; &quot;123&quot;.toFixed() &#x62A5;&#x9519;&#xFF09;&#x3002;</p>
 
                                 
                                 </section>
@@ -2916,7 +2962,7 @@ let strLength:number = (someValue as string).length&#xFF1B;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"as关键字，类型断言","level":"1.7.3.1","depth":3,"next":{"title":"extends和implements","level":"1.7.3.2","depth":3,"path":"notes/JavaScript/typescript/extends和implements.md","ref":"./notes/JavaScript/typescript/extends和implements.md","articles":[]},"previous":{"title":"typescript","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"as关键字，类型断言","level":"1.7.3.1","depth":3,"path":"notes/JavaScript/typescript/as关键字，类型断言.md","ref":"./notes/JavaScript/typescript/as关键字，类型断言.md","articles":[]},{"title":"extends和implements","level":"1.7.3.2","depth":3,"path":"notes/JavaScript/typescript/extends和implements.md","ref":"./notes/JavaScript/typescript/extends和implements.md","articles":[]},{"title":"问号和惊叹号操作符","level":"1.7.3.3","depth":3,"path":"notes/JavaScript/typescript/问号和惊叹号操作符.md","ref":"./notes/JavaScript/typescript/问号和惊叹号操作符.md","articles":[]},{"title":"联合类型和交叉类型","level":"1.7.3.4","depth":3,"path":"notes/JavaScript/typescript/联合类型和交叉类型.md","ref":"./notes/JavaScript/typescript/联合类型和交叉类型.md","articles":[]},{"title":"索引签名","level":"1.7.3.5","depth":3,"path":"notes/JavaScript/typescript/索引签名.md","ref":"./notes/JavaScript/typescript/索引签名.md","articles":[]},{"title":"类型保护","level":"1.7.3.6","depth":3,"path":"notes/JavaScript/typescript/类型保护.md","ref":"./notes/JavaScript/typescript/类型保护.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/JavaScript/typescript/as关键字，类型断言.md","mtime":"2025-02-06T09:10:10.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-03T02:48:33.296Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"as关键字，类型断言","level":"1.7.3.1","depth":3,"next":{"title":"extends和implements","level":"1.7.3.2","depth":3,"path":"notes/JavaScript/typescript/extends和implements.md","ref":"./notes/JavaScript/typescript/extends和implements.md","articles":[]},"previous":{"title":"typescript","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"as关键字，类型断言","level":"1.7.3.1","depth":3,"path":"notes/JavaScript/typescript/as关键字，类型断言.md","ref":"./notes/JavaScript/typescript/as关键字，类型断言.md","articles":[]},{"title":"extends和implements","level":"1.7.3.2","depth":3,"path":"notes/JavaScript/typescript/extends和implements.md","ref":"./notes/JavaScript/typescript/extends和implements.md","articles":[]},{"title":"问号和惊叹号操作符","level":"1.7.3.3","depth":3,"path":"notes/JavaScript/typescript/问号和惊叹号操作符.md","ref":"./notes/JavaScript/typescript/问号和惊叹号操作符.md","articles":[]},{"title":"联合类型和交叉类型","level":"1.7.3.4","depth":3,"path":"notes/JavaScript/typescript/联合类型和交叉类型.md","ref":"./notes/JavaScript/typescript/联合类型和交叉类型.md","articles":[]},{"title":"索引签名","level":"1.7.3.5","depth":3,"path":"notes/JavaScript/typescript/索引签名.md","ref":"./notes/JavaScript/typescript/索引签名.md","articles":[]},{"title":"类型保护","level":"1.7.3.6","depth":3,"path":"notes/JavaScript/typescript/类型保护.md","ref":"./notes/JavaScript/typescript/类型保护.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/JavaScript/typescript/as关键字，类型断言.md","mtime":"2025-07-03T04:21:40.491Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-03T04:21:44.734Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
