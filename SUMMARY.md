@@ -49,6 +49,7 @@
         * [React.memo](./notes/React/api和hooks/React.memo.md)
         * [React组件propTypes属性](./notes/React/api和hooks/React组件propTypes属性.md)
         * [useRef](./notes/React/api和hooks/useRef.md)
+        * [createPortal用法](./notes/React/api和hooks/createPortal用法.md)
     * react源码解读
         * [flow和typescript比较](./notes/React/react源码解读/flow和typescript比较.md)
         * [React的两种启动方式](./notes/React/react源码解读/React的两种启动方式.md)
