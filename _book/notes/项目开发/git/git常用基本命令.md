@@ -40,3 +40,8 @@
 
 - ```git reset``` 命令用于回退版本，可以指定退回某一次提交的版本。
 - ```git reset --mixed``` mixed是git reset的默认值，该命令等同于git reset，作用是重置暂存区的文件与上一次的提交(commit)保持一致，工作区文件内容保持不变。相当于撤销git add，但是不改变编译器中写过的代码
+
+
+### git restore
+
+- ```git restore --staged .``` 将暂存区的文件内容恢复到工作区，相当于git add .命令的回退，命令也可以指定具体的文件，比如```git restore --staged file.txt```
