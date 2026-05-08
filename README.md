@@ -2,9 +2,7 @@
 
 I am a web developer and I have written lots of notes in my daily study life, I decided to share with others by published on github.
 
-I marked these notes in OneNote(a Microsoft application), it will take me some time to convert words to markdown, I can use some spare time to finish it.
-
-I am a Chinese, so it is convenient to write in Chinese. Maybe I will write an English version someday if it has a lot of stars.
+node v18
 
 # preparation
  - **You need to install node environment to run gitbook**
@@ -19,6 +17,8 @@ I am a Chinese, so it is convenient to write in Chinese. Maybe I will write an E
 # usage
 ```
 git clone https://github.com/leonopteryx130/notes_docs.git
+cd notes_docs
+npm install
 gitbook install
 gitbook serve --port 4000
 ```
