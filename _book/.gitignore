@@ -1,6 +1,3 @@
-# GitBook 构建产物（gitbook build）
-_book/
-
 # 依赖
 node_modules/
 
