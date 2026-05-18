@@ -131,6 +131,9 @@
             * [什么是BFC](./notes/前端开发/css/css基本概念/什么是BFC.md)
         * api
             * [linear-gradient](./notes/前端开发/css/api/linear-gradient.md)
+* 服务端开发
+    * 数据库
+        * [DDL和DML](./notes/服务端开发/数据库/DDL和DML.md)
 * 计算机网络
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
