@@ -12,7 +12,9 @@ $$\sigma(x) = \frac{1}{1 + e^{-x}}, \quad x \in (-\infty, +\infty), \quad \sigma
 
 由 $$y = \dfrac{1}{1+e^{-x}}$$ 得 $$e^{-x} = \dfrac{1-y}{y}$$，取对数即得 $$x = \ln\dfrac{y}{1-y}$$。
 
+
 这个函数也叫logit函数
+
 ---
 
 ### 导数
