@@ -40,4 +40,6 @@ $$\sigma'(x) = -\frac{1}{(1 + e^{-x})^2} \cdot (-e^{-x}) = \frac{e^{-x}}{(1 + e^
 ### 特点
 
 - **S 型、单调递增**：$$x \to -\infty$$ 时趋 0，$$x \to +\infty$$ 时趋 1
+- **值域**：$$\sigma(x) \in (0, 1)$$，开区间，有限 $$x$$ 下取不到 0 和 1
 - **中心对称**：$$\sigma(-x) = 1 - \sigma(x)$$
+- **导数的值域**：由 $$\sigma'(x) = \sigma(x)\bigl(1 - \sigma(x)\bigr)$$，在 $$\sigma = \tfrac{1}{2}$$（即 $$x = 0$$）处取最大值 $$\tfrac{1}{4}$$，故 $$\sigma'(x) \in \bigl(0, \tfrac{1}{4}\bigr]$$；$$|x|$$ 越大导数越小
