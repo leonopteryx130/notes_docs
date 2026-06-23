@@ -131,6 +131,7 @@
     * css
         * css基本概念
             * [什么是BFC](./notes/前端开发/css/css基本概念/什么是BFC.md)
+            * [margin-inline和padding-inline](./notes/前端开发/css/css基本概念/margin-inline和padding-inline.md)
         * api
             * [linear-gradient](./notes/前端开发/css/api/linear-gradient.md)
 * 服务端开发
