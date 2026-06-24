@@ -1,9 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
+* AI
+    * [一些基本知识](./notes/AI/一些基本知识.md)
+    * pytorch
+        * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
 * 计算机科学
-    * AI
-        * [一些基本知识](./notes/计算机科学/AI/一些基本知识.md)
     * 基础知识
         * [应用程序的进程和线程](./notes/计算机科学/基础知识/进程和线程.md)
         * [进程控制块](./notes/计算机科学/基础知识/进程控制块.md)
