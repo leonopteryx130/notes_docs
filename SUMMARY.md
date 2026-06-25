@@ -3,6 +3,8 @@
 * [Introduction](README.md)
 * AI
     * [一些基本知识](./notes/AI/一些基本知识.md)
+    * 基本概念
+        * [负采样](./notes/AI/基本概念/负采样.md)
     * pytorch
         * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
 * 计算机科学
