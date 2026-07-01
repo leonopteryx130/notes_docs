@@ -164,6 +164,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.2.2" data-path="../../AI/基本概念/卷积层.html">
+            
+                <a href="../../AI/基本概念/卷积层.html">
+            
+                    
+                    卷积层
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -3364,6 +3377,46 @@ transformed = np.tanh(linear_out)  <span class="hljs-comment"># (9, 3)</span>
 <h3 id="&#x751F;&#x7269;&#x4E0E;&#x6570;&#x5B66;&#x610F;&#x4E49;&#xFF1A;&#x6A21;&#x62DF;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x5F00;&#x5173;&#x4E0E;&#x95E8;&#x63A7;">&#x751F;&#x7269;&#x4E0E;&#x6570;&#x5B66;&#x610F;&#x4E49;&#xFF1A;&#x6A21;&#x62DF;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x201C;&#x5F00;&#x5173;&#x201D;&#x4E0E;&#x201C;&#x95E8;&#x63A7;&#x201D;</h3>
 <p><strong>&#x751F;&#x7269;&#x89C6;&#x89D2;</strong>&#xFF1A;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x6A21;&#x62DF;&#x4E86;&#x751F;&#x7269;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x201C;&#x5168;&#x6216;&#x65E0;&#x201D;&#x7279;&#x6027;&#x2014;&#x2014;&#x53EA;&#x6709;&#x5F53;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7D2F;&#x79EF;&#x8D85;&#x8FC7;&#x67D0;&#x4E2A;&#x9608;&#x503C;&#x65F6;&#xFF0C;&#x795E;&#x7ECF;&#x5143;&#x624D;&#x4F1A;&#x88AB;&#x6FC0;&#x6D3B;&#x5E76;&#x5411;&#x4E0B;&#x4F20;&#x9012;&#x4FE1;&#x53F7;&#x3002;</p>
 <p><strong>&#x6570;&#x5B66;&#x89C6;&#x89D2;</strong>&#xFF1A;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x5145;&#x5F53;&#x4E86;&#x6570;&#x636E;&#x5206;&#x5E03;&#x7684;&#x201C;&#x5C3A;&#x5EA6;&#x53D8;&#x6362;&#x5668;&#x201D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;Sigmoid &#x5C06;&#x8F93;&#x51FA;&#x538B;&#x7F29;&#x5230; (0, 1) &#x533A;&#x95F4;&#xFF0C;&#x9002;&#x5408;&#x505A;&#x6982;&#x7387;&#x8F93;&#x51FA;&#xFF1B;Tanh &#x5C06;&#x8F93;&#x51FA;&#x538B;&#x7F29;&#x5230; (-1, 1)&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x6570;&#x636E;&#x5747;&#x503C;&#x4E2D;&#x5FC3;&#x5316;&#xFF0C;&#x4FBF;&#x4E8E;&#x4E0B;&#x4E00;&#x5C42;&#x5B66;&#x4E60;&#x3002;</p>
+<p>&#x9644;&#x4E0A;&#x4E0A;&#x8FB9;&#x5B9E;&#x9A8C;&#x7684;&#x5236;&#x56FE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python">
+<span class="hljs-comment"># ========== 3. &#x7ED8;&#x5236;&#x5BF9;&#x6BD4;&#x56FE; ==========</span>
+fig = plt.figure(figsize=(<span class="hljs-number">14</span>, <span class="hljs-number">6</span>))
+
+<span class="hljs-comment"># ---- &#x5DE6;&#x56FE;&#xFF1A;&#x539F;&#x59CB;&#x5E73;&#x9762; ----</span>
+ax1 = fig.add_subplot(<span class="hljs-number">121</span>, projection=<span class="hljs-string">&apos;3d&apos;</span>)
+ax1.scatter(points[:, <span class="hljs-number">0</span>], points[:, <span class="hljs-number">1</span>], points[:, <span class="hljs-number">2</span>], 
+            c=<span class="hljs-string">&apos;blue&apos;</span>, s=<span class="hljs-number">120</span>, alpha=<span class="hljs-number">0.8</span>, edgecolors=<span class="hljs-string">&apos;darkblue&apos;</span>, linewidth=<span class="hljs-number">2</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    idx = i * <span class="hljs-number">3</span>
+    ax1.plot(points[idx:idx+<span class="hljs-number">3</span>, <span class="hljs-number">0</span>], points[idx:idx+<span class="hljs-number">3</span>, <span class="hljs-number">1</span>], points[idx:idx+<span class="hljs-number">3</span>, <span class="hljs-number">2</span>], 
+             <span class="hljs-string">&apos;b-&apos;</span>, alpha=<span class="hljs-number">0.5</span>, lw=<span class="hljs-number">2</span>)
+<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    idx = j
+    ax1.plot(points[idx:idx+<span class="hljs-number">7</span>:<span class="hljs-number">3</span>, <span class="hljs-number">0</span>], points[idx:idx+<span class="hljs-number">7</span>:<span class="hljs-number">3</span>, <span class="hljs-number">1</span>], points[idx:idx+<span class="hljs-number">7</span>:<span class="hljs-number">3</span>, <span class="hljs-number">2</span>], 
+             <span class="hljs-string">&apos;b-&apos;</span>, alpha=<span class="hljs-number">0.5</span>, lw=<span class="hljs-number">2</span>)
+ax1.set_xlabel(<span class="hljs-string">&apos;X&apos;</span>); ax1.set_ylabel(<span class="hljs-string">&apos;Y&apos;</span>); ax1.set_zlabel(<span class="hljs-string">&apos;Z&apos;</span>)
+ax1.set_xlim(<span class="hljs-number">-2.5</span>, <span class="hljs-number">2.5</span>); ax1.set_ylim(<span class="hljs-number">-2.5</span>, <span class="hljs-number">2.5</span>); ax1.set_zlim(<span class="hljs-number">-2.5</span>, <span class="hljs-number">2.5</span>)
+ax1.view_init(elev=<span class="hljs-number">30</span>, azim=<span class="hljs-number">-60</span>)
+
+<span class="hljs-comment"># ---- &#x53F3;&#x56FE;&#xFF1A;&#x7ECF;&#x8FC7; Tanh &#x626D;&#x66F2;&#x540E;&#x7684;&#x66F2;&#x9762; ----</span>
+ax2 = fig.add_subplot(<span class="hljs-number">122</span>, projection=<span class="hljs-string">&apos;3d&apos;</span>)
+ax2.scatter(transformed[:, <span class="hljs-number">0</span>], transformed[:, <span class="hljs-number">1</span>], transformed[:, <span class="hljs-number">2</span>], 
+            c=<span class="hljs-string">&apos;red&apos;</span>, s=<span class="hljs-number">120</span>, alpha=<span class="hljs-number">0.8</span>, edgecolors=<span class="hljs-string">&apos;darkred&apos;</span>, linewidth=<span class="hljs-number">2</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    idx = i * <span class="hljs-number">3</span>
+    ax2.plot(transformed[idx:idx+<span class="hljs-number">3</span>, <span class="hljs-number">0</span>], transformed[idx:idx+<span class="hljs-number">3</span>, <span class="hljs-number">1</span>], transformed[idx:idx+<span class="hljs-number">3</span>, <span class="hljs-number">2</span>], 
+             <span class="hljs-string">&apos;r-&apos;</span>, alpha=<span class="hljs-number">0.5</span>, lw=<span class="hljs-number">2</span>)
+<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    idx = j
+    ax2.plot(transformed[idx:idx+<span class="hljs-number">7</span>:<span class="hljs-number">3</span>, <span class="hljs-number">0</span>], transformed[idx:idx+<span class="hljs-number">7</span>:<span class="hljs-number">3</span>, <span class="hljs-number">1</span>], transformed[idx:idx+<span class="hljs-number">7</span>:<span class="hljs-number">3</span>, <span class="hljs-number">2</span>], 
+             <span class="hljs-string">&apos;r-&apos;</span>, alpha=<span class="hljs-number">0.5</span>, lw=<span class="hljs-number">2</span>)
+ax2.set_xlabel(<span class="hljs-string">&apos;X&apos;</span>); ax2.set_ylabel(<span class="hljs-string">&apos;Y&apos;</span>); ax2.set_zlabel(<span class="hljs-string">&apos;Z&apos;</span>)
+ax2.set_xlim(<span class="hljs-number">-1.2</span>, <span class="hljs-number">1.2</span>); ax2.set_ylim(<span class="hljs-number">-1.2</span>, <span class="hljs-number">1.2</span>); ax2.set_zlim(<span class="hljs-number">-1.2</span>, <span class="hljs-number">1.2</span>)
+ax2.view_init(elev=<span class="hljs-number">30</span>, azim=<span class="hljs-number">-60</span>)
+
+plt.tight_layout()
+plt.show()
+</code></pre>
 
                                 
                                 </section>
@@ -3407,7 +3460,7 @@ transformed = np.tanh(linear_out)  <span class="hljs-comment"># (9, 3)</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"如何理解激活函数","level":"1.8.2.6","depth":3,"next":{"title":"全连接神经网络","level":"1.8.2.7","depth":3,"path":"notes/数学/应用数学/全连接神经网络.md","ref":"./notes/数学/应用数学/全连接神经网络.md","articles":[]},"previous":{"title":"skip-gram模型","level":"1.8.2.5","depth":3,"path":"notes/数学/应用数学/skip-gram模型.md","ref":"./notes/数学/应用数学/skip-gram模型.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","expandable-chapters","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/数学/应用数学/如何理解激活函数.md","mtime":"2026-07-01T07:31:28.665Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-01T07:32:32.963Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何理解激活函数","level":"1.8.2.6","depth":3,"next":{"title":"全连接神经网络","level":"1.8.2.7","depth":3,"path":"notes/数学/应用数学/全连接神经网络.md","ref":"./notes/数学/应用数学/全连接神经网络.md","articles":[]},"previous":{"title":"skip-gram模型","level":"1.8.2.5","depth":3,"path":"notes/数学/应用数学/skip-gram模型.md","ref":"./notes/数学/应用数学/skip-gram模型.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","expandable-chapters","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/数学/应用数学/如何理解激活函数.md","mtime":"2026-07-01T09:03:05.456Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-01T10:10:01.458Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
