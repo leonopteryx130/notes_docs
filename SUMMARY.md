@@ -7,6 +7,7 @@
         * [负采样](./notes/AI/基本概念/负采样.md)
         * [卷积层](./notes/AI/基本概念/卷积层.md)
         * [池化](./notes/AI/基本概念/池化.md)
+        * [梯度消失和梯度爆炸问题](./notes/AI/基本概念/梯度消失和梯度爆炸问题.md)
     * pytorch
         * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
 * 计算机科学
