@@ -9,6 +9,8 @@
         * [池化](./notes/AI/基本概念/池化.md)
         * [梯度消失和梯度爆炸问题](./notes/AI/基本概念/梯度消失和梯度爆炸问题.md)
         * [Encoder-Decoder架构](./notes/AI/基本概念/Encoder-Decoder架构.md)
+    * 深度学习模型架构
+        * [双向循环神经网络Bi-RNN](./notes/AI/深度学习模型架构/双向循环神经网络Bi-RNN.md)
     * pytorch
         * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
 * 计算机科学
