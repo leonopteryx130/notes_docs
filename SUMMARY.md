@@ -8,9 +8,12 @@
         * [卷积层](./notes/AI/基本概念/卷积层.md)
         * [池化](./notes/AI/基本概念/池化.md)
         * [梯度消失和梯度爆炸问题](./notes/AI/基本概念/梯度消失和梯度爆炸问题.md)
-        * [Encoder-Decoder架构](./notes/AI/基本概念/Encoder-Decoder架构.md)
     * 深度学习模型架构
+        * [skip-gram模型](./notes/AI/深度学习模型架构/skip-gram模型.md)
+        * [循环神经网络](./notes/AI/深度学习模型架构/循环神经网络RNN.md)
         * [双向循环神经网络Bi-RNN](./notes/AI/深度学习模型架构/双向循环神经网络Bi-RNN.md)
+        * [Encoder-Decoder架构](./notes/AI/深度学习模型架构/Encoder-Decoder架构.md)
+        * [卷积神经网络](./notes/AI/深度学习模型架构/卷积神经网络CNN.md)
     * pytorch
         * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
 * 计算机科学
@@ -222,9 +225,6 @@
         * [线性回归模型](./notes//数学/应用数学/线性回归模型.md)
         * [逻辑回归模型](./notes/数学/应用数学/逻辑回归模型.md)
         * [逻辑回归模型的loss函数](./notes/数学/应用数学/逻辑回归模型的loss函数.md)
-        * [skip-gram模型](./notes/数学/应用数学/skip-gram模型.md)
         * [如何理解激活函数](./notes/数学/应用数学/如何理解激活函数.md)
         * [全连接神经网络](./notes/数学/应用数学/全连接神经网络.md)
-        * [循环神经网络](./notes/数学/应用数学/循环神经网络RNN.md)
-        * [卷积神经网络](./notes/数学/应用数学/卷积神经网络CNN.md)
         * [梯度下降算法](./notes/数学/应用数学/梯度下降算法.md)

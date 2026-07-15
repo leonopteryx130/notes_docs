@@ -22,3 +22,12 @@
 
 - **整句表示**：拼的是两个方向各自「读完整句」后的状态。在**词位置**编号下，正向读完落在位置 $$T$$，反向读完落在位置 $$1$$，所以是 $$[h_T^{\rightarrow}; h_1^{\leftarrow}]$$。
 - **每个词的表示**：按**同一个词位置**拼 $$[h_t^{\rightarrow}; h_t^{\leftarrow}]$$。
+
+
+### 应用到 Encoder-Decoder 中
+
+Seq2Seq 里用 Bi-RNN 做 Encoder 时，正向与反向隐藏状态会拼接，语义向量维度变为原来的 **2H**。和 Decoder 对接时通常有三种做法：
+
+1. **线性投影**：用 $$W \in \mathbb{R}^{H \times 2H}$$ 把 $$[h_T^{\rightarrow}; h_1^{\leftarrow}]$$ 压回维度 $$H$$，再作为 Decoder 的初始状态。
+2. **对齐维度**：直接把 Decoder 隐藏层设为 $$2H$$，与 Encoder 输出对齐，不再压缩。
+3. **Attention**：不再只用单个固定向量 C；Decoder 每步对编码器各位置的 $$[h_t^{\rightarrow}; h_t^{\leftarrow}]$$（维度 $$2H$$）做加权求和，再决定当前输出。
