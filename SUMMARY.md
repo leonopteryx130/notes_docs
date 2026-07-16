@@ -14,6 +14,7 @@
         * [双向循环神经网络Bi-RNN](./notes/AI/深度学习模型架构/双向循环神经网络Bi-RNN.md)
         * [Encoder-Decoder架构](./notes/AI/深度学习模型架构/Encoder-Decoder架构.md)
         * [卷积神经网络](./notes/AI/深度学习模型架构/卷积神经网络CNN.md)
+        * [Bahdanau Attention](./notes/AI/深度学习模型架构/Bahdanau_Attention.md)
     * pytorch
         * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
 * 计算机科学
