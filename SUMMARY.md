@@ -18,6 +18,8 @@
         * [Attention](./notes/AI/深度学习模型架构/Attention.md)
     * pytorch
         * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
+    * 探索实践
+        * [RNN+Attention文本分类](./notes/AI/探索实践/RNN+Attention文本分类.md)
 * 计算机科学
     * 基础知识
         * [应用程序的进程和线程](./notes/计算机科学/基础知识/进程和线程.md)
