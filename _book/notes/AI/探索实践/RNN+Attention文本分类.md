@@ -6,7 +6,7 @@
 
 与翻译不同：这里没有逐步变化的解码器，Attention **只算一次**。本节模型用的是 **Additive Attention（加性注意力）**。
 
-完整实验：`code_demo/RNN_attention/`（说明见同目录 `实验.md`）。`setting.ATTN_TYPE` 可切 `additive` / `scaled_dot` / `self`：
+完整实验：`code_demo/RNN_attention/`（说明见同目录 `实验.md`）。数据为 **AG News 小型子集**（4 类多分类）。`setting.ATTN_TYPE` 可切 `additive` / `scaled_dot` / `self`：
 
 ```bash
 cd code_demo/RNN_attention
