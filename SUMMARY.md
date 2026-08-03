@@ -21,6 +21,8 @@
         * [torch中的乘法](./notes/AI/pytorch/torch中的乘法.md)
     * 探索实践
         * [RNN+Attention文本分类](./notes/AI/探索实践/RNN+Attention文本分类.md)
+    * 强化学习
+        * [马尔可夫链和马尔可夫奖励过程](./notes/AI/强化学习/马尔可夫链和马尔可夫奖励过程.md)
 * 计算机科学
     * 基础知识
         * [应用程序的进程和线程](./notes/计算机科学/基础知识/进程和线程.md)
