@@ -1,0 +1,3938 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>全概率公式和贝叶斯公式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="预测的分类.html" />
+    
+    
+    <link rel="prev" href="概率，几率，对数几率.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    AI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../AI/一些基本知识.html">
+            
+                <a href="../../AI/一些基本知识.html">
+            
+                    
+                    一些基本知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    基本概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../AI/基本概念/负采样.html">
+            
+                <a href="../../AI/基本概念/负采样.html">
+            
+                    
+                    负采样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../AI/基本概念/卷积层.html">
+            
+                <a href="../../AI/基本概念/卷积层.html">
+            
+                    
+                    卷积层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../AI/基本概念/池化.html">
+            
+                <a href="../../AI/基本概念/池化.html">
+            
+                    
+                    池化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../AI/基本概念/梯度消失和梯度爆炸问题.html">
+            
+                <a href="../../AI/基本概念/梯度消失和梯度爆炸问题.html">
+            
+                    
+                    梯度消失和梯度爆炸问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../../AI/基本概念/数据增强.html">
+            
+                <a href="../../AI/基本概念/数据增强.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    深度学习模型架构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../AI/深度学习模型架构/skip-gram模型.html">
+            
+                <a href="../../AI/深度学习模型架构/skip-gram模型.html">
+            
+                    
+                    skip-gram模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../AI/深度学习模型架构/循环神经网络RNN.html">
+            
+                <a href="../../AI/深度学习模型架构/循环神经网络RNN.html">
+            
+                    
+                    循环神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../AI/深度学习模型架构/双向循环神经网络Bi-RNN.html">
+            
+                <a href="../../AI/深度学习模型架构/双向循环神经网络Bi-RNN.html">
+            
+                    
+                    双向循环神经网络Bi-RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../AI/深度学习模型架构/Encoder-Decoder架构.html">
+            
+                <a href="../../AI/深度学习模型架构/Encoder-Decoder架构.html">
+            
+                    
+                    Encoder-Decoder架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../AI/深度学习模型架构/卷积神经网络CNN.html">
+            
+                <a href="../../AI/深度学习模型架构/卷积神经网络CNN.html">
+            
+                    
+                    卷积神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../AI/深度学习模型架构/Bahdanau_Attention.html">
+            
+                <a href="../../AI/深度学习模型架构/Bahdanau_Attention.html">
+            
+                    
+                    Bahdanau Attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../../AI/深度学习模型架构/Attention.html">
+            
+                <a href="../../AI/深度学习模型架构/Attention.html">
+            
+                    
+                    Attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    pytorch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../AI/pytorch/pytorch里的tensor.html">
+            
+                <a href="../../AI/pytorch/pytorch里的tensor.html">
+            
+                    
+                    pytorch里的tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../AI/pytorch/torch中的乘法.html">
+            
+                <a href="../../AI/pytorch/torch中的乘法.html">
+            
+                    
+                    torch中的乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    探索实践
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../AI/探索实践/RNN+Attention文本分类.html">
+            
+                <a href="../../AI/探索实践/RNN+Attention文本分类.html">
+            
+                    
+                    RNN+Attention文本分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    强化学习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../../AI/强化学习/马尔可夫链及其回报.html">
+            
+                <a href="../../AI/强化学习/马尔可夫链及其回报.html">
+            
+                    
+                    马尔可夫链及其回报
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    计算机科学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../计算机科学/基础知识/进程和线程.html">
+            
+                <a href="../../计算机科学/基础知识/进程和线程.html">
+            
+                    
+                    应用程序的进程和线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../计算机科学/基础知识/进程控制块.html">
+            
+                <a href="../../计算机科学/基础知识/进程控制块.html">
+            
+                    
+                    进程控制块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../计算机科学/基础知识/转储.html">
+            
+                <a href="../../计算机科学/基础知识/转储.html">
+            
+                    
+                    转储dump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../计算机科学/基础知识/字节序.html">
+            
+                <a href="../../计算机科学/基础知识/字节序.html">
+            
+                    
+                    字节序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../计算机科学/基础知识/缓冲区.html">
+            
+                <a href="../../计算机科学/基础知识/缓冲区.html">
+            
+                    
+                    缓冲区
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    硬件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../计算机科学/硬件/缓存cache.html">
+            
+                <a href="../../计算机科学/硬件/缓存cache.html">
+            
+                    
+                    缓存cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    数据结构及其算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../计算机科学/数据结构及其算法/线性表.html">
+            
+                <a href="../../计算机科学/数据结构及其算法/线性表.html">
+            
+                    
+                    线性表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../计算机科学/数据结构及其算法/图的存储结构.html">
+            
+                <a href="../../计算机科学/数据结构及其算法/图的存储结构.html">
+            
+                    
+                    图的存储结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../计算机科学/数据结构及其算法/邻接矩阵.html">
+            
+                <a href="../../计算机科学/数据结构及其算法/邻接矩阵.html">
+            
+                    
+                    邻接矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../计算机科学/数据结构及其算法/树的遍历——深度优先vs广度优先.html">
+            
+                <a href="../../计算机科学/数据结构及其算法/树的遍历——深度优先vs广度优先.html">
+            
+                    
+                    树的遍历——深度优先vs广度优先
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../../计算机科学/数据结构及其算法/哈希表.html">
+            
+                <a href="../../计算机科学/数据结构及其算法/哈希表.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../../计算机科学/数据结构及其算法/时间复杂度算法.html">
+            
+                <a href="../../计算机科学/数据结构及其算法/时间复杂度算法.html">
+            
+                    
+                    时间复杂度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../../计算机科学/数据结构及其算法/冒泡排序.html">
+            
+                <a href="../../计算机科学/数据结构及其算法/冒泡排序.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    计算机图形学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../计算机科学/计算机图形学/顶点，图元，片元，像素.html">
+            
+                <a href="../../计算机科学/计算机图形学/顶点，图元，片元，像素.html">
+            
+                    
+                    顶点，图元，片元，像素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../计算机科学/计算机图形学/图像错切.html">
+            
+                <a href="../../计算机科学/计算机图形学/图像错切.html">
+            
+                    
+                    图像错切
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../计算机科学/计算机图形学/图像噪声.html">
+            
+                <a href="../../计算机科学/计算机图形学/图像噪声.html">
+            
+                    
+                    图像噪声
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../计算机科学/计算机图形学/色彩空间.html">
+            
+                <a href="../../计算机科学/计算机图形学/色彩空间.html">
+            
+                    
+                    色彩空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../计算机科学/计算机图形学/hsv色彩空间.html">
+            
+                <a href="../../计算机科学/计算机图形学/hsv色彩空间.html">
+            
+                    
+                    hsv色彩空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../../计算机科学/计算机图形学/pixel和point及分辨率.html">
+            
+                <a href="../../计算机科学/计算机图形学/pixel和point及分辨率.html">
+            
+                    
+                    pixel和point及分辨率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../../计算机科学/计算机图形学/alpha通道.html">
+            
+                <a href="../../计算机科学/计算机图形学/alpha通道.html">
+            
+                    
+                    alpha通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../../计算机科学/计算机图形学/直线的光栅化算法.html">
+            
+                <a href="../../计算机科学/计算机图形学/直线的光栅化算法.html">
+            
+                    
+                    直线的光栅化算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="../../计算机科学/计算机图形学/FXAA.html">
+            
+                <a href="../../计算机科学/计算机图形学/FXAA.html">
+            
+                    
+                    FXAA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    编程语言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../计算机科学/编程语言/声明式编程和命令式编程.html">
+            
+                <a href="../../计算机科学/编程语言/声明式编程和命令式编程.html">
+            
+                    
+                    声明式编程和命令式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../计算机科学/编程语言/一些基本概念.html">
+            
+                <a href="../../计算机科学/编程语言/一些基本概念.html">
+            
+                    
+                    一些基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../../计算机科学/编程语言/序列化和反序列化.html">
+            
+                <a href="../../计算机科学/编程语言/序列化和反序列化.html">
+            
+                    
+                    序列化和反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../../计算机科学/编程语言/面向对象和面向过程.html">
+            
+                <a href="../../计算机科学/编程语言/面向对象和面向过程.html">
+            
+                    
+                    面向对象和面向过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../../计算机科学/编程语言/trim.html">
+            
+                <a href="../../计算机科学/编程语言/trim.html">
+            
+                    
+                    trim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    操作系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" >
+            
+                <span>
+            
+                    
+                    Macos
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.2.1" data-path="../../计算机科学/操作系统/Macos/macos中的四种配置文件.html">
+            
+                <a href="../../计算机科学/操作系统/Macos/macos中的四种配置文件.html">
+            
+                    
+                    macos中的四种配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../../计算机科学/操作系统/不同的shell.html">
+            
+                <a href="../../计算机科学/操作系统/不同的shell.html">
+            
+                    
+                    不同的shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../../计算机科学/操作系统/软连接和硬链接.html">
+            
+                <a href="../../计算机科学/操作系统/软连接和硬链接.html">
+            
+                    
+                    软连接和硬链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    前端开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    React
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" >
+            
+                <span>
+            
+                    
+                    基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" data-path="../../前端开发/React/基础知识/Fiber树.html">
+            
+                <a href="../../前端开发/React/基础知识/Fiber树.html">
+            
+                    
+                    Fiber树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="../../前端开发/React/基础知识/react自动批处理.html">
+            
+                <a href="../../前端开发/React/基础知识/react自动批处理.html">
+            
+                    
+                    react自动批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3" data-path="../../前端开发/React/基础知识/高阶组件HOC.html">
+            
+                <a href="../../前端开发/React/基础知识/高阶组件HOC.html">
+            
+                    
+                    高阶组件HOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <span>
+            
+                    
+                    api和hooks
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1" data-path="../../前端开发/React/api和hooks/什么是hooks.html">
+            
+                <a href="../../前端开发/React/api和hooks/什么是hooks.html">
+            
+                    
+                    什么是hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.2" data-path="../../前端开发/React/api和hooks/useEffect.html">
+            
+                <a href="../../前端开发/React/api和hooks/useEffect.html">
+            
+                    
+                    useEffect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.3" data-path="../../前端开发/React/api和hooks/useCallback.html">
+            
+                <a href="../../前端开发/React/api和hooks/useCallback.html">
+            
+                    
+                    useCallback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.4" data-path="../../前端开发/React/api和hooks/useMemo.html">
+            
+                <a href="../../前端开发/React/api和hooks/useMemo.html">
+            
+                    
+                    useMemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.5" data-path="../../前端开发/React/api和hooks/React.memo.html">
+            
+                <a href="../../前端开发/React/api和hooks/React.memo.html">
+            
+                    
+                    React.memo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.6" data-path="../../前端开发/React/api和hooks/React组件propTypes属性.html">
+            
+                <a href="../../前端开发/React/api和hooks/React组件propTypes属性.html">
+            
+                    
+                    React组件propTypes属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.7" data-path="../../前端开发/React/api和hooks/useRef.html">
+            
+                <a href="../../前端开发/React/api和hooks/useRef.html">
+            
+                    
+                    useRef
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.8" data-path="../../前端开发/React/api和hooks/createPortal用法.html">
+            
+                <a href="../../前端开发/React/api和hooks/createPortal用法.html">
+            
+                    
+                    createPortal用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" >
+            
+                <span>
+            
+                    
+                    react源码解读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1" data-path="../../前端开发/React/react源码解读/flow和typescript比较.html">
+            
+                <a href="../../前端开发/React/react源码解读/flow和typescript比较.html">
+            
+                    
+                    flow和typescript比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2" data-path="../../前端开发/React/react源码解读/React的两种启动方式.html">
+            
+                <a href="../../前端开发/React/react源码解读/React的两种启动方式.html">
+            
+                    
+                    React的两种启动方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.3" data-path="../../前端开发/React/react源码解读/createRoot节点类型和节点挂载检查.html">
+            
+                <a href="../../前端开发/React/react源码解读/createRoot节点类型和节点挂载检查.html">
+            
+                    
+                    createRoot节点类型和节点挂载检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.4" data-path="../../前端开发/React/react源码解读/为什么有两个createRoot方法？.html">
+            
+                <a href="../../前端开发/React/react源码解读/为什么有两个createRoot方法？.html">
+            
+                    
+                    为什么有两个createRoot方法？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.5" data-path="../../前端开发/React/react源码解读/react挂载元素根组件标记.html">
+            
+                <a href="../../前端开发/React/react源码解读/react挂载元素根组件标记.html">
+            
+                    
+                    react挂载元素根组件标记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" >
+            
+                <span>
+            
+                    
+                    Redux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.4.1" data-path="../../前端开发/React/Redux/一些基本概念.html">
+            
+                <a href="../../前端开发/React/Redux/一些基本概念.html">
+            
+                    
+                    一些基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    Vue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" >
+            
+                <span>
+            
+                    
+                    基本概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../前端开发/vue/基本概念/数据更新.html">
+            
+                <a href="../../前端开发/vue/基本概念/数据更新.html">
+            
+                    
+                    数据更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../前端开发/vue/基本概念/一些基本概念.html">
+            
+                <a href="../../前端开发/vue/基本概念/一些基本概念.html">
+            
+                    
+                    一些基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../../前端开发/vue/基本概念/vue数据劫持.html">
+            
+                <a href="../../前端开发/vue/基本概念/vue数据劫持.html">
+            
+                    
+                    vue数据劫持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" >
+            
+                <span>
+            
+                    
+                    api
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../前端开发/vue/api/computed.html">
+            
+                <a href="../../前端开发/vue/api/computed.html">
+            
+                    
+                    computed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../../前端开发/vue/api/watch.html">
+            
+                <a href="../../前端开发/vue/api/watch.html">
+            
+                    
+                    watch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../../前端开发/vue/api/template标签.html">
+            
+                <a href="../../前端开发/vue/api/template标签.html">
+            
+                    
+                    template标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../../前端开发/vue/api/slot.html">
+            
+                <a href="../../前端开发/vue/api/slot.html">
+            
+                    
+                    slot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" >
+            
+                <span>
+            
+                    
+                    vue源码解读
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../../前端开发/vue/vue源码解读/vue3/ReactiveFlags标记.html">
+            
+                <a href="../../前端开发/vue/vue源码解读/vue3/ReactiveFlags标记.html">
+            
+                    
+                    ReactiveFlags标记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../../前端开发/vue/vue源码解读/utils.html">
+            
+                <a href="../../前端开发/vue/vue源码解读/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../../前端开发/vue/vue源码解读/perf.ts——vue组件性能标记.html">
+            
+                <a href="../../前端开发/vue/vue源码解读/perf.ts——vue组件性能标记.html">
+            
+                    
+                    perf.ts——vue组件性能标记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" >
+            
+                <span>
+            
+                    
+                    HTML基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1.1" data-path="../../前端开发/HTML/HTML基础知识/预加载prefetch和preload.html">
+            
+                <a href="../../前端开发/HTML/HTML基础知识/预加载prefetch和preload.html">
+            
+                    
+                    预加载prefetch和preload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2" data-path="../../前端开发/HTML/HTML基础知识/模板引擎.html">
+            
+                <a href="../../前端开发/HTML/HTML基础知识/模板引擎.html">
+            
+                    
+                    模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" >
+            
+                <span>
+            
+                    
+                    api
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../前端开发/HTML/api/documentFragment对象.html">
+            
+                <a href="../../前端开发/HTML/api/documentFragment对象.html">
+            
+                    
+                    documentFragment对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    浏览器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../前端开发/浏览器/判断对象是否存活的方法.html">
+            
+                <a href="../../前端开发/浏览器/判断对象是否存活的方法.html">
+            
+                    
+                    判断对象是否存活的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../前端开发/浏览器/怪异模式和标准模式.html">
+            
+                <a href="../../前端开发/浏览器/怪异模式和标准模式.html">
+            
+                    
+                    怪异模式和标准模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../前端开发/浏览器/强缓存和协商缓存.html">
+            
+                <a href="../../前端开发/浏览器/强缓存和协商缓存.html">
+            
+                    
+                    强缓存和协商缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../前端开发/浏览器/浏览器渲染.html">
+            
+                <a href="../../前端开发/浏览器/浏览器渲染.html">
+            
+                    
+                    浏览器渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../前端开发/浏览器/浏览器的渲染层和合成层.html">
+            
+                <a href="../../前端开发/浏览器/浏览器的渲染层和合成层.html">
+            
+                    
+                    浏览器的渲染层和合成层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../前端开发/浏览器/浏览器多线程机制.html">
+            
+                <a href="../../前端开发/浏览器/浏览器多线程机制.html">
+            
+                    
+                    浏览器多线程机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../前端开发/浏览器/浏览器渲染过程的事件触发.html">
+            
+                <a href="../../前端开发/浏览器/浏览器渲染过程的事件触发.html">
+            
+                    
+                    浏览器渲染过程的事件触发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../前端开发/浏览器/浏览器的空闲时间.html">
+            
+                <a href="../../前端开发/浏览器/浏览器的空闲时间.html">
+            
+                    
+                    浏览器的空闲时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../../前端开发/浏览器/hash路由和history路由.html">
+            
+                <a href="../../前端开发/浏览器/hash路由和history路由.html">
+            
+                    
+                    hash路由和history路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../../前端开发/浏览器/裸导入和import-maps.html">
+            
+                <a href="../../前端开发/浏览器/裸导入和import-maps.html">
+            
+                    
+                    裸导入和import-maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" >
+            
+                <span>
+            
+                    
+                    基本概念及理念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1.1" data-path="../../前端开发/JavaScript/基本概念及理念/node.js和javascript中的全局对象.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/node.js和javascript中的全局对象.html">
+            
+                    
+                    node.js和javascript中的全局变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.2" data-path="../../前端开发/JavaScript/基本概念及理念/js内部对象和宿主对象.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/js内部对象和宿主对象.html">
+            
+                    
+                    js内部对象和宿主对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.3" data-path="../../前端开发/JavaScript/基本概念及理念/事件循环，宏任务和微任务.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/事件循环，宏任务和微任务.html">
+            
+                    
+                    事件循环，宏任务和微任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.4" data-path="../../前端开发/JavaScript/基本概念及理念/基本数据类型和引用数据类型.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/基本数据类型和引用数据类型.html">
+            
+                    
+                    基本数据类型和引用数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.5" data-path="../../前端开发/JavaScript/基本概念及理念/深拷贝和浅拷贝.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/深拷贝和浅拷贝.html">
+            
+                    
+                    深拷贝和浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.6" data-path="../../前端开发/JavaScript/基本概念及理念/js的几种继承方式.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/js的几种继承方式.html">
+            
+                    
+                    js的几种继承方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.7" data-path="../../前端开发/JavaScript/基本概念及理念/对象的属性描述符.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/对象的属性描述符.html">
+            
+                    
+                    对象的属性描述符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.8" data-path="../../前端开发/JavaScript/基本概念及理念/模块化和模块化的发展.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/模块化和模块化的发展.html">
+            
+                    
+                    模块化和模块化的发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.9" data-path="../../前端开发/JavaScript/基本概念及理念/function中的this指向.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/function中的this指向.html">
+            
+                    
+                    function中的this指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.10" data-path="../../前端开发/JavaScript/基本概念及理念/装饰器.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/装饰器.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.1.11" data-path="../../前端开发/JavaScript/基本概念及理念/Thunk函数.html">
+            
+                <a href="../../前端开发/JavaScript/基本概念及理念/Thunk函数.html">
+            
+                    
+                    Thunk函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" >
+            
+                <span>
+            
+                    
+                    函数及api
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.2.1" data-path="../../前端开发/JavaScript/函数及api/postMessage跨文档消息传递.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/postMessage跨文档消息传递.html">
+            
+                    
+                    postMessage跨文档消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.2" data-path="../../前端开发/JavaScript/函数及api/call,apply和bind.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/call,apply和bind.html">
+            
+                    
+                    call,apply和bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.3" data-path="../../前端开发/JavaScript/函数及api/import异步加载.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/import异步加载.html">
+            
+                    
+                    import()异步加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.4" data-path="../../前端开发/JavaScript/函数及api/setTimeout的知识.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/setTimeout的知识.html">
+            
+                    
+                    setTimeouot的知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.5" data-path="../../前端开发/JavaScript/函数及api/async和await.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/async和await.html">
+            
+                    
+                    async和await
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.6" data-path="../../前端开发/JavaScript/函数及api/IntersectionObserver.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/IntersectionObserver.html">
+            
+                    
+                    IntersectionObserver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.7" data-path="../../前端开发/JavaScript/函数及api/continue和break.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/continue和break.html">
+            
+                    
+                    continue和break
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.8" data-path="../../前端开发/JavaScript/函数及api/path模块.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/path模块.html">
+            
+                    
+                    path模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.9" data-path="../../前端开发/JavaScript/函数及api/Performance.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/Performance.html">
+            
+                    
+                    Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.10" data-path="../../前端开发/JavaScript/函数及api/Function.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.11" data-path="../../前端开发/JavaScript/函数及api/JSON.stringfy.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/JSON.stringfy.html">
+            
+                    
+                    JSON.stringfy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2.12" data-path="../../前端开发/JavaScript/函数及api/requestIdleCallback.html">
+            
+                <a href="../../前端开发/JavaScript/函数及api/requestIdleCallback.html">
+            
+                    
+                    requestIdleCallback
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" >
+            
+                <span>
+            
+                    
+                    typescript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.3.1" data-path="../../前端开发/JavaScript/typescript/as关键字，类型断言.html">
+            
+                <a href="../../前端开发/JavaScript/typescript/as关键字，类型断言.html">
+            
+                    
+                    as关键字，类型断言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3.2" data-path="../../前端开发/JavaScript/typescript/extends和implements.html">
+            
+                <a href="../../前端开发/JavaScript/typescript/extends和implements.html">
+            
+                    
+                    extends和implements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3.3" data-path="../../前端开发/JavaScript/typescript/问号和惊叹号操作符.html">
+            
+                <a href="../../前端开发/JavaScript/typescript/问号和惊叹号操作符.html">
+            
+                    
+                    问号和惊叹号操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3.4" data-path="../../前端开发/JavaScript/typescript/联合类型和交叉类型.html">
+            
+                <a href="../../前端开发/JavaScript/typescript/联合类型和交叉类型.html">
+            
+                    
+                    联合类型和交叉类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3.5" data-path="../../前端开发/JavaScript/typescript/索引签名.html">
+            
+                <a href="../../前端开发/JavaScript/typescript/索引签名.html">
+            
+                    
+                    索引签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3.6" data-path="../../前端开发/JavaScript/typescript/类型保护.html">
+            
+                <a href="../../前端开发/JavaScript/typescript/类型保护.html">
+            
+                    
+                    类型保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" >
+            
+                <span>
+            
+                    
+                    canvas
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.4.1" data-path="../../前端开发/JavaScript/canvas/canvas获取渲染上下文.html">
+            
+                <a href="../../前端开发/JavaScript/canvas/canvas获取渲染上下文.html">
+            
+                    
+                    canvas获取渲染上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" >
+            
+                <span>
+            
+                    
+                    code demo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.5.1" data-path="../../前端开发/JavaScript/code_demo/用defineProperty方法实现数据劫持.html">
+            
+                <a href="../../前端开发/JavaScript/code_demo/用defineProperty方法实现数据劫持.html">
+            
+                    
+                    用defineProperty方法实现数据劫持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    css
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" >
+            
+                <span>
+            
+                    
+                    css基本概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1.1" data-path="../../前端开发/css/css基本概念/什么是BFC.html">
+            
+                <a href="../../前端开发/css/css基本概念/什么是BFC.html">
+            
+                    
+                    什么是BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.1.2" data-path="../../前端开发/css/css基本概念/margin-inline和padding-inline.html">
+            
+                <a href="../../前端开发/css/css基本概念/margin-inline和padding-inline.html">
+            
+                    
+                    margin-inline和padding-inline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" >
+            
+                <span>
+            
+                    
+                    api
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.2.1" data-path="../../前端开发/css/api/linear-gradient.html">
+            
+                <a href="../../前端开发/css/api/linear-gradient.html">
+            
+                    
+                    linear-gradient
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    服务端开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../服务端开发/数据库/DDL和DML.html">
+            
+                <a href="../../服务端开发/数据库/DDL和DML.html">
+            
+                    
+                    DDL和DML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../服务端开发/基础知识/消息模式分类.html">
+            
+                <a href="../../服务端开发/基础知识/消息模式分类.html">
+            
+                    
+                    消息模式分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../服务端开发/基础知识/kafka.html">
+            
+                <a href="../../服务端开发/基础知识/kafka.html">
+            
+                    
+                    kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../计算机网络/基础知识/各种域名服务器.html">
+            
+                <a href="../../计算机网络/基础知识/各种域名服务器.html">
+            
+                    
+                    各种域名服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../计算机网络/基础知识/jsonp和跨域.html">
+            
+                <a href="../../计算机网络/基础知识/jsonp和跨域.html">
+            
+                    
+                    jsonp和跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../计算机网络/基础知识/cookie的结构.html">
+            
+                <a href="../../计算机网络/基础知识/cookie的结构.html">
+            
+                    
+                    cookie的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../../计算机网络/基础知识/接口限流算法.html">
+            
+                <a href="../../计算机网络/基础知识/接口限流算法.html">
+            
+                    
+                    接口限流算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../../计算机网络/基础知识/POST提交数据的请求类型.html">
+            
+                <a href="../../计算机网络/基础知识/POST提交数据的请求类型.html">
+            
+                    
+                    POST提交数据的请求类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="../../计算机网络/基础知识/全连接队列和半连接队列.html">
+            
+                <a href="../../计算机网络/基础知识/全连接队列和半连接队列.html">
+            
+                    
+                    全连接队列和半连接队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    通信协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../计算机网络/通信协议/广播和泛洪.html">
+            
+                <a href="../../计算机网络/通信协议/广播和泛洪.html">
+            
+                    
+                    广播和泛洪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../计算机网络/通信协议/DHCP.html">
+            
+                <a href="../../计算机网络/通信协议/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../../计算机网络/通信协议/TCP和UDP.html">
+            
+                <a href="../../计算机网络/通信协议/TCP和UDP.html">
+            
+                    
+                    TCP和UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    项目开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    基本知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../项目开发/基本知识/app整包更新和热更新.html">
+            
+                <a href="../../项目开发/基本知识/app整包更新和热更新.html">
+            
+                    
+                    app整包更新和热更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../项目开发/基本知识/什么是LCP.html">
+            
+                <a href="../../项目开发/基本知识/什么是LCP.html">
+            
+                    
+                    什么是LCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../项目开发/基本知识/前端页面性能指标.html">
+            
+                <a href="../../项目开发/基本知识/前端页面性能指标.html">
+            
+                    
+                    前端页面性能指标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../项目开发/基本知识/沙箱.html">
+            
+                <a href="../../项目开发/基本知识/沙箱.html">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../../项目开发/基本知识/前端项目的环境.html">
+            
+                <a href="../../项目开发/基本知识/前端项目的环境.html">
+            
+                    
+                    前端项目的环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../../项目开发/基本知识/react里的css module.html">
+            
+                <a href="../../项目开发/基本知识/react里的css module.html">
+            
+                    
+                    react里的css module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../../项目开发/基本知识/AOP——面向切面编程.html">
+            
+                <a href="../../项目开发/基本知识/AOP——面向切面编程.html">
+            
+                    
+                    AOP——面向切面编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../项目开发/git/git常用基本命令.html">
+            
+                <a href="../../项目开发/git/git常用基本命令.html">
+            
+                    
+                    git常用基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../项目开发/git/vscode-git常见标识.html">
+            
+                <a href="../../项目开发/git/vscode-git常见标识.html">
+            
+                    
+                    vscode-git常见标识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../项目开发/git/github切换ssh连接.html">
+            
+                <a href="../../项目开发/git/github切换ssh连接.html">
+            
+                    
+                    github切换ssh连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    nginx
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../../项目开发/nginx/nginx基本用法.html">
+            
+                <a href="../../项目开发/nginx/nginx基本用法.html">
+            
+                    
+                    nginx基本用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" >
+            
+                <span>
+            
+                    
+                    webpack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../../项目开发/webpack/CRA是如何运行webpack的.html">
+            
+                <a href="../../项目开发/webpack/CRA是如何运行webpack的.html">
+            
+                    
+                    CRA是如何运行webpack的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../../项目开发/webpack/webpack-dev-server.html">
+            
+                <a href="../../项目开发/webpack/webpack-dev-server.html">
+            
+                    
+                    webpack-dev-server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../../项目开发/webpack/webpack基本概述.html">
+            
+                <a href="../../项目开发/webpack/webpack基本概述.html">
+            
+                    
+                    webpack基本概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../../项目开发/webpack/webpack常用插件.html">
+            
+                <a href="../../项目开发/webpack/webpack常用插件.html">
+            
+                    
+                    webpack常用插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../../项目开发/webpack/webpack-chain.html">
+            
+                <a href="../../项目开发/webpack/webpack-chain.html">
+            
+                    
+                    webpack-chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.6" data-path="../../项目开发/webpack/loader和plugin的区别.html">
+            
+                <a href="../../项目开发/webpack/loader和plugin的区别.html">
+            
+                    
+                    loader和plugin的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.7" data-path="../../项目开发/webpack/loaders.html">
+            
+                <a href="../../项目开发/webpack/loaders.html">
+            
+                    
+                    loaders
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" >
+            
+                <span>
+            
+                    
+                    前端工程化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" >
+            
+                <span>
+            
+                    
+                    package.json
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1.1" data-path="../../项目开发/前端工程化/package.json/基本参数.html">
+            
+                <a href="../../项目开发/前端工程化/package.json/基本参数.html">
+            
+                    
+                    基本参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../../项目开发/前端工程化/幽灵依赖.html">
+            
+                <a href="../../项目开发/前端工程化/幽灵依赖.html">
+            
+                    
+                    幽灵依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../../项目开发/前端工程化/npm发展.html">
+            
+                <a href="../../项目开发/前端工程化/npm发展.html">
+            
+                    
+                    npm发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.4" data-path="../../项目开发/前端工程化/pnpm原理.html">
+            
+                <a href="../../项目开发/前端工程化/pnpm原理.html">
+            
+                    
+                    pnpm原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.5" data-path="../../项目开发/前端工程化/vscode中react项目启用eslint.html">
+            
+                <a href="../../项目开发/前端工程化/vscode中react项目启用eslint.html">
+            
+                    
+                    vscode中react项目启用eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" >
+            
+                <span>
+            
+                    
+                    babel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../../项目开发/babel/入门基本知识.html">
+            
+                <a href="../../项目开发/babel/入门基本知识.html">
+            
+                    
+                    入门基本知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" >
+            
+                <span>
+            
+                    
+                    解决方案
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.7.1" data-path="../../项目开发/解决方案/jenkins+github实现自动部署.html">
+            
+                <a href="../../项目开发/解决方案/jenkins+github实现自动部署.html">
+            
+                    
+                    jenkins+github实现自动部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7.2" data-path="../../项目开发/解决方案/前端引入字体文件.html">
+            
+                <a href="../../项目开发/解决方案/前端引入字体文件.html">
+            
+                    
+                    前端引入字体文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7.3" data-path="../../项目开发/解决方案/字体文件裁剪工程化.html">
+            
+                <a href="../../项目开发/解决方案/字体文件裁剪工程化.html">
+            
+                    
+                    字体文件裁剪工程化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" >
+            
+                <span>
+            
+                    
+                    设计模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.8.1" data-path="../../项目开发/设计模式/单例模式.html">
+            
+                <a href="../../项目开发/设计模式/单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.2" data-path="../../项目开发/设计模式/观察者模式.html">
+            
+                <a href="../../项目开发/设计模式/观察者模式.html">
+            
+                    
+                    观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.3" data-path="../../项目开发/设计模式/访问者模式.html">
+            
+                <a href="../../项目开发/设计模式/访问者模式.html">
+            
+                    
+                    访问者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.4" data-path="../../项目开发/设计模式/mixin模式.html">
+            
+                <a href="../../项目开发/设计模式/mixin模式.html">
+            
+                    
+                    mixin模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.5" data-path="../../项目开发/设计模式/枚举标志位.html">
+            
+                <a href="../../项目开发/设计模式/枚举标志位.html">
+            
+                    
+                    枚举标志位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../../项目开发/其他/电话外呼业务.html">
+            
+                <a href="../../项目开发/其他/电话外呼业务.html">
+            
+                    
+                    电话外呼业务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.2" data-path="../../项目开发/其他/jenkins修改shell脚本的执行用户.html">
+            
+                <a href="../../项目开发/其他/jenkins修改shell脚本的执行用户.html">
+            
+                    
+                    jenkins修改shell脚本的执行用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    理论数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="一些基本概念.html">
+            
+                <a href="一些基本概念.html">
+            
+                    
+                    一些基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="向量空间的基.html">
+            
+                <a href="向量空间的基.html">
+            
+                    
+                    向量空间的基
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="向量的内积和外积.html">
+            
+                <a href="向量的内积和外积.html">
+            
+                    
+                    向量的内积和外积
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="转移概率矩阵.html">
+            
+                <a href="转移概率矩阵.html">
+            
+                    
+                    转移概率矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5" data-path="复合函数求导.html">
+            
+                <a href="复合函数求导.html">
+            
+                    
+                    复合函数求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6" data-path="偏导数和梯度.html">
+            
+                <a href="偏导数和梯度.html">
+            
+                    
+                    偏导数和梯度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.7" data-path="概率，几率，对数几率.html">
+            
+                <a href="概率，几率，对数几率.html">
+            
+                    
+                    概率，几率，对数几率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.1.8" data-path="全概率公式和贝叶斯公式.html">
+            
+                <a href="全概率公式和贝叶斯公式.html">
+            
+                    
+                    全概率公式和贝叶斯公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.9" data-path="预测的分类.html">
+            
+                <a href="预测的分类.html">
+            
+                    
+                    预测的分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.10" data-path="关于sigmoid函数.html">
+            
+                <a href="关于sigmoid函数.html">
+            
+                    
+                    关于sigmoid函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.11" data-path="概率分布和概率密度.html">
+            
+                <a href="概率分布和概率密度.html">
+            
+                    
+                    概率分布和概率密度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.12" data-path="似然函数和概率分布函数.html">
+            
+                <a href="似然函数和概率分布函数.html">
+            
+                    
+                    似然函数和概率分布函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.13" data-path="矩估计法.html">
+            
+                <a href="矩估计法.html">
+            
+                    
+                    矩估计法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.14" data-path="IoU交并比.html">
+            
+                <a href="IoU交并比.html">
+            
+                    
+                    Intersection over Union交并比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    应用数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../应用数学/特征工程.html">
+            
+                <a href="../应用数学/特征工程.html">
+            
+                    
+                    特征工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../应用数学/线性回归模型.html">
+            
+                <a href="../应用数学/线性回归模型.html">
+            
+                    
+                    线性回归模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" data-path="../应用数学/逻辑回归模型.html">
+            
+                <a href="../应用数学/逻辑回归模型.html">
+            
+                    
+                    逻辑回归模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.4" data-path="../应用数学/逻辑回归模型的loss函数.html">
+            
+                <a href="../应用数学/逻辑回归模型的loss函数.html">
+            
+                    
+                    逻辑回归模型的loss函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.5" data-path="../应用数学/如何理解激活函数.html">
+            
+                <a href="../应用数学/如何理解激活函数.html">
+            
+                    
+                    如何理解激活函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.6" data-path="../应用数学/全连接神经网络.html">
+            
+                <a href="../应用数学/全连接神经网络.html">
+            
+                    
+                    全连接神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.7" data-path="../应用数学/梯度下降算法.html">
+            
+                <a href="../应用数学/梯度下降算法.html">
+            
+                    
+                    梯度下降算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.8" data-path="../应用数学/向量和矩阵的相似度计算.html">
+            
+                <a href="../应用数学/向量和矩阵的相似度计算.html">
+            
+                    
+                    向量和矩阵的相似度计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.9" data-path="../应用数学/n-gram.html">
+            
+                <a href="../应用数学/n-gram.html">
+            
+                    
+                    n-gram
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >全概率公式和贝叶斯公式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;&#x548C;&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;">&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;&#x548C;&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;</h1>
+<h3 id="&#x80CC;&#x666F;&#x77E5;&#x8BC6;">&#x80CC;&#x666F;&#x77E5;&#x8BC6;</h3>
+<p><strong>&#x5B8C;&#x5907;&#x4E8B;&#x4EF6;&#x7EC4;</strong></p>
+<p>&#x8BBE;&#x6837;&#x672C;&#x7A7A;&#x95F4;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x3A9;</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x3A9;</span></span></span></span>&#xFF0C;&#x4E8B;&#x4EF6; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>B</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><msub><mi>B</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">B_1, B_2, \ldots, B_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x6EE1;&#x8DB3;&#xFF1A;</p>
+<ol>
+<li><strong>&#x4E24;&#x4E24;&#x4E92;&#x65A5;</strong>&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>&#x2260;</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i \neq j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.716em;"></span><span class="strut bottom" style="height:0.9309999999999999em;vertical-align:-0.215em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mrel">&#x2260;</span><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span> &#x65F6;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mi>i</mi></msub><mo>&#x2229;</mo><msub><mi>B</mi><mi>j</mi></msub><mo>=</mo><mi mathvariant="normal">&#x2205;</mi></mrow><annotation encoding="application/x-tex">B_i \cap B_j = \emptyset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2229;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">&#x2205;</span></span></span></span>&#xFF08;&#x4E0D;&#x4F1A;&#x540C;&#x65F6;&#x53D1;&#x751F;&#xFF09;</li>
+<li><strong>&#x5E76;&#x96C6;&#x8986;&#x76D6;&#x5168;&#x96C6;</strong>&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>&#x222A;</mo><msub><mi>B</mi><mn>2</mn></msub><mo>&#x222A;</mo><mo>&#x22EF;</mo><mo>&#x222A;</mo><msub><mi>B</mi><mi>n</mi></msub><mo>=</mo><mi mathvariant="normal">&#x3A9;</mi></mrow><annotation encoding="application/x-tex">B_1 \cup B_2 \cup \cdots \cup B_n = \Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x222A;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x222A;</span><span class="minner">&#x22EF;</span><span class="mbin">&#x222A;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">&#x3A9;</span></span></span></span>&#xFF08;&#x5FC5;&#x7136;&#x53D1;&#x751F;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#xFF09;</li>
+</ol>
+<p>&#x5219;&#x79F0; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><msub><mi>B</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>B</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><msub><mi>B</mi><mi>n</mi></msub><mo>}</mo></mrow><annotation encoding="application/x-tex">\{B_1, B_2, \ldots, B_n\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">{</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">}</span></span></span></span> &#x662F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x3A9;</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x3A9;</span></span></span></span> &#x7684;&#x4E00;&#x4E2A;<strong>&#x5B8C;&#x5907;&#x4E8B;&#x4EF6;&#x7EC4;</strong>&#xFF08;&#x4E5F;&#x79F0;&#x6837;&#x672C;&#x7A7A;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x5212;&#x5206;&#xFF09;&#x3002;</p>
+<p><strong>&#x4EA4;&#x4E8B;&#x4EF6;&#x6982;&#x7387; / &#x4E58;&#x6CD5;&#x516C;&#x5F0F;</strong></p>
+<p>&#x7531;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x5B9A;&#x4E49; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><mi>B</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mi>B</mi><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><mi>B</mi><mo>)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(A \vert B) = \dfrac{P(AB)}{P(B)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.427em;"></span><span class="strut bottom" style="height:2.363em;vertical-align:-0.936em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span><span style="top:-0.2300000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>&#xFF08;&#x8981;&#x6C42; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>B</mi><mo>)</mo><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P(B) &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mrel">&gt;</span><span class="mord mathrm">0</span></span></span></span>&#xFF09;&#xFF0C;&#x7ACB;&#x523B;&#x5F97;&#x5230;&#x4E58;&#x6CD5;&#x516C;&#x5F0F;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mi>B</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>B</mi><mo>)</mo><mo>&#x22C5;</mo><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><mi>B</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>&#x22C5;</mo><mi>P</mi><mo>(</mo><mi>B</mi><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">
+P(AB) = P(B) \cdot P(A \vert B) = P(A) \cdot P(B \vert A)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mbin">&#x22C5;</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mbin">&#x22C5;</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span></span></span></span></p>
+<p>&#x5176;&#x4E2D; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span> &#x8868;&#x793A;&#x4EA4;&#x4E8B;&#x4EF6; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>&#x2229;</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cap B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mbin">&#x2229;</span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span>&#x3002;&#x76F4;&#x89C2;&#x542B;&#x4E49;&#xFF1A;&#x4E24;&#x4EF6;&#x4E8B;&#x540C;&#x65F6;&#x53D1;&#x751F;&#x7684;&#x6982;&#x7387; = &#x4E00;&#x4EF6;&#x4E8B;&#x5148;&#x53D1;&#x751F;&#x7684;&#x6982;&#x7387; &#xD7; &#x5728;&#x5B83;&#x53D1;&#x751F;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x53E6;&#x4E00;&#x4EF6;&#x4E8B;&#x53D1;&#x751F;&#x7684;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x3002;</p>
+<h3 id="&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;">&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;</h3>
+<p><img src="&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;&#x548C;&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;.webp" alt="&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;&#x8BF4;&#x660E;"></p>
+<p>&#x5982;&#x4E0A;&#x56FE;&#xFF1A;&#x6837;&#x672C;&#x7A7A;&#x95F4;&#x88AB;&#x5B8C;&#x5907;&#x4E8B;&#x4EF6;&#x7EC4; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>B</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><msub><mi>B</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">B_1, B_2, \ldots, B_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x5212;&#x6210;&#x4E92;&#x4E0D;&#x91CD;&#x53E0;&#x7684;&#x51E0;&#x5757;&#xFF0C;&#x4E8B;&#x4EF6; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>&#xFF08;&#x7070;&#x8272;&#x533A;&#x57DF;&#xFF09;&#x88AB;&#x8FD9;&#x4E9B;&#x8FB9;&#x754C;&#x5207;&#x6210;&#x82E5;&#x5E72;&#x5C0F;&#x5757; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msub><mi>B</mi><mn>1</mn></msub><mo separator="true">,</mo><mi>A</mi><msub><mi>B</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>&#x2026;</mo></mrow><annotation encoding="application/x-tex">AB_1, AB_2, \ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="minner">&#x2026;</span></span></span></span>&#x3002;&#x4E8E;&#x662F;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mi>A</mi><msub><mi>B</mi><mn>1</mn></msub><mo>&#x222A;</mo><mi>A</mi><msub><mi>B</mi><mn>2</mn></msub><mo>&#x222A;</mo><mo>&#x22EF;</mo><mo>&#x222A;</mo><mi>A</mi><msub><mi>B</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">
+A = AB_1 \cup AB_2 \cup \cdots \cup AB_n
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">=</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x222A;</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x222A;</span><span class="minner">&#x22EF;</span><span class="mbin">&#x222A;</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p>&#x4E14;&#x5404; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msub><mi>B</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">AB_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x4E24;&#x4E24;&#x4E92;&#x65A5;&#xFF0C;&#x6240;&#x4EE5;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>=</mo><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo><mo>=</mo><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo><mspace width="0.16667em"></mspace><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">
+P(A) = \sum_{i=1}^{n} P(AB_i) = \sum_{i=1}^{n} P(B_i)\, P(A \vert B_i)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.0500099999999999em;vertical-align:-0.30001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mrel">=</span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mord mathit"><span class="mspace thinspace"></span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>&#x8FD9;&#x5C31;&#x662F;<strong>&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;</strong>&#xFF1A;&#x5148;&#x6309;&#x300C;&#x539F;&#x56E0; / &#x573A;&#x666F;&#x300D;&#x62C6;&#x5F00;&#xFF0C;&#x518D;&#x628A;&#x5404;&#x573A;&#x666F;&#x4E0B; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> &#x53D1;&#x751F;&#x7684;&#x6982;&#x7387;&#x52A0;&#x603B;&#x3002;</p>
+<p><strong>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;</strong></p>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x8981;&#x53BB;&#x5B66;&#x6821;&#xFF0C;&#x6709; 3 &#x79CD;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#xFF08;&#x5B8C;&#x5907;&#x4E8B;&#x4EF6;&#x7EC4;&#xFF09;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x4E8B;&#x4EF6;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+<th style="text-align:center">&#x5148;&#x9A8C;&#x6982;&#x7387; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">P(B_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">B_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></td>
+<td style="text-align:left">&#x5750;&#x516C;&#x4EA4;&#x8F66;</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">B_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></td>
+<td style="text-align:left">&#x9A91;&#x81EA;&#x884C;&#x8F66;</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">0.3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">B_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></td>
+<td style="text-align:left">&#x8D70;&#x8DEF;</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0.2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8BBE;&#x4E8B;&#x4EF6; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> &#x4E3A;&#x300C;&#x4E0A;&#x5B66;&#x8FDF;&#x5230;&#x300D;&#xFF0C;&#x5404;&#x4EA4;&#x901A;&#x65B9;&#x5F0F;&#x4E0B;&#x7684;&#x8FDF;&#x5230;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x4E3A;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mn>1</mn></msub><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mn>2</mn></msub><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mn>3</mn></msub><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">
+P(A \vert B_1) = 0.1,\quad P(A \vert B_2) = 0.2,\quad P(A \vert B_3) = 0.4
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathit"><span class="mspace quad"></span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathit"><span class="mspace quad"></span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span></span></span></span></p>
+<p>&#x7531;&#x4E58;&#x6CD5;&#x516C;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#x300C;&#x5750;&#x516C;&#x4EA4;&#x4E14;&#x8FDF;&#x5230;&#x300D;&#x7684;&#x6982;&#x7387;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mn>1</mn></msub><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><msub><mi>B</mi><mn>1</mn></msub><mo>)</mo><mo>&#x22C5;</mo><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mn>1</mn></msub><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn><mo>&#xD7;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">
+P(AB_1) = P(B_1) \cdot P(A \vert B_1) = 0.5 \times 0.1 = 0.05
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mbin">&#x22C5;</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">5</span></span></span></span></p>
+<p>&#x540C;&#x7406;&#x53EF;&#x5F97; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mn>2</mn></msub><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>6</mn></mrow><annotation encoding="application/x-tex">P(AB_2) = 0.06</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">6</span></span></span></span>&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mn>3</mn></msub><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>8</mn></mrow><annotation encoding="application/x-tex">P(AB_3) = 0.08</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">8</span></span></span></span>&#x3002;&#x603B;&#x8FDF;&#x5230;&#x6982;&#x7387;&#x5C31;&#x662F;&#x4E09;&#x79CD;&#x60C5;&#x5883;&#x4E0B;&#x8FDF;&#x5230;&#x6982;&#x7387;&#x4E4B;&#x548C;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtable><mtr><mtd><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow></mtd><mtd><mrow><mrow></mrow><mo>=</mo><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mn>1</mn></msub><mo>)</mo><mo>+</mo><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mn>2</mn></msub><mo>)</mo><mo>+</mo><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mn>3</mn></msub><mo>)</mo></mrow></mtd></mtr><mtr><mtd><mrow></mrow></mtd><mtd><mrow><mrow></mrow><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>5</mn><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>6</mn><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>8</mn><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>9</mn></mrow></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">
+\begin{aligned}
+P(A)
+&amp;= P(AB_1) + P(AB_2) + P(AB_3) \\
+&amp;= 0.05 + 0.06 + 0.08 = 0.19
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.45em;"></span><span class="strut bottom" style="height:2.4000000000000004em;vertical-align:-0.9500000000000004em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist"><span style="top:-0.6099999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mclose">)</span></span></span><span style="top:0.5900000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="col-align-l"><span class="vlist"><span style="top:-0.6099999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"><span class="mord textstyle uncramped"></span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span><span style="top:0.5900000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"><span class="mord textstyle uncramped"></span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">5</span><span class="mbin">+</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">6</span><span class="mbin">+</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">8</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mord mathrm">9</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span></p>
+<p>&#x6216;&#x76F4;&#x63A5;&#x5957;&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn><mo>&#xD7;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn><mo>&#xD7;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo>&#xD7;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">
+P(A) = 0.5 \times 0.1 + 0.3 \times 0.2 + 0.2 \times 0.4 = 0.19
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span><span class="mbin">&#xD7;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mbin">+</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mbin">&#xD7;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mord mathrm">9</span></span></span></span></p>
+<h3 id="&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;">&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;</h3>
+<p>&#x5168;&#x6982;&#x7387;&#x662F;&#x300C;&#x7531;&#x56E0;&#x63A8;&#x679C;&#x300D;&#xFF1A;&#x5DF2;&#x77E5;&#x5404;&#x539F;&#x56E0;&#x7684;&#x6982;&#x7387;&#xFF0C;&#x6C42;&#x7ED3;&#x679C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> &#x7684;&#x603B;&#x6982;&#x7387;&#x3002;&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;&#x5219;&#x662F;&#x300C;&#x7531;&#x679C;&#x63A8;&#x56E0;&#x300D;&#xFF1A;&#x5DF2;&#x7ECF;&#x89C2;&#x5BDF;&#x5230; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> &#x53D1;&#x751F;&#x4E86;&#xFF0C;&#x53CD;&#x63A8;&#x5B83;&#x66F4;&#x53EF;&#x80FD;&#x6765;&#x81EA;&#x54EA;&#x4E2A;&#x539F;&#x56E0; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">B_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x3002;</p>
+<p>&#x7531;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x4E0E;&#x4E58;&#x6CD5;&#x516C;&#x5F0F;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo><mspace width="0.16667em"></mspace><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+P(B_i \vert A) = \frac{P(AB_i)}{P(A)} = \frac{P(B_i)\, P(A \vert B_i)}{P(A)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.01em;"></span><span class="strut bottom" style="height:1.53em;vertical-align:-0.52em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.34500000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mclose mtight">)</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.485em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.34500000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mclose mtight">)</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.485em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose mtight">)</span><span class="mord mathit mtight"><span class="mspace thinspace mtight"></span><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span></span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mord mathrm mtight">&#x2223;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></p>
+<p>&#x5206;&#x6BCD;&#x7528;&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;&#x5C55;&#x5F00;&#xFF0C;&#x5F97;&#x5230;<strong>&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;</strong>&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo><mspace width="0.16667em"></mspace><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo></mrow><mrow><mstyle scriptlevel="0" displaystyle="true"><msubsup><mo>&#x2211;</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>j</mi></msub><mo>)</mo><mspace width="0.16667em"></mspace><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mi>j</mi></msub><mo>)</mo></mstyle></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+P(B_i \vert A) = \frac{P(B_i)\, P(A \vert B_i)}{\displaystyle\sum_{j=1}^{n} P(B_j)\, P(A \vert B_j)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.01em;"></span><span class="strut bottom" style="height:3.885174em;vertical-align:-2.8751740000000003em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:1.4613970000000005em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mop op-limits reset-scriptstyle displaystyle textstyle uncramped"><span class="vlist"><span style="top:1.1776689999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.000005000000000254801em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-1.2500050000000005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord mathit reset-scriptstyle displaystyle textstyle uncramped" style="margin-right:0.13889em;">P</span><span class="mopen reset-scriptstyle displaystyle textstyle uncramped">(</span><span class="mord reset-scriptstyle displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose reset-scriptstyle displaystyle textstyle uncramped">)</span><span class="mord mathit reset-scriptstyle displaystyle textstyle uncramped"><span class="mspace thinspace"></span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span><span class="mopen reset-scriptstyle displaystyle textstyle uncramped">(</span><span class="mord mathit reset-scriptstyle displaystyle textstyle uncramped">A</span><span class="mord mathrm reset-scriptstyle displaystyle textstyle uncramped">&#x2223;</span><span class="mord reset-scriptstyle displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose reset-scriptstyle displaystyle textstyle uncramped">)</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.485em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose mtight">)</span><span class="mord mathit mtight"><span class="mspace thinspace mtight"></span><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span></span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mord mathrm mtight">&#x2223;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></p>
+<p>&#x5E38;&#x7528;&#x672F;&#x8BED;&#xFF1A;</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">P(B_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>&#xFF1A;<strong>&#x5148;&#x9A8C;&#x6982;&#x7387;</strong>&#xFF08;&#x5148;&#x9A8C;&#xFF0C;prior&#xFF09;&#x2014;&#x2014;&#x8FD8;&#x6CA1;&#x770B;&#x5230;&#x7ED3;&#x679C;&#x524D;&#xFF0C;&#x5BF9;&#x539F;&#x56E0;&#x7684;&#x4FE1;&#x5FF5;</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mi mathvariant="normal">&#x2223;</mi><msub><mi>B</mi><mi>i</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">P(A \vert B_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>&#xFF1A;<strong>&#x4F3C;&#x7136;</strong>&#xFF08;likelihood&#xFF09;&#x2014;&#x2014;&#x8BE5;&#x539F;&#x56E0;&#x4E0B;&#x51FA;&#x73B0;&#x89C2;&#x6D4B; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> &#x7684;&#x53EF;&#x80FD;&#x6027;</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">P(B_i \vert A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span></span></span></span>&#xFF1A;<strong>&#x540E;&#x9A8C;&#x6982;&#x7387;</strong>&#xFF08;&#x540E;&#x9A8C;&#xFF0C;posterior&#xFF09;&#x2014;&#x2014;&#x770B;&#x5230; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> &#x4E4B;&#x540E;&#xFF0C;&#x5BF9;&#x539F;&#x56E0;&#x7684;&#x66F4;&#x65B0;&#x4FE1;&#x5FF5;</li>
+</ul>
+<p><strong>&#x627F;&#x63A5;&#x4E0A;&#x4F8B;</strong></p>
+<p>&#x82E5;&#x5DF2;&#x77E5;&#x4F60;&#x8FDF;&#x5230;&#x4E86;&#xFF08;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> &#x53D1;&#x751F;&#xFF09;&#xFF0C;&#x95EE;&#x300C;&#x6700;&#x53EF;&#x80FD;&#x662F;&#x5750;&#x516C;&#x4EA4;&#x6765;&#x7684;&#x300D;&#x7684;&#x6982;&#x7387;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mn>1</mn></msub><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><mi>A</mi><msub><mi>B</mi><mn>1</mn></msub><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>5</mn></mrow><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>9</mn></mrow></mfrac><mo>&#x2248;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mn>6</mn><mn>3</mn></mrow><annotation encoding="application/x-tex">
+P(B_1 \vert A) = \frac{P(AB_1)}{P(A)} = \frac{0.05}{0.19} \approx 0.263
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.01em;"></span><span class="strut bottom" style="height:1.53em;vertical-align:-0.52em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.34500000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mclose mtight">)</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.485em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">9</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">5</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">&#x2248;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mord mathrm">6</span><span class="mord mathrm">3</span></span></span></span></p>
+<p>&#x540C;&#x7406;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mn>2</mn></msub><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>6</mn></mrow><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>9</mn></mrow></mfrac><mo>&#x2248;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn><mn>1</mn><mn>6</mn><mo separator="true">,</mo><mspace width="2em"></mspace><mi>P</mi><mo>(</mo><msub><mi>B</mi><mn>3</mn></msub><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>8</mn></mrow><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>9</mn></mrow></mfrac><mo>&#x2248;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mn>2</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">
+P(B_2 \vert A) = \frac{0.06}{0.19} \approx 0.316,\qquad
+P(B_3 \vert A) = \frac{0.08}{0.19} \approx 0.421
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">9</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">6</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">&#x2248;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span><span class="mord mathrm">1</span><span class="mord mathrm">6</span><span class="mpunct">,</span><span class="mord mathit"><span class="mspace qquad"></span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">9</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">0</span><span class="mord mathrm mtight">8</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">&#x2248;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mord mathrm">2</span><span class="mord mathrm">1</span></span></span></span></p>
+<p>&#x5C3D;&#x7BA1;&#x8D70;&#x8DEF;&#x7684;&#x5148;&#x9A8C;&#x6700;&#x5C0F;&#xFF08;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0.2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span></span></span></span>&#xFF09;&#xFF0C;&#x4F46;&#x8D70;&#x8DEF;&#x8FDF;&#x5230;&#x7387;&#x6700;&#x9AD8;&#xFF0C;&#x6240;&#x4EE5;&#x300C;&#x5DF2;&#x7ECF;&#x8FDF;&#x5230;&#x300D;&#x65F6;&#xFF0C;&#x540E;&#x9A8C;&#x4E0A;&#x6700;&#x53EF;&#x7591;&#x7684;&#x53CD;&#x800C;&#x662F;&#x8D70;&#x8DEF;&#x3002;&#x5148;&#x9A8C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn><mi mathvariant="normal">/</mi><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn><mi mathvariant="normal">/</mi><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0.5 / 0.3 / 0.2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span><span class="mord mathrm">/</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span><span class="mord mathrm">/</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span></span></span></span> &#x88AB;&#x89C2;&#x6D4B;&#x66F4;&#x65B0;&#x6210;&#x7EA6; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mn>6</mn><mi mathvariant="normal">/</mi><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn><mn>2</mn><mi mathvariant="normal">/</mi><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mn>2</mn></mrow><annotation encoding="application/x-tex">0.26 / 0.32 / 0.42</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mord mathrm">6</span><span class="mord mathrm">/</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span><span class="mord mathrm">2</span><span class="mord mathrm">/</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mord mathrm">2</span></span></span></span>&#x3002;</p>
+<h3 id="&#x4E8C;&#x8005;&#x5173;&#x7CFB;&#x5C0F;&#x7ED3;">&#x4E8C;&#x8005;&#x5173;&#x7CFB;&#x5C0F;&#x7ED3;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">&#x5168;&#x6982;&#x7387;&#x516C;&#x5F0F;</th>
+<th style="text-align:left">&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x65B9;&#x5411;</td>
+<td style="text-align:left">&#x7531;&#x56E0;&#x6C42;&#x679C;</td>
+<td style="text-align:left">&#x7531;&#x679C;&#x6C42;&#x56E0;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x95EE;&#x7684;&#x662F;</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">P(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mclose">)</span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><msub><mi>B</mi><mi>i</mi></msub><mi mathvariant="normal">&#x2223;</mi><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">P(B_i \vert A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.05017em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">A</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4F9D;&#x8D56;</td>
+<td style="text-align:left">&#x5B8C;&#x5907;&#x4E8B;&#x4EF6;&#x7EC4; + &#x4E58;&#x6CD5;&#x516C;&#x5F0F;</td>
+<td style="text-align:left">&#x5168;&#x6982;&#x7387;&#x4F5C;&#x5206;&#x6BCD; + &#x4E58;&#x6CD5;&#x516C;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E00;&#x53E5;&#x8BDD;</td>
+<td style="text-align:left">&#x628A;&#x5404;&#x573A;&#x666F;&#x4E0B;&#x7684;&#x6982;&#x7387;&#x52A0;&#x8D77;&#x6765;</td>
+<td style="text-align:left">&#x7528;&#x89C2;&#x6D4B;&#x628A;&#x5148;&#x9A8C;&#x66F4;&#x65B0;&#x6210;&#x540E;&#x9A8C;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="概率，几率，对数几率.html" class="navigation navigation-prev " aria-label="Previous page: 概率，几率，对数几率">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="预测的分类.html" class="navigation navigation-next " aria-label="Next page: 预测的分类">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"全概率公式和贝叶斯公式","level":"1.8.1.8","depth":3,"next":{"title":"预测的分类","level":"1.8.1.9","depth":3,"path":"notes/数学/理论数学/预测的分类.md","ref":"./notes/数学/理论数学/预测的分类.md","articles":[]},"previous":{"title":"概率，几率，对数几率","level":"1.8.1.7","depth":3,"path":"notes/数学/理论数学/概率，几率，对数几率.md","ref":"./notes/数学/理论数学/概率，几率，对数几率.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","expandable-chapters","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"notes/数学/理论数学/全概率公式和贝叶斯公式.md","mtime":"2026-08-07T08:54:28.496Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-08-07T08:56:50.698Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
