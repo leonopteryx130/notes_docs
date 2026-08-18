@@ -18,6 +18,7 @@
         * [Bahdanau Attention](./notes/AI/深度学习模型架构/Bahdanau_Attention.md)
         * [Attention](./notes/AI/深度学习模型架构/Attention.md)
         * [self-Attention](./notes/AI/深度学习模型架构/self-Attention.md)
+        * [Multi-Head Attention](./notes/AI/深度学习模型架构/Multi-Head Attention.md)
     * pytorch
         * [pytorch里的tensor](./notes/AI/pytorch/pytorch里的tensor.md)
         * [torch中的乘法](./notes/AI/pytorch/torch中的乘法.md)
