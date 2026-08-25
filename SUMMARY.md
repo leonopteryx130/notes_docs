@@ -9,8 +9,8 @@
         * [池化](./notes/AI/基本概念/池化.md)
         * [梯度消失和梯度爆炸问题](./notes/AI/基本概念/梯度消失和梯度爆炸问题.md)
         * [数据增强](./notes/AI/基本概念/数据增强.md)
-    * 传统及其学习算法
-        * [KNN](./notes/AI/传统及其学习算法/KNN.md)
+    * 机器学习算法
+        * [KNN](./notes/AI/机器学习算法/KNN.md)
     * 深度学习模型架构
         * [skip-gram模型](./notes/AI/深度学习模型架构/skip-gram模型.md)
         * [循环神经网络](./notes/AI/深度学习模型架构/循环神经网络RNN.md)
