@@ -13,6 +13,7 @@
         * [skip-gram模型](./notes/AI/深度学习模型架构/skip-gram模型.md)
         * [循环神经网络](./notes/AI/深度学习模型架构/循环神经网络RNN.md)
         * [双向循环神经网络Bi-RNN](./notes/AI/深度学习模型架构/双向循环神经网络Bi-RNN.md)
+        * [长短期记忆网络LSTM](./notes/AI/深度学习模型架构/长短期记忆网络LSTM.md)
         * [Encoder-Decoder架构](./notes/AI/深度学习模型架构/Encoder-Decoder架构.md)
         * [卷积神经网络](./notes/AI/深度学习模型架构/卷积神经网络CNN.md)
         * [Bahdanau Attention](./notes/AI/深度学习模型架构/Bahdanau_Attention.md)
