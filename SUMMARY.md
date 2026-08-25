@@ -175,6 +175,7 @@
     * 基础知识
         * [消息模式分类](./notes/服务端开发/基础知识/消息模式分类.md)
         * [kafka](./notes/服务端开发/基础知识/kafka.md)
+        * [nginx基本用法](./notes/服务端开发/基础知识/nginx基本用法.md)
 * 计算机网络
     * 基础知识
         * [各种域名服务器](./notes/计算机网络/基础知识/各种域名服务器.md)
@@ -200,8 +201,6 @@
         * [git常用基本命令](./notes/项目开发/git/git常用基本命令.md)
         * [vscode-git常见标识](./notes/项目开发/git/vscode-git常见标识.md)
         * [github切换ssh连接](./notes/项目开发/git/github切换ssh连接.md)
-    * nginx
-        * [nginx基本用法](./notes/项目开发/nginx/nginx基本用法.md)
     * webpack
         * [CRA是如何运行webpack的](./notes/项目开发/webpack/CRA是如何运行webpack的.md)
         * [webpack-dev-server](./notes/项目开发/webpack/webpack-dev-server.md)
