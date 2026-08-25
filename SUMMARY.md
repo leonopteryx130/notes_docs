@@ -11,6 +11,7 @@
         * [数据增强](./notes/AI/基本概念/数据增强.md)
     * 机器学习算法
         * [KNN](./notes/AI/机器学习算法/KNN.md)
+        * [k-means](./notes/AI/机器学习算法/k-means.md)
     * 深度学习模型架构
         * [skip-gram模型](./notes/AI/深度学习模型架构/skip-gram模型.md)
         * [循环神经网络](./notes/AI/深度学习模型架构/循环神经网络RNN.md)
