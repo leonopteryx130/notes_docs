@@ -32,6 +32,7 @@
         * [马尔可夫链及其回报](./notes/AI/强化学习/马尔可夫链及其回报.md)
         * [贝尔曼方程](./notes/AI/强化学习/贝尔曼方程.md)
         * [Q-learning](./notes/AI/强化学习/Q-learning.md)
+        * [DQN（Deep Q-Network）](./notes/AI/强化学习/DQN.md)
 * 计算机科学
     * 基础知识
         * [应用程序的进程和线程](./notes/计算机科学/基础知识/进程和线程.md)
