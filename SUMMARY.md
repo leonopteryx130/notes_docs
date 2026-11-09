@@ -128,6 +128,7 @@
         * [浏览器的空闲时间](./notes/前端开发/浏览器/浏览器的空闲时间.md)
         * [hash路由和history路由](./notes/前端开发/浏览器/hash路由和history路由.md)
         * [裸导入和import-maps](./notes/前端开发/浏览器/裸导入和import-maps.md)
+        * [SharedWorker](./notes/前端开发/浏览器/shareWorker.md)
     * JavaScript
         * 基本概念及理念
             * [node.js和javascript中的全局变量](./notes/前端开发/JavaScript/基本概念及理念/node.js和javascript中的全局对象.md)
